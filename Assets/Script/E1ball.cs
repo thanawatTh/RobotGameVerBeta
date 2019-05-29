@@ -31,12 +31,7 @@ public class E1ball : MonoBehaviour
     {
 
         currentHealth -= damageAmount;
-        anim.Play("Hit" ,0 ,0);
-        
-        
-
-
-
+         
         if (currentHealth <= 0)
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -44,8 +39,6 @@ public class E1ball : MonoBehaviour
             gameObject.SetActive(false);
 
         }
-
-
 
     }
 }
