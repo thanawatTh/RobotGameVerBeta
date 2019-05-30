@@ -10,9 +10,6 @@ public class PlayerControl : MonoBehaviour
     private Vector3 moveInput;
     private Vector3 moveVelocity;
 
-    private float timeMove;
-
-    public float forcePower = 100f;
     public Camera mainCamera;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +20,6 @@ public class PlayerControl : MonoBehaviour
     
     void Update()
     {
-        timeMove += Time.deltaTime;
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * moveSpeed;
 
