@@ -41,4 +41,12 @@ public class E1ball : MonoBehaviour
         }
 
     }
+
+     void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag== "Missle")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
