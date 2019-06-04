@@ -5,7 +5,7 @@ using UnityEngine;
 public class FloorSpeed : MonoBehaviour
 {
     private float forcePower = 1000f;
-   
+    
 
     // Start is called before the first frame update
 

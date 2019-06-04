@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public float moveSpeed = 5;
-    private Rigidbody rigidBody;
+    public Rigidbody rigidBody;
 
     private Vector3 moveInput;
     private Vector3 moveVelocity;
 
     public Camera mainCamera;
+
+    public Ray cameraRay;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class PlayerControl : MonoBehaviour
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * moveSpeed;
 
-        Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
         Plane groundPlan = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
 

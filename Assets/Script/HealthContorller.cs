@@ -20,7 +20,7 @@ public class HealthContorller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Camera.main.WorldToScreenPoint    
     }
 
     public void TakeDamge(int damage)
