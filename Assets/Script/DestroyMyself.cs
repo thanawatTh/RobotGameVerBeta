@@ -20,8 +20,8 @@ public class DestroyMyself : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
-            Destroy(gameObject);
-            Debug.Log("Player see me!!");
+                Destroy(gameObject);
+                Debug.Log("Player see me!!");
         }
     }
 }

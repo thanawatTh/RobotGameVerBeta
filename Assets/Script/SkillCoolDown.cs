@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class SkillCoolDown : MonoBehaviour
 {
-    public Image imageCooldown;
+   public Image imageCooldown;
     public float cooldown = 5;
     public bool isCooldown;
     public Missiles useScript;
 
      void Start()
     {
-        //useScript = GetComponent<Missiles>();
+        useScript = GetComponent<Missiles>();
         
     }
     // Update is called once per frame
     void Update()
     {
-        if (useScript.isMissleGo == true)     
+        if (useScript.isMissleGo == true)    
         {
             isCooldown = true;
         }
@@ -31,6 +31,7 @@ public class SkillCoolDown : MonoBehaviour
             {
                 imageCooldown.fillAmount = 0;
                 isCooldown = false;
+                useScript.isMissleGo = false;
             }
         }
 
