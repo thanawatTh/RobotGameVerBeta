@@ -16,8 +16,9 @@ public class MissileFollowTarget : MonoBehaviour
 
     void Start()
     {
-        
+
         target = GameObject.FindGameObjectWithTag("TestEnamy").transform;
+        
     }
     private void FixedUpdate()
     {
