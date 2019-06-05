@@ -7,6 +7,8 @@ public class AbilityDash : MonoBehaviour
     
     public float distace = 5.0f;
     private Rigidbody rigiBody;
+    public float fireRate = 0.25f;
+    private float nextFire;
     
     // Start is called before the first frame update
 
@@ -20,8 +22,10 @@ public class AbilityDash : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)  
             {
+                nextFire = Time.time + fireRate;
+            Debug.Log(nextFire);
                 DashForward();
             }
 

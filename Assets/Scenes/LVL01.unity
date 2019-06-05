@@ -10768,6 +10768,11 @@ PrefabInstance:
       propertyPath: useScript
       value: 
       objectReference: {fileID: 836118083}
+    - target: {fileID: 748470594435956115, guid: fb7384b640ead384eba0c7ba610c2233,
+        type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4717078052311650098, guid: fb7384b640ead384eba0c7ba610c2233, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fb7384b640ead384eba0c7ba610c2233, type: 3}
