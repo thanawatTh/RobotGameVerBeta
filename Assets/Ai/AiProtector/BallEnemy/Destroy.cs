@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    private HealthContorller health;
+       
     void Start()
     {
+
         Destroy(gameObject, 3f);
+        health = PlayerManager.instance.healthBar;
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    // Find Trigger on Collider
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+
+            health.TakeDamge(10);  
+            
+        }
     }
 }

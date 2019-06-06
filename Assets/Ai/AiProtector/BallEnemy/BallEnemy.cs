@@ -20,20 +20,22 @@ public class BallEnemy : MonoBehaviour
 
     void Start()
     {
+
         target = PlayerManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
+
     }
 
     
     void Update()
     {
+
         transform.position = Vector3.MoveTowards(transform.position, target.position , speed * Time.deltaTime);
         float distance = Vector3.Distance(target.position, transform.position);
-
-
-
-       if(distance <= lookRaius && Time.time > nextFire)
+     
+        if (distance <= lookRaius && Time.time > nextFire)
         {
+
             agent.SetDestination(target.position);
 
             nextFire = Time.time + fireRate;
@@ -42,6 +44,7 @@ public class BallEnemy : MonoBehaviour
             missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             missleInstance.AddForce(barrelEnd.forward * 1000);
             Debug.Log("missle");
+
         }
    
     }

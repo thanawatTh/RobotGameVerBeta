@@ -9,8 +9,7 @@ public class Boomer : MonoBehaviour
    
     public float lookRaius = 5f;
     public float lookIn = 2f;
-    //public float speed;
-
+  //public float speed;
     
     public NavMeshAgent agent;
 
@@ -19,12 +18,14 @@ public class Boomer : MonoBehaviour
 
     public Transform target;
 
+    private HealthContorller health;
+
     void Start()
     {
         target = PlayerManager.instance.main.transform;
-        agent = GetComponent<NavMeshAgent>();    
+        agent = GetComponent<NavMeshAgent>();
+        health = PlayerManager.instance.healthBar;
     }
-
     
     void Update()
     {
@@ -38,7 +39,9 @@ public class Boomer : MonoBehaviour
 
         if (distance <= lookIn)
         {
+            
             Instantiate(booM, transform.position, Quaternion.identity);
+            health.TakeDamge(90);
             Destroy(booMer);       
         }
 
