@@ -419,6 +419,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 652036699}
     m_Modifications:
+    - target: {fileID: 4752107843431423329, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
+        type: 3}
+      propertyPath: m_Name
+      value: Target01 (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 4752107843431423341, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -488,11 +493,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4752107843431423329, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
-        type: 3}
-      propertyPath: m_Name
-      value: Target01 (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55ebadbdb50fe6a4da8449b877c7b97c, type: 3}
@@ -4416,6 +4416,11 @@ PrefabInstance:
       propertyPath: imageCooldown
       value: 
       objectReference: {fileID: 332554198}
+    - target: {fileID: 2751092434543354305, guid: c3aed75f195c0934c884a9e38be47f3f,
+        type: 3}
+      propertyPath: healthUi
+      value: 
+      objectReference: {fileID: 351657303}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3aed75f195c0934c884a9e38be47f3f, type: 3}
 --- !u!1001 &630864023
@@ -7165,6 +7170,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 652036699}
     m_Modifications:
+    - target: {fileID: 4752107843431423329, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
+        type: 3}
+      propertyPath: m_Name
+      value: Target01
+      objectReference: {fileID: 0}
     - target: {fileID: 4752107843431423341, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7234,11 +7244,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4752107843431423329, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
-        type: 3}
-      propertyPath: m_Name
-      value: Target01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55ebadbdb50fe6a4da8449b877c7b97c, type: 3}
@@ -12530,6 +12535,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 652036699}
     m_Modifications:
+    - target: {fileID: 4752107843431423329, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
+        type: 3}
+      propertyPath: m_Name
+      value: Target01 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4752107843431423341, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12599,11 +12609,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9295027
-      objectReference: {fileID: 0}
-    - target: {fileID: 4752107843431423329, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
-        type: 3}
-      propertyPath: m_Name
-      value: Target01 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55ebadbdb50fe6a4da8449b877c7b97c, type: 3}
@@ -12835,6 +12840,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 652036699}
     m_Modifications:
+    - target: {fileID: 4752107843431423329, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
+        type: 3}
+      propertyPath: m_Name
+      value: Target01 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4752107843431423341, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12904,11 +12914,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.2151026
-      objectReference: {fileID: 0}
-    - target: {fileID: 4752107843431423329, guid: 55ebadbdb50fe6a4da8449b877c7b97c,
-        type: 3}
-      propertyPath: m_Name
-      value: Target01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55ebadbdb50fe6a4da8449b877c7b97c, type: 3}
