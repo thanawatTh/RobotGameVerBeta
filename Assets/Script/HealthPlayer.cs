@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class HealthPlayer : MonoBehaviour
 {
-    public HealthContorller healthBar;
+    private HealthContorller healthBar;
     // Start is called before the first frame update
 
+
+    private void Start()
+    {
+        healthBar = PlayerManager.instance.healthBar;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enamy") 

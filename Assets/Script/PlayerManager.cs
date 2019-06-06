@@ -7,8 +7,10 @@ public class PlayerManager : MonoBehaviour
 
     #region Signleton
     public static PlayerManager instance;
+    public HealthContorller healthBar;
+    public GameObject main;
 
-     void Awake()
+    void Awake()
     {
         instance = this;
     }
@@ -16,6 +18,6 @@ public class PlayerManager : MonoBehaviour
     #endregion
 
 
-    public GameObject main;
+    
    
 }

@@ -10,13 +10,14 @@ public class PlayerControl : MonoBehaviour
     private Vector3 moveInput;
     private Vector3 moveVelocity;
 
-    public Camera mainCamera;
+    private Camera mainCamera;
 
     public Ray cameraRay;
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        mainCamera = Camera.main;
     }
 
     
