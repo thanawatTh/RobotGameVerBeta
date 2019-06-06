@@ -4405,7 +4405,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mainCamera
       value: 
-      objectReference: {fileID: 605400090}
+      objectReference: {fileID: 534669904}
     - target: {fileID: 6661543686510101970, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
       propertyPath: healthBar
