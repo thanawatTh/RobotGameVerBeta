@@ -34,7 +34,7 @@ public class E1ball : MonoBehaviour
          
         if (currentHealth <= 0)
         {
-            //Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
 
@@ -46,6 +46,7 @@ public class E1ball : MonoBehaviour
     {
         if(other.gameObject.tag== "Missle")
         {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
