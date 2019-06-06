@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  rigidBody: {fileID: 0}
+  rigidBody: {fileID: 4717078052311650102}
   mainCamera: {fileID: 0}
 --- !u!20 &6661543686510101971
 Camera:
