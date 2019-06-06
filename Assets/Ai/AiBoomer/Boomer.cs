@@ -22,10 +22,7 @@ public class Boomer : MonoBehaviour
     void Start()
     {
         target = PlayerManager.instance.main.transform;
-        agent = GetComponent<NavMeshAgent>();
-       
-
-        
+        agent = GetComponent<NavMeshAgent>();    
     }
 
     
@@ -49,6 +46,7 @@ public class Boomer : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRaius);
 
@@ -56,9 +54,5 @@ public class Boomer : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lookIn);
 
     }
-
-
-     
-
 
 }
