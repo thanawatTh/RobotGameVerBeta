@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Missiles : MonoBehaviour
 {
     public Rigidbody missilPrefab;
     public Transform barrelEnd;
     public int countMissiles;
-    public Text countM;
+   // public Text countM;
     public bool isMissleGo;
+    public bool MissleCall;
 
 
     
@@ -18,26 +20,44 @@ public class Missiles : MonoBehaviour
     void Start()
     {
         isMissleGo = false;
+
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-       if (Input.GetKeyDown(KeyCode.Alpha1))
+        ///Mouse 0
+        ///////////////////////////////////////////////////////////////////////////////////////
+        /*  if (Input.GetKeyDown(KeyCode.Alpha1))
+           {
+               MissleMove();
+               //countMissiles--;
+
+               isMissleGo = true;
+
+           }*/
+
+        //TouchSkill
+        ///////////////////////////////////////////////////////////////////////////////////////
+        if (MissleCall == true)
         {
             MissleMove();
-            //countMissiles--;
-
             isMissleGo = true;
-
         }
+
+        if (MissleCall == false)
+        {
+            isMissleGo = false;
+        }
+
+       
         
             
     }
     
 
-    void MissleMove()
+    public void MissleMove()
 
     {
        if (!isMissleGo)
@@ -46,11 +66,24 @@ public class Missiles : MonoBehaviour
             Rigidbody missleInstance;
             missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             missleInstance.AddForce(barrelEnd.forward * 5000);
-       }
+
+        }
        
         
     }
-  
+
+    public void OnTouchDown()
+    {
+        MissleCall = true;
+    }
+
+    public void OnTouchUp()
+    {
+        MissleCall = false;
+    }
+
+
+
 
 }
 
