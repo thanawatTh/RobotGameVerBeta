@@ -17,6 +17,8 @@ public class Shooting : MonoBehaviour
     private LineRenderer laserLine;
     private float nextFire;
 
+    public bool shootingCall;
+
 
     void Start()
     {
@@ -34,7 +36,20 @@ public class Shooting : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
+        if (shootingCall == true)
+        {
+            ShootingStart();
+        }
+        else
+        {
+            shootingCall = false;
+        }
+
+    }
+
+    public void ShootingStart()
+    {
+        if ( Time.time > nextFire)
         {
 
             nextFire = Time.time + fireRate;
@@ -81,9 +96,8 @@ public class Shooting : MonoBehaviour
                 laserLine.SetPosition(1, rayOrigin + (fpsCam.transform.forward * weaponRange));
             }
         }
+
     }
-
-
     private IEnumerator ShotEffect()
     {
 
@@ -98,5 +112,18 @@ public class Shooting : MonoBehaviour
 
         laserLine.enabled = false;
     }
+
+
+
+    public void ShootingDown()
+    {
+        shootingCall = true;
+    }
+
+    public void ShootingUp()
+    {
+        shootingCall = false;
+    }
 }
+
 

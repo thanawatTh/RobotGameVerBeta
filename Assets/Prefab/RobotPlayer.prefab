@@ -676,8 +676,8 @@ MonoBehaviour:
     type: 3}
   barrelEnd: {fileID: 2421962698714647548}
   countMissiles: 5
-  countM: {fileID: 0}
   isMissleGo: 0
+  MissleCall: 0
 --- !u!114 &395963363089784506
 MonoBehaviour:
   m_ObjectHideFlags: 0

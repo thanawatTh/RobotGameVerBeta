@@ -11,7 +11,7 @@ public class Missiles : MonoBehaviour
     public int countMissiles;
    // public Text countM;
     public bool isMissleGo;
-    public bool MissleCall;
+    public bool missleCall;
 
 
     
@@ -40,13 +40,13 @@ public class Missiles : MonoBehaviour
 
         //TouchSkill
         ///////////////////////////////////////////////////////////////////////////////////////
-        if (MissleCall == true)
+        if (missleCall == true)
         {
             MissleMove();
             isMissleGo = true;
         }
 
-        if (MissleCall == false)
+        if (missleCall == false)
         {
             isMissleGo = false;
         }
@@ -74,12 +74,12 @@ public class Missiles : MonoBehaviour
 
     public void OnTouchDown()
     {
-        MissleCall = true;
+        missleCall = true;
     }
 
     public void OnTouchUp()
     {
-        MissleCall = false;
+        missleCall = false;
     }
 
 
