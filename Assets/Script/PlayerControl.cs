@@ -38,12 +38,18 @@ public class PlayerControl : MonoBehaviour
         moveVelocity = moveInput * moveSpeed;
 
         Vector2 from = new Vector2(0, 1);
+        Vector2 to = joyInputMove.joyInput;
+
+        transform.localEulerAngles = new Vector3(0f, -30 - Vector2.SignedAngle(from, to), 0f);//หามุมของแกนy
+
+        //rotation right
+
+        /*Vector2 from = new Vector2(0, 1);
         Vector2 to = joyInputRot.rotInput;
 
         transform.localEulerAngles = new Vector3(0f, -30 - Vector2.SignedAngle(from, to), 0f);//หามุมของแกนy
 
-
-
+         */     
 
         /* KeyBroad
          /////////////////////////////////////////////////////////////////////////////////////////////
