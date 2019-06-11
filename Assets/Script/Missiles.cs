@@ -44,18 +44,19 @@ public class Missiles : MonoBehaviour
         {
             MissleMove();
             isMissleGo = true;
+
+            
+
         }
 
-        if (missleCall == false)
-        {
-            isMissleGo = false;
-        }
+        
 
        
         
             
     }
-    
+
+   
 
     public void MissleMove()
 
@@ -74,12 +75,26 @@ public class Missiles : MonoBehaviour
 
     public void OnTouchDown()
     {
-        missleCall = true;
+       
+       missleCall = true;
+
     }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(1);
+        //missleCall = true;
+    }
+
+   
+
+   
 
     public void OnTouchUp()
     {
+        
         missleCall = false;
+        StartCoroutine(wait());
     }
 
 
