@@ -21,9 +21,7 @@ public class E1ball : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
-        
-
+        anim = GetComponent<Animator>();        
     }
 
 

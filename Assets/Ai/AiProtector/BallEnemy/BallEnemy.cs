@@ -18,6 +18,10 @@ public class BallEnemy : MonoBehaviour
 
     private float nextFire;
 
+    public int currentHealth = 3;
+
+    public ParticleSystem deathEffect;
+
     void Start()
     {
 
@@ -26,11 +30,34 @@ public class BallEnemy : MonoBehaviour
 
     }
 
-    
+    public void Damage(int damageAmount)
+    {
+
+        currentHealth -= damageAmount;
+
+        if (currentHealth <= 0)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+
+            gameObject.SetActive(false);
+
+        }
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Missle")
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
+
     void Update()
     {
 
-        transform.position = Vector3.MoveTowards(transform.position, target.position , speed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, target.position , speed * Time.deltaTime);
         float distance = Vector3.Distance(target.position, transform.position);
      
         if (distance <= lookRaius && Time.time > nextFire)
@@ -42,7 +69,7 @@ public class BallEnemy : MonoBehaviour
 
             Rigidbody missleInstance;
             missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
-            missleInstance.AddForce(barrelEnd.forward * 1000);
+            missleInstance.AddForce(barrelEnd.forward * 2000);
             Debug.Log("missle");
 
         }
