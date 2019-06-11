@@ -49,7 +49,7 @@ public class TouchControl : MonoBehaviour,IDragHandler, IPointerDownHandler, IPo
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        this.transform.localPosition = Vector3.zero;
+       this.transform.localPosition = Vector3.zero;
         joyInput = Vector2.zero;
     }
 }

@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 2544198969291935407}
   - component: {fileID: 1560689469324329139}
   - component: {fileID: 395963363089784506}
+  - component: {fileID: 1081482247978554687}
   - component: {fileID: 748470594435956115}
   - component: {fileID: 1046160455912669679}
   m_Layer: 0
@@ -695,6 +696,22 @@ MonoBehaviour:
   cooldown: 5
   isCooldown: 0
   useScript: {fileID: 1560689469324329139}
+--- !u!114 &1081482247978554687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717078052311650096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 852afe072e9f4b740b6629c3999b1d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageCooldown: {fileID: 0}
+  cooldown: 5
+  isCooldown: 0
+  useScript: {fileID: 748470594435956115}
 --- !u!114 &748470594435956115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,6 +726,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distace: 5
   fireRate: 0.25
+  dashStart: 0
+  isDashGo: 0
 --- !u!20 &1046160455912669679
 Camera:
   m_ObjectHideFlags: 0

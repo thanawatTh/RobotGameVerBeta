@@ -25,7 +25,7 @@ public class PlayerControl : MonoBehaviour
         mainCamera = Camera.main;
 
         joyInputMove = GameObject.Find("JoyMove").GetComponent<TouchControl>();
-        joyInputRot = GameObject.Find("JoyRot").GetComponent<TouchRotControl>();
+       // joyInputRot = GameObject.Find("JoyRot").GetComponent<TouchRotControl>();
     }
 
     
@@ -37,10 +37,14 @@ public class PlayerControl : MonoBehaviour
         moveInput = new Vector3(joyInputMove.joyInput.x, 0, joyInputMove.joyInput.y);
         moveVelocity = moveInput * moveSpeed;
 
-        Vector2 from = new Vector2(0, 1);
+        Vector2 from = new Vector2(0,1);
         Vector2 to = joyInputMove.joyInput;
 
         transform.localEulerAngles = new Vector3(0f, -30 - Vector2.SignedAngle(from, to), 0f);//หามุมของแกนy
+
+
+
+
 
         //rotation right
 
@@ -74,5 +78,6 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate()
     {
         rigidBody.velocity = moveVelocity;
+
     }
 }

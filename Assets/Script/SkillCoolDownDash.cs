@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkillCoolDown : MonoBehaviour
-{
-   public Image imageCooldown;
-    public float cooldown = 5;
-    public bool isCooldown;
-    public Missiles useScript;
 
-     void Start()
+
+public class SkillCoolDownDash : MonoBehaviour
+{
+    public Image imageCooldown;
+    private float cooldown = 1;
+    public bool isCooldown;
+    public AbilityDash useScript;
+
+    void Start()
     {
-        useScript = GetComponent<Missiles>();
-        
+        useScript = GetComponent<AbilityDash>();
+
     }
     // Update is called once per frame
     void Update()
     {
-        if (useScript.isMissleGo == true)    
+        if (useScript.isDashGo == true)
         {
             isCooldown = true;
         }
 
-        if (isCooldown == true )  
+        if (isCooldown == true)
         {
             imageCooldown.fillAmount += 1 / cooldown * Time.deltaTime;
 
@@ -31,12 +33,12 @@ public class SkillCoolDown : MonoBehaviour
             {
                 imageCooldown.fillAmount = 0;
                 isCooldown = false;
-                useScript.isMissleGo = false;
+                useScript.isDashGo = false;
             }
         }
 
-      
-
-
     }
+
+
+   
 }

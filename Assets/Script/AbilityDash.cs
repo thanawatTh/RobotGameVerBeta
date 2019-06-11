@@ -9,6 +9,8 @@ public class AbilityDash : MonoBehaviour
     private Rigidbody rigiBody;
     public float fireRate = 0.25f;
     private float nextFire;
+    public bool dashStart;
+    public bool isDashGo;
     
     // Start is called before the first frame update
 
@@ -22,15 +24,32 @@ public class AbilityDash : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)  
+       /* if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)  
             {
                 nextFire = Time.time + fireRate;
             Debug.Log(nextFire);
                 DashForward();
-            }
+            }*/
+
+///////////////////////////////////////////////////////////////////////////////
+///
+       /* if (Input.GetKeyDown(KeyCode.Space))
+        {
+           
+            Debug.Log(nextFire);
+            DashForward();
+        }*/
 
 
-        
+
+
+        if(dashStart == true)
+        {
+            isDashGo = true;
+            DashForward();
+        }
+
+
     }
 
     public void DashForward()
@@ -43,6 +62,7 @@ public class AbilityDash : MonoBehaviour
         if (Physics.Linecast(transform.position , destination, out hit)) 
         {
             destination = transform.position + transform.forward * (hit.distance - 1f);
+            dashStart = true;
         }
 
 
@@ -52,13 +72,37 @@ public class AbilityDash : MonoBehaviour
             destination = hit.point;
             destination.y = 1f;
             transform.position = destination;
-            
+            dashStart = true;
         }
         
 
     }
 
-   
+
+    public void onTouchDown()
+    {
+        dashStart = true;
+    }
+
+
+    IEnumerator waitSpeed()
+    {
+        yield return new WaitForSeconds(1);
+
+    }
+
+    public void onTouchUp()
+    {
+        dashStart = false;
+        StartCoroutine(waitSpeed());
+    }
+
+
+
+
+
+
+
 
 
 }
