@@ -50,6 +50,7 @@ public class Boomer : MonoBehaviour
         }
 
     }
+
     public void Damage(int damageAmount)
     {
 
