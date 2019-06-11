@@ -1299,6 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joyInput: {x: 0, y: 0}
+  rotationInput: {x: 0, y: 0}
 --- !u!1001 &587080108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1426,7 +1427,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1724348986}
-          m_MethodName: onTouchDown
+          m_MethodName: OnTouchDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1441,18 +1442,7 @@ MonoBehaviour:
   - eventID: 3
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1724348986}
-          m_MethodName: onTouchUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
@@ -1862,7 +1852,7 @@ PrefabInstance:
     - target: {fileID: 4717078053362280213, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -82.5
+      value: -84
       objectReference: {fileID: 0}
     - target: {fileID: 4717078053362280213, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
@@ -1872,7 +1862,7 @@ PrefabInstance:
     - target: {fileID: 4717078053362280213, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 43.828274
+      value: 49.8
       objectReference: {fileID: 0}
     - target: {fileID: 4717078053362280213, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
@@ -2078,6 +2068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.907
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717078052311650102, guid: c3aed75f195c0934c884a9e38be47f3f,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1081482247978554687, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
@@ -2890,18 +2885,7 @@ MonoBehaviour:
   - eventID: 3
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1724348988}
-          m_MethodName: OnTouchUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []

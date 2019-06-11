@@ -8,6 +8,7 @@ public class TouchControl : MonoBehaviour,IDragHandler, IPointerDownHandler, IPo
     private RectTransform parent;
     private float radius;
     public Vector2 joyInput;
+    public Vector2 rotationInput;
 
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class TouchControl : MonoBehaviour,IDragHandler, IPointerDownHandler, IPo
         }
 
         joyInput = this.transform.localPosition / radius;
+        rotationInput = this.transform.localPosition / radius;
 
         Debug.Log(joyInput.magnitude);
     }

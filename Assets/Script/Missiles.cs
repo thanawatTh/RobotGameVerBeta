@@ -40,14 +40,7 @@ public class Missiles : MonoBehaviour
 
         //TouchSkill
         ///////////////////////////////////////////////////////////////////////////////////////
-        if (missleCall == true)
-        {
-            MissleMove();
-            isMissleGo = true;
-
-            
-
-        }
+       
 
         
 
@@ -59,43 +52,37 @@ public class Missiles : MonoBehaviour
    
 
     public void MissleMove()
-
     {
-       if (!isMissleGo)
-
-       {
             Rigidbody missleInstance;
             missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             missleInstance.AddForce(barrelEnd.forward * 5000);
 
-        }
        
-        
     }
 
     public void OnTouchDown()
     {
        
        missleCall = true;
+        if (missleCall == true)
+        {
+            if (isMissleGo == false)
+            {
+                isMissleGo = true;
+                MissleMove();
+            }
+        }
 
-    }
-
-    IEnumerator wait()
-    {
-        yield return new WaitForSeconds(1);
-        //missleCall = true;
-    }
-
-   
-
-   
-
-    public void OnTouchUp()
-    {
-        
         missleCall = false;
-        StartCoroutine(wait());
+
     }
+
+    
+
+
+
+
+
 
 
 

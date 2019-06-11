@@ -24,30 +24,35 @@ public class AbilityDash : MonoBehaviour
     void Update()
     {
 
-       /* if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)  
-            {
-                nextFire = Time.time + fireRate;
-            Debug.Log(nextFire);
-                DashForward();
-            }*/
+        /* if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)  
+             {
+                 nextFire = Time.time + fireRate;
+             Debug.Log(nextFire);
+                 DashForward();
+             }*/
 
-///////////////////////////////////////////////////////////////////////////////
-///
-       /* if (Input.GetKeyDown(KeyCode.Space))
+        ///////////////////////////////////////////////////////////////////////////////
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
            
             Debug.Log(nextFire);
             DashForward();
-        }*/
-
-
-
-
-        if(dashStart == true)
-        {
-            isDashGo = true;
-            DashForward();
         }
+
+
+
+
+        //if(dashStart == true)
+        //{
+        //    //isDashGo = true;
+        //    if (isDashGo == false)
+        //    {
+        //        isDashGo = true;
+        //        DashForward();
+        //    }
+        //    //isDashGo = true;
+        //}
 
 
     }
@@ -56,46 +61,51 @@ public class AbilityDash : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 destination = transform.position + transform.forward * distace ;
-
+        
 
         //hit block
         if (Physics.Linecast(transform.position , destination, out hit)) 
         {
             destination = transform.position + transform.forward * (hit.distance - 1f);
-            dashStart = true;
+            
         }
 
+        destination.y = transform.position.y;
+        transform.position = destination;
 
-       //not hit block
-       if (Physics.Raycast(destination, -Vector3.up, out hit))
-        {
-            destination = hit.point;
-            destination.y = 1f;
-            transform.position = destination;
-            dashStart = true;
-        }
+        //not hit block
+        //if (Physics.Raycast(destination, -Vector3.up, out hit))
+        //{
+        //    destination = hit.point;
+        //    destination.y = transform.position.y;
+        //    transform.position = destination;
+          
+        //}
         
 
     }
 
 
-    public void onTouchDown()
+    public void OnTouchDown()
     {
         dashStart = true;
-    }
-
-
-    IEnumerator waitSpeed()
-    {
-        yield return new WaitForSeconds(1);
-
-    }
-
-    public void onTouchUp()
-    {
+        if (dashStart == true)
+        {
+            //isDashGo = true;
+            if (isDashGo == false)
+            {
+                isDashGo = true;
+                DashForward();
+            }
+            //isDashGo = true;
+        }
         dashStart = false;
-        StartCoroutine(waitSpeed());
     }
+
+
+   
+
+    
 
 
 
