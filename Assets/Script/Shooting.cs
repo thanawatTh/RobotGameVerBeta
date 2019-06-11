@@ -74,8 +74,10 @@ public class Shooting : MonoBehaviour
 
 
                 E1ball health = hit.collider.GetComponent<E1ball>();
+                Boomer health1 = hit.collider.GetComponent<Boomer>();
+                BallEnemy health2 = hit.collider.GetComponent<BallEnemy>();
 
-
+                //E1ball
                 if (health != null)
                 {
 
@@ -88,6 +90,36 @@ public class Shooting : MonoBehaviour
 
                     hit.rigidbody.AddForce(-hit.normal * hitForce);
                 }
+
+
+                //Boomer
+                if (health1 != null)
+                {
+
+                    health1.Damage(gunDamage);
+                }
+
+
+                if (hit.rigidbody != null)
+                {
+
+                    hit.rigidbody.AddForce(-hit.normal * hitForce);
+                }
+
+                //BallEnemy
+                if (health2 != null)
+                {
+
+                    health2.Damage(gunDamage);
+                }
+
+
+                if (hit.rigidbody != null)
+                {
+
+                    hit.rigidbody.AddForce(-hit.normal * hitForce);
+                }
+
             }
 
             else

@@ -33,11 +33,6 @@ public class MissileFollowTarget : MonoBehaviour
             missleRigibody.MoveRotation(Quaternion.RotateTowards(transform.rotation, missleTargetRotation, turn));
 
         }
-       
-
-        
-       
-
     }
 
     private void OnTriggerEnter(Collider other)

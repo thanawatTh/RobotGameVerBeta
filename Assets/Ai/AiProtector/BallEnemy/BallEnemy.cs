@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class BallEnemy : MonoBehaviour
 {
+    [Header("Unity Setup")]
+    public ParticleSystem deathEffect;
 
     public float lookRaius = 5f;
 
@@ -19,9 +21,7 @@ public class BallEnemy : MonoBehaviour
     private float nextFire;
 
     public int currentHealth = 3;
-
-    public ParticleSystem deathEffect;
-
+   
     void Start()
     {
 
@@ -29,6 +29,7 @@ public class BallEnemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
     }
+
 
     public void Damage(int damageAmount)
     {

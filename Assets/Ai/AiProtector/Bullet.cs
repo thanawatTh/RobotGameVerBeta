@@ -19,9 +19,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
-        {
-
-            
+        {     
             Rigidbody missleInstance;
             missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             missleInstance.AddForce(barrelEnd.forward * 5000);
