@@ -11,7 +11,7 @@ public class HealthContorller : MonoBehaviour
 
     public ParticleSystem dead;
 
-    public GameObject gameObject;
+    public GameObject mySelf;
 
     public GameObject hpBar;
 
@@ -31,8 +31,11 @@ public class HealthContorller : MonoBehaviour
         {
 
             Instantiate(dead, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(mySelf);
             Destroy(hpBar);
+
+
+            GameObject.FindObjectOfType<GameManager>().EndGame();
 
 
         }

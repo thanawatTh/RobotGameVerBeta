@@ -14,7 +14,7 @@ public class SkillCoolDownDash : MonoBehaviour
 
     void Start()
     {
-        abilityDash = GetComponent<AbilityDash>();
+        abilityDash = GameObject.Find("Body").GetComponent<AbilityDash>();
 
     }
     // Update is called once per frame

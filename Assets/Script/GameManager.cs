@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     }
 
 
-    
 
     #endregion
 
@@ -35,7 +34,7 @@ public class GameManager : MonoBehaviour
         {
             gameHasEnded = true;
             Debug.Log("GAME OVER");
-            Reset();
+            Invoke("Reset", 2f);
         }
     }
 

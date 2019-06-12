@@ -25,12 +25,5 @@ public class HealthPlayer : MonoBehaviour
     }
 
 
-    public void Die()
-    {
-        if (healthContorller.health <= 0)
-        {
-             healthContorller.isDie = true;
-            GameObject.FindObjectOfType<GameManager>().EndGame();
-        }
-    }
+    
 }
