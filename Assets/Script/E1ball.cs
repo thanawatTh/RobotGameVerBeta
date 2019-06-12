@@ -33,9 +33,9 @@ public class E1ball : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        target = PlayerManager.instance.main.transform;
+        target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
-        health = PlayerManager.instance.healthBar;
+        health = GameManager.instance.healthBar;
     }
 
     void Update()
