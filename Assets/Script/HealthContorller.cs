@@ -10,7 +10,7 @@ public class HealthContorller : MonoBehaviour
     public Image healthBarImage;
 
     public bool isDie;
-
+  
     // Start is called before the first frame update
     void Start()
     {
