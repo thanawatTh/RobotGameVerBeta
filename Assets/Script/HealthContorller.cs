@@ -9,7 +9,7 @@ public class HealthContorller : MonoBehaviour
     public float startHealth;
     public Image healthBarImage;
 
-    bool isDie;
+    public bool isDie;
 
     // Start is called before the first frame update
     void Start()
@@ -27,15 +27,8 @@ public class HealthContorller : MonoBehaviour
     {
         health = health - damage;
         healthBarImage.fillAmount = health / startHealth;
+      
     }
 
-    public void Die()
-    {
-        if (health <= 0)
-        {
-            isDie = true;
-            
-        }
-    }
-    
+   
 }
