@@ -48,6 +48,7 @@ public class E1ball : MonoBehaviour
         if (distance <= lookRaius)
         {
             Vector3 destination = target.position + transform.forward * distace;
+            transform.position = destination;
         }
 
         if (distance <= lookIn)

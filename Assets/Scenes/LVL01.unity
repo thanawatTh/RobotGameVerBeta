@@ -1746,21 +1746,6 @@ PrefabInstance:
       propertyPath: healthUi
       value: 
       objectReference: {fileID: 351657303}
-    - target: {fileID: 2397632496020646201, guid: c3aed75f195c0934c884a9e38be47f3f,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 1724348996}
-    - target: {fileID: 1046160455912669679, guid: c3aed75f195c0934c884a9e38be47f3f,
-        type: 3}
-      propertyPath: m_TargetDisplay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1046160455912669679, guid: c3aed75f195c0934c884a9e38be47f3f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2533568627005485090, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1820,6 +1805,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.907
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397632496020646201, guid: c3aed75f195c0934c884a9e38be47f3f,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1724348996}
+    - target: {fileID: 1046160455912669679, guid: c3aed75f195c0934c884a9e38be47f3f,
+        type: 3}
+      propertyPath: m_TargetDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046160455912669679, guid: c3aed75f195c0934c884a9e38be47f3f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4717078052311650102, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
@@ -4738,9 +4738,15 @@ MonoBehaviour:
   deathEffect: {fileID: 2715918762866171766, guid: 442867dd6308e8040a7b29ee5a786c18,
     type: 3}
   currentHealth: 1
+<<<<<<< HEAD
   lookRaius: 5
   lookIn: 2
   distace: 5
+=======
+  lookRaius: 10
+  lookIn: 3
+  distace: 0.3
+>>>>>>> d2cd0fe5c5ae1546a618e5628be36d0ce3221181
   target: {fileID: 1724348985}
   Ball: {fileID: 1900910853}
   ballHit: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96, type: 3}
