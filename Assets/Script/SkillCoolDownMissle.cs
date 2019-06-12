@@ -8,17 +8,17 @@ public class SkillCoolDownMissle : MonoBehaviour
    public Image imageCooldown;
     public float cooldown = 5;
     public bool isCooldown;
-    public Missiles useScript;
+    public Missiles missiles;
 
-     void Start()
+    void Start()
     {
-        useScript = GetComponent<Missiles>();
+        missiles = GetComponent<Missiles>();
         
     }
     // Update is called once per frame
     void Update()
     {
-        if (useScript.isMissleGo == true)    
+        if (missiles.isMissleGo == true)    
         {
             isCooldown = true;
         }
@@ -31,7 +31,7 @@ public class SkillCoolDownMissle : MonoBehaviour
             {
                 imageCooldown.fillAmount = 0;
                 isCooldown = false;
-                useScript.isMissleGo = false;
+                missiles.isMissleGo = false;
             }
         }
 

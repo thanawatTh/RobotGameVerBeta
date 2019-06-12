@@ -36,14 +36,7 @@ public class Shooting : MonoBehaviour
     void Update()
     {
 
-        if (shootingCall == true)
-        {
-            ShootingStart();
-        }
-        else
-        {
-            shootingCall = false;
-        }
+       
 
     }
 
@@ -150,12 +143,15 @@ public class Shooting : MonoBehaviour
     public void ShootingDown()
     {
         shootingCall = true;
-    }
 
-    public void ShootingUp()
-    {
+        if (shootingCall == true)
+        {
+            ShootingStart();
+        }
         shootingCall = false;
     }
+
+   
 }
 
 

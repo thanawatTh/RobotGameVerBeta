@@ -10,17 +10,17 @@ public class SkillCoolDownDash : MonoBehaviour
     public Image imageCooldown;
     private float cooldown = 1;
     public bool isCooldown;
-    public AbilityDash useScript;
+    public AbilityDash abilityDash;
 
     void Start()
     {
-        useScript = GetComponent<AbilityDash>();
+        abilityDash = GetComponent<AbilityDash>();
 
     }
     // Update is called once per frame
     void Update()
     {
-        if (useScript.isDashGo == true)
+        if (abilityDash.isDashGo == true)
         {
             isCooldown = true;
         }
@@ -33,7 +33,7 @@ public class SkillCoolDownDash : MonoBehaviour
             {
                 imageCooldown.fillAmount = 0;
                 isCooldown = false;
-                useScript.isDashGo = false;
+                abilityDash.isDashGo = false;
             }
         }
 

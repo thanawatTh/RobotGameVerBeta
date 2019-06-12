@@ -53,11 +53,11 @@ public class PlayerControl : MonoBehaviour
 
         transform.localEulerAngles = new Vector3(0f, -30 - Vector2.SignedAngle(from, to), 0f);//หามุมของแกนy
 
-         */     
+         */
 
-        /* KeyBroad
-         /////////////////////////////////////////////////////////////////////////////////////////////
-           moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+#if UNITY_EDITOR 
+
+        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
            moveVelocity = moveInput * moveSpeed;
 
            cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -70,8 +70,11 @@ public class PlayerControl : MonoBehaviour
                Debug.DrawLine(cameraRay.origin, pointToLook, Color.black);
 
                transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-           }*/
-        /////////////////////////////////////////////////////////////////////////////////////////////
+           }
+#endif
+
+
+
 
     }
 
