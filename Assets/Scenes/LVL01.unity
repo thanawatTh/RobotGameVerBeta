@@ -821,6 +821,9 @@ MonoBehaviour:
   health: 100
   startHealth: 100
   healthBarImage: {fileID: 1465700989}
+  dead: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96, type: 3}
+  gameObject: {fileID: 1724348984}
+  hpBar: {fileID: 351657301}
 --- !u!1 &379058907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1715125131798218, guid: 58f14a7ea93be45af844577c263b9d3c,

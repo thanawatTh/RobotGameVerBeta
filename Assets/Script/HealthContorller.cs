@@ -9,6 +9,12 @@ public class HealthContorller : MonoBehaviour
     public float startHealth;
     public Image healthBarImage;
 
+    public ParticleSystem dead;
+
+    public GameObject gameObject;
+
+    public GameObject hpBar;
+
     bool isDie;
 
     // Start is called before the first frame update
@@ -21,21 +27,22 @@ public class HealthContorller : MonoBehaviour
     void Update()
     {
         //Camera.main.WorldToScreenPoint    
+        if (health <= 0)
+        {
+
+            Instantiate(dead, transform.position, Quaternion.identity);
+
+            Destroy(gameObject);
+            Destroy(hpBar);
+
+
+        }
     }
 
     public void TakeDamge(int damage)
     {
         health = health - damage;
         healthBarImage.fillAmount = health / startHealth;
-    }
-
-    public void Die()
-    {
-        if (health <= 0)
-        {
-            isDie = true;
-            
-        }
-    }
+    }  
     
 }

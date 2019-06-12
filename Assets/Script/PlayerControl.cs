@@ -57,7 +57,7 @@ public class PlayerControl : MonoBehaviour
 
 
 
-        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+           moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
            moveVelocity = moveInput * moveSpeed;
 
            cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
