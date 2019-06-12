@@ -10,7 +10,7 @@ public class HealthPlayer : MonoBehaviour
 
     private void Start()
     {
-        healthBar = PlayerManager.instance.healthBar;
+        healthBar = GameManager.instance.healthBar;
     }
     private void OnTriggerEnter(Collider other)
     {

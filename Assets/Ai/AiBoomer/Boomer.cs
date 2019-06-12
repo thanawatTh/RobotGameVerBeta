@@ -27,9 +27,9 @@ public class Boomer : MonoBehaviour
 
     void Start()
     {
-        target = PlayerManager.instance.main.transform;
+        target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
-        health = PlayerManager.instance.healthBar;
+        health = GameManager.instance.healthBar;
     }
     
     void Update()
