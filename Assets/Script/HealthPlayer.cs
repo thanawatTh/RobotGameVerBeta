@@ -4,23 +4,33 @@ using UnityEngine;
 
 public class HealthPlayer : MonoBehaviour
 {
-    private HealthContorller healthBar;
+    private HealthContorller healthContorller;
     // Start is called before the first frame update
 
 
     private void Start()
     {
-        healthBar = GameManager.instance.healthBar;
+        healthContorller = GameManager.instance.healthBar;
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enamy") 
         {
-                     
-                healthBar.TakeDamge(10);
+
+                healthContorller.TakeDamge(10);
                 Debug.Log("damage");
                 Destroy(GameObject.Find("EvilCube"));
-            
+                Debug.Log(healthContorller);
+        }
+    }
+
+
+    public void Die()
+    {
+        if (healthContorller.health <= 0)
+        {
+             healthContorller.isDie = true;
+            GameObject.FindObjectOfType<GameManager>().EndGame();
         }
     }
 }

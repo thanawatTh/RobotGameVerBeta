@@ -15,7 +15,7 @@ public class HealthContorller : MonoBehaviour
 
     public GameObject hpBar;
 
-    bool isDie;
+    public bool isDie;
 
     // Start is called before the first frame update
     void Start()
@@ -44,4 +44,6 @@ public class HealthContorller : MonoBehaviour
         healthBarImage.fillAmount = health / startHealth;
     }  
     
+
+   
 }
