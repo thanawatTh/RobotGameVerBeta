@@ -11,7 +11,7 @@ public class Destroy : MonoBehaviour
     {
 
         Destroy(gameObject, 3f);
-        health = PlayerManager.instance.healthBar;
+        health = GameManager.instance.healthBar;
         
     }
 

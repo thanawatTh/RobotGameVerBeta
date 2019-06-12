@@ -28,5 +28,14 @@ public class HealthContorller : MonoBehaviour
         health = health - damage;
         healthBarImage.fillAmount = health / startHealth;
     }
+
+    public void Die()
+    {
+        if (health <= 0)
+        {
+            isDie = true;
+            
+        }
+    }
     
 }

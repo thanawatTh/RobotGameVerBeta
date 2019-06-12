@@ -15,7 +15,7 @@ public class TouchControl : MonoBehaviour,IDragHandler, IPointerDownHandler, IPo
     void Start()
     {
         parent = this.transform.parent.GetComponent<RectTransform>();
-        radius = parent.sizeDelta.x / 2;
+        radius = parent.sizeDelta.x / 4;
         joyInput = Vector2.zero;
     }
 

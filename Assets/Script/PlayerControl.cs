@@ -55,7 +55,7 @@ public class PlayerControl : MonoBehaviour
 
          */
 
-#if UNITY_EDITOR 
+#if UnityEditor
 
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
            moveVelocity = moveInput * moveSpeed;
@@ -73,7 +73,7 @@ public class PlayerControl : MonoBehaviour
            }
 #endif
 
-
+    
 
 
     }

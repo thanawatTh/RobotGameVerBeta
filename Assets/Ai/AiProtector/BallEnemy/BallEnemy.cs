@@ -25,7 +25,7 @@ public class BallEnemy : MonoBehaviour
     void Start()
     {
 
-        target = PlayerManager.instance.main.transform;
+        target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
 
     }

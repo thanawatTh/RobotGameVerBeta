@@ -26,7 +26,7 @@ public class EvilEyeController : MonoBehaviour
 
     void Start()
     {
-        target = PlayerManager.instance.main.transform;
+        target = GameManager.instance.main.transform;
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         Col = GetComponent<SphereCollider>();
