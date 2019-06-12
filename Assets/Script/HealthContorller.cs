@@ -31,7 +31,6 @@ public class HealthContorller : MonoBehaviour
         {
 
             Instantiate(dead, transform.position, Quaternion.identity);
-
             Destroy(gameObject);
             Destroy(hpBar);
 
