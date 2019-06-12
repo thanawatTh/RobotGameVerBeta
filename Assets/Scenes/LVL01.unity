@@ -822,7 +822,7 @@ MonoBehaviour:
   startHealth: 100
   healthBarImage: {fileID: 1465700989}
   dead: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96, type: 3}
-  mySelf: {fileID: 0}
+  mySelf: {fileID: 1724348984}
   hpBar: {fileID: 351657301}
   isDie: 0
 --- !u!1 &379058907 stripped
@@ -1709,6 +1709,11 @@ PrefabInstance:
       propertyPath: imageCooldown
       value: 
       objectReference: {fileID: 332554198}
+    - target: {fileID: 395963363089784506, guid: c3aed75f195c0934c884a9e38be47f3f,
+        type: 3}
+      propertyPath: missiles
+      value: 
+      objectReference: {fileID: 1724348988}
     - target: {fileID: 4717078052311650097, guid: c3aed75f195c0934c884a9e38be47f3f,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1829,6 +1834,11 @@ PrefabInstance:
       propertyPath: imageCooldown
       value: 
       objectReference: {fileID: 2039318527}
+    - target: {fileID: 1081482247978554687, guid: c3aed75f195c0934c884a9e38be47f3f,
+        type: 3}
+      propertyPath: abilityDash
+      value: 
+      objectReference: {fileID: 1724348986}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3aed75f195c0934c884a9e38be47f3f, type: 3}
 --- !u!1 &652036698
