@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 2719687515184152442, guid: 05bb455c6a37807408d8d9835a6a86a7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2719687515184152442, guid: 05bb455c6a37807408d8d9835a6a86a7,
         type: 3}
@@ -5187,6 +5187,8 @@ MonoBehaviour:
   protecter: {fileID: 3318069663581244709}
   healthTank: 3
   tank: {fileID: 227665279}
+  healthManS: 3
+  manS: {fileID: 6433701417878265516, guid: 7525cf53b96bc6044a945cc5284c0174, type: 3}
   deathEffect: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96,
     type: 3}
 --- !u!114 &748470595061463802 stripped
@@ -5412,7 +5414,7 @@ PrefabInstance:
     - target: {fileID: 3007125627180451229, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3007125627180451229, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
         type: 3}
@@ -5755,7 +5757,7 @@ PrefabInstance:
     - target: {fileID: 8648942943219107745, guid: 0c431352de63bdf4f8edadc71e20916d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8648942943219107745, guid: 0c431352de63bdf4f8edadc71e20916d,
         type: 3}
@@ -5859,7 +5861,7 @@ PrefabInstance:
     - target: {fileID: 7105245465069843810, guid: 072162143ead02d4492ff931288f3f45,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7105245465069843810, guid: 072162143ead02d4492ff931288f3f45,
         type: 3}

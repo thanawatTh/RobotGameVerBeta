@@ -8,21 +8,21 @@ public class HealthPlayer : MonoBehaviour
     // Start is called before the first frame update
 
 
-    private void Start()
-    {
-        healthContorller = GameManager.instance.healthBar;
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Enamy") 
-        {
+    //private void Start()
+    //{
+    //    healthContorller = GameManager.instance.healthBar;
+    //}
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Enamy") 
+    //    {
 
-                healthContorller.TakeDamge(10);
-                Debug.Log("damage");
-                Destroy(GameObject.Find("EvilCube"));
-                Debug.Log(healthContorller);
-        }
-    }
+    //            healthContorller.TakeDamge(10);
+    //            Debug.Log("damage");
+    //            Destroy(GameObject.Find("EvilCube"));
+    //            Debug.Log(healthContorller);
+    //    }
+    //}
 
 
     

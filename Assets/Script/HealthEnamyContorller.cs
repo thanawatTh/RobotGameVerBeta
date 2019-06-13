@@ -17,6 +17,10 @@ public class HealthEnamyContorller : MonoBehaviour
     public float healthTank = 3;
     public GameObject tank;
 
+    //manS
+    public float healthManS = 1;
+    public GameObject manS;
+
     //public float startHealth;
 
     [Header("Unity Setup")]
@@ -38,28 +42,32 @@ public class HealthEnamyContorller : MonoBehaviour
 
     public void TakeDamageBoomber(int damage)
     {
-        
-        healthBoomber = healthBoomber - damage;
+
+        healthBoomber -= damage;
         
     }
 
 
     public void TakeDamageProtecter(int damage)
     {
-        
-        healthProtecter = healthProtecter - damage;
+
+        healthProtecter -= damage;
         
     }
 
     public void TakeDamageTank(int damage)
     {
 
-        
-        healthTank = healthTank - damage;
-
+        healthTank -=damage;
 
     }
 
-   
+
+    public void TakeDamageManS(int damage)
+    {
+        healthManS -= damage;
+
+    }
+
 
 }

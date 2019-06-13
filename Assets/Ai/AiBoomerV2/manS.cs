@@ -5,8 +5,8 @@ using UnityEngine;
 public class manS : MonoBehaviour
 {
 
-    [Header("Unity Setup")]
-    public ParticleSystem deathEffect;
+    //[Header("Unity Setup")]
+    //public ParticleSystem deathEffect;
 
     public float lookRaius = 5f;
     public float lookIn = 2f;
@@ -27,18 +27,25 @@ public class manS : MonoBehaviour
 
     public float fireRate = 2f;
 
+
+    private HealthEnamyContorller healthEnamyContorller;
+
     void Start()
     {
         target = GameManager.instance.main.transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         health = GameManager.instance.healthBar;
-    }
+        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
+
+}
 
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         float distance = Vector3.Distance(target.position, transform.position);
         Debug.Log(distance);
+
+
         if (distance <= lookRaius)
         {
             
@@ -57,11 +64,11 @@ public class manS : MonoBehaviour
     public void Damage(int damageAmount)
     {
 
-        currentHealth -= damageAmount;
+        healthEnamyContorller.healthManS -= damageAmount;
 
-        if (currentHealth <= 0)
+        if (healthEnamyContorller.healthManS <= 0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
 
@@ -73,7 +80,7 @@ public class manS : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
