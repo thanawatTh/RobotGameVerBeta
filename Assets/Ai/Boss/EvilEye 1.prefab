@@ -468,7 +468,6 @@ GameObject:
   - component: {fileID: 6473264489339068171}
   - component: {fileID: 346106617486951537}
   - component: {fileID: 8862061218918828310}
-  - component: {fileID: 8862061218918828312}
   - component: {fileID: 8862061218918828313}
   m_Layer: 0
   m_Name: EvilEye 1
@@ -572,29 +571,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8862061218918828312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7138149589029410530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7be58a2da96396438d8094a34ac97e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  jumgSpeed: 10
-  distToGround: 0.5
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 1
-  lookRaius: 15
-  lookIn: 2
-  agent: {fileID: 8862061218918828313}
-  target: {fileID: 0}
-  Col: {fileID: 0}
 --- !u!195 &8862061218918828313
 NavMeshAgent:
   m_ObjectHideFlags: 0
