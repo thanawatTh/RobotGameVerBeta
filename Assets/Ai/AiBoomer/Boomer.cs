@@ -58,7 +58,7 @@ public class Boomer : MonoBehaviour
     {
 
         //currentHealth -= damageAmount;
-        healthEnamyContorller.healthBoomber -= damageAmount;
+        healthEnamyContorller.healthBoomber -= damageAmount;        
 
         //if (/*currentHealth*/ healthEnamyContorller.healthBoomber <= 0)
         //{

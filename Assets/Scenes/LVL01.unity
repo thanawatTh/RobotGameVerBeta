@@ -5178,7 +5178,8 @@ MonoBehaviour:
   healthBoomber: 1
   healthProtecter: 3
   healthTank: 3
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96,
+    type: 3}
 --- !u!114 &748470595061463802 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4846607029101924589, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
@@ -5364,6 +5365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1398425802}
     m_Modifications:
+    - target: {fileID: 3007125627180882365, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
+        type: 3}
+      propertyPath: m_Name
+      value: ball
+      objectReference: {fileID: 0}
     - target: {fileID: 3007125627180451229, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5418,11 +5424,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3007125627180882365, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
-        type: 3}
-      propertyPath: m_Name
-      value: ball
       objectReference: {fileID: 0}
     - target: {fileID: 3007125626082137338, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
         type: 3}

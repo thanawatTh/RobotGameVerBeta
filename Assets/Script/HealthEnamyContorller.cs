@@ -6,12 +6,16 @@ public class HealthEnamyContorller : MonoBehaviour
 {
     //boomber
     public float healthBoomber = 1;
+    public GameObject boomber;
+
 
     //protecter
     public float healthProtecter = 3;
+    public GameObject protecter;
 
     //tank
     public float healthTank = 3;
+    public GameObject tank;
 
     //public float startHealth;
 
@@ -30,25 +34,26 @@ public class HealthEnamyContorller : MonoBehaviour
 
         if (healthBoomber <= 0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
 
-            gameObject.SetActive(false);
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(boomber);
 
         }
 
         if (healthTank <= 0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
 
-            gameObject.SetActive(false);
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(tank);
 
         }
 
         if (healthProtecter <= 0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
 
-            gameObject.SetActive(false);
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(protecter);
+
         }
 
     }
@@ -56,7 +61,7 @@ public class HealthEnamyContorller : MonoBehaviour
 
     public void TakeDamageBoomber(int damage)
     {
-
+        
         healthBoomber = healthBoomber - damage;
         
     }
@@ -64,6 +69,7 @@ public class HealthEnamyContorller : MonoBehaviour
 
     public void TakeDamageProtecter(int damage)
     {
+        
         healthProtecter = healthProtecter - damage;
         
     }
@@ -71,7 +77,7 @@ public class HealthEnamyContorller : MonoBehaviour
     public void TakeDamageTank(int damage)
     {
 
-
+        
         healthTank = healthTank - damage;
 
 
