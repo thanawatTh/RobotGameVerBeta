@@ -1,61 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class EvilEyeController : MonoBehaviour
+public class manS : MonoBehaviour
 {
 
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;
 
-    public int currentHealth = 1;
-    Rigidbody rb;
     public float lookRaius = 5f;
     public float lookIn = 2f;
+    public float speed = 5f;
+
+    public UnityEngine.AI.NavMeshAgent agent;
+
+    public GameObject booMer;
+    public ParticleSystem booM;
 
     public Transform target;
 
     private HealthContorller health;
 
-    public GameObject Ball;
-    public ParticleSystem ballHit;
-
-    public NavMeshAgent agent;
-
-    public Transform spawnPoints;
-    public GameObject cude;
+    public int currentHealth = 1;
 
     private float nextFire;
 
     public float fireRate = 2f;
 
-    private void Start()
-    {       
-        rb = GetComponent<Rigidbody>();
+    void Start()
+    {
         target = GameManager.instance.main.transform;
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         health = GameManager.instance.healthBar;
     }
 
     void Update()
     {
-
-
+        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         float distance = Vector3.Distance(target.position, transform.position);
         Debug.Log(distance);
-
-        if (distance <= lookRaius && Time.time > nextFire)
+        if (distance <= lookRaius)
         {
-            nextFire = Time.time + fireRate;
-            Instantiate(cude, spawnPoints.position, spawnPoints.rotation);
+            
+            agent.SetDestination(target.position);
         }
 
         if (distance <= lookIn)
         {
-            /*Instantiate(ballHit, transform.position, Quaternion.identity);
-            health.TakeDamge(20);
-            Destroy(Ball);*/
+            Instantiate(booM, transform.position, Quaternion.identity);
+            health.TakeDamge(5);
+            Destroy(booMer);
         }
 
     }
@@ -94,5 +88,5 @@ public class EvilEyeController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lookIn);
 
     }
-    
+
 }
