@@ -32,29 +32,6 @@ public class HealthEnamyContorller : MonoBehaviour
     void Update()
     {
 
-        if (healthBoomber <= 0)
-        {
-
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(boomber);
-
-        }
-
-        if (healthTank <= 0)
-        {
-
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(tank);
-
-        }
-
-        if (healthProtecter <= 0)
-        {
-
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(protecter);
-
-        }
 
     }
 
@@ -83,5 +60,6 @@ public class HealthEnamyContorller : MonoBehaviour
 
     }
 
+   
 
 }

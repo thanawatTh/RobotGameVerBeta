@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class BallEnemy : MonoBehaviour
 {
-    [Header("Unity Setup")]
-    public ParticleSystem deathEffect;
+    //[Header("Unity Setup")]
+    //public ParticleSystem deathEffect;
 
     public float lookRaius = 5f;
 
@@ -38,15 +38,13 @@ public class BallEnemy : MonoBehaviour
 
         healthEnamyContorller.healthTank -= damageAmount;
 
-        //currentHealth -= damageAmount;
+        if (healthEnamyContorller.healthTank <= 0)
+        {
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-        //if (currentHealth <= 0)
-        //{
-        //    Instantiate(deathEffect, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
 
-        //    gameObject.SetActive(false);
-
-        //}
+        }
 
 
 
@@ -56,7 +54,7 @@ public class BallEnemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

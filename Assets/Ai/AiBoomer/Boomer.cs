@@ -7,8 +7,8 @@ using UnityEngine.AI;
 public class Boomer : MonoBehaviour
 {
 
-    [Header("Unity Setup")]
-    public ParticleSystem deathEffect;
+    //[Header("Unity Setup")]
+    //public ParticleSystem deathEffect;
 
     public float lookRaius = 5f;
     public float lookIn = 2f;
@@ -58,15 +58,15 @@ public class Boomer : MonoBehaviour
     {
 
         //currentHealth -= damageAmount;
-        healthEnamyContorller.healthBoomber -= damageAmount;        
+        healthEnamyContorller.healthBoomber -= damageAmount;
 
-        //if (/*currentHealth*/ healthEnamyContorller.healthBoomber <= 0)
-        //{
-        //    Instantiate(deathEffect, transform.position, Quaternion.identity);
+        if ( healthEnamyContorller.healthBoomber <= 0)
+        {
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-        //    gameObject.SetActive(false);
+            gameObject.SetActive(false);
 
-        //}
+        }
 
     }
 
@@ -74,7 +74,7 @@ public class Boomer : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

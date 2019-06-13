@@ -474,6 +474,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.0000014, y: 0.50000036, z: 2.6999996}
   m_Center: {x: 0.0000009536743, y: -0.0000039041042, z: 1.3499999}
+--- !u!1 &227665279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7105245465069843836, guid: 072162143ead02d4492ff931288f3f45,
+    type: 3}
+  m_PrefabInstance: {fileID: 7105245464300041041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &232592232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5176,8 +5182,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBoomber: 1
+  boomber: {fileID: 1580624836}
   healthProtecter: 3
+  protecter: {fileID: 3318069663581244709}
   healthTank: 3
+  tank: {fileID: 227665279}
   deathEffect: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96,
     type: 3}
 --- !u!114 &748470595061463802 stripped
@@ -5365,11 +5374,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1398425802}
     m_Modifications:
-    - target: {fileID: 3007125627180882365, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
-        type: 3}
-      propertyPath: m_Name
-      value: ball
-      objectReference: {fileID: 0}
     - target: {fileID: 3007125627180451229, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5425,6 +5429,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007125627180882365, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
+        type: 3}
+      propertyPath: m_Name
+      value: ball
+      objectReference: {fileID: 0}
     - target: {fileID: 3007125626082137338, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
         type: 3}
       propertyPath: target
@@ -5450,8 +5459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf90e957148d57942954511f10aadd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96,
-    type: 3}
   lookRaius: 10
   speed: 0
   missilPrefab: {fileID: 7707115001276440689, guid: 3d866d1c72adf4b46bf1e7cf5e7d06e8,

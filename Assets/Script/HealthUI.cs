@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
-    public Image healthUi;
-    
+    private Image healthUi;
 
+
+    private void Start()
+    {
+        healthUi = GameObject.Find("HealthBG").GetComponent<Image>();
+    }
     // Update is called once per frame
     void Update()
     {
