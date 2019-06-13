@@ -20,27 +20,32 @@ public class Enemy : MonoBehaviour
 
     private float nextFire;
 
-    public int currentHealth = 3;
+
+    private HealthEnamyContorller healthEnamyContorller;
+
+    //public int currentHealth = 3;
 
     void Start()
     {
 
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
+        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
 
     }
 
     public void Damage(int damageAmount)
     {
+        healthEnamyContorller.healthProtecter -= damageAmount;
 
-        currentHealth -= damageAmount;
+        //currentHealth -= damageAmount;
 
-        if (currentHealth <= 0)
-        {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        //if (currentHealth <= 0)
+        //{
+        //    Instantiate(deathEffect, transform.position, Quaternion.identity);
 
-            gameObject.SetActive(false);
-        }
+        //    gameObject.SetActive(false);
+        //}
 
     }
 

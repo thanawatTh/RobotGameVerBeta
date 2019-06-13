@@ -879,7 +879,7 @@ MonoBehaviour:
   startHealth: 100
   healthBarImage: {fileID: 1465700989}
   dead: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96, type: 3}
-  mySelf: {fileID: 4717078052759881817}
+  player: {fileID: 0}
   hpBar: {fileID: 351657301}
   isDie: 0
 --- !u!1 &379058907 stripped
@@ -5157,6 +5157,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &2129659556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1439811243527794361, guid: a93808f5a8c28ad4e9066d4d4ab3865b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1439811243752849008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2129659557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129659556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33a761b78a580d46a12af496fd2eb8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBoomber: 1
+  healthProtecter: 3
+  healthTank: 3
+  deathEffect: {fileID: 0}
 --- !u!114 &748470595061463802 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4846607029101924589, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
@@ -5342,11 +5364,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1398425802}
     m_Modifications:
-    - target: {fileID: 3007125627180882365, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
-        type: 3}
-      propertyPath: m_Name
-      value: ball
-      objectReference: {fileID: 0}
     - target: {fileID: 3007125627180451229, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5402,6 +5419,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007125627180882365, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
+        type: 3}
+      propertyPath: m_Name
+      value: ball
+      objectReference: {fileID: 0}
     - target: {fileID: 3007125626082137338, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
         type: 3}
       propertyPath: target
@@ -5435,7 +5457,6 @@ MonoBehaviour:
     type: 3}
   barrelEnd: {fileID: 1428067931}
   fireRate: 1
-  currentHealth: 2
 --- !u!54 &3318069663581244711
 Rigidbody:
   m_ObjectHideFlags: 0

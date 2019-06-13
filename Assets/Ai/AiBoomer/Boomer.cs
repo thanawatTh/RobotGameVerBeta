@@ -23,13 +23,16 @@ public class Boomer : MonoBehaviour
 
     private HealthContorller health;
 
-    public int currentHealth = 1;
+    //public int currentHealth = 1;
+
+    private HealthEnamyContorller healthEnamyContorller;
 
     void Start()
     {
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
+        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
     }
     
     void Update()
@@ -54,15 +57,16 @@ public class Boomer : MonoBehaviour
     public void Damage(int damageAmount)
     {
 
-        currentHealth -= damageAmount;
+        //currentHealth -= damageAmount;
+        healthEnamyContorller.healthBoomber -= damageAmount;
 
-        if (currentHealth <= 0)
-        {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        //if (/*currentHealth*/ healthEnamyContorller.healthBoomber <= 0)
+        //{
+        //    Instantiate(deathEffect, transform.position, Quaternion.identity);
 
-            gameObject.SetActive(false);
+        //    gameObject.SetActive(false);
 
-        }
+        //}
 
     }
 

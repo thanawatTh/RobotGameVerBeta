@@ -20,29 +20,35 @@ public class BallEnemy : MonoBehaviour
 
     private float nextFire;
 
-    public int currentHealth = 3;
-   
+    //public int currentHealth = 3;
+
+    private HealthEnamyContorller healthEnamyContorller;
+
     void Start()
     {
 
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
-
+        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
     }
 
 
     public void Damage(int damageAmount)
     {
 
-        currentHealth -= damageAmount;
+        healthEnamyContorller.healthTank -= damageAmount;
 
-        if (currentHealth <= 0)
-        {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        //currentHealth -= damageAmount;
 
-            gameObject.SetActive(false);
+        //if (currentHealth <= 0)
+        //{
+        //    Instantiate(deathEffect, transform.position, Quaternion.identity);
 
-        }
+        //    gameObject.SetActive(false);
+
+        //}
+
+
 
     }
 
