@@ -10,6 +10,7 @@ public class ShieldAbility : MonoBehaviour
 
     [HideInInspector]
     public bool showShield;
+    public bool isShieldGo;
 
     // Start is called before the first frame update
     void Start()
