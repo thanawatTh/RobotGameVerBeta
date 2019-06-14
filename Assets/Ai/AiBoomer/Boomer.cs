@@ -22,6 +22,9 @@ public class Boomer : MonoBehaviour
     public Transform target;
 
     private HealthContorller health;
+    public ShieldBlock ShieldBlock;
+    public bool boomberDie;
+   
 
     //public int currentHealth = 1;
 
@@ -33,25 +36,51 @@ public class Boomer : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
         healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
+        ShieldBlock = GameObject.Find("ShieldObj").GetComponent<ShieldBlock>();
+        boomberDie = false;
+
+
     }
     
     void Update()
     {
-        
+
         float distance = Vector3.Distance(target.position, transform.position);
         Debug.Log(distance);
-        if( distance <= lookRaius)
+        if (distance <= lookRaius)
         {
             agent.SetDestination(target.position);
         }
 
-        if (distance <= lookIn)
-        {           
+
+        if (ShieldBlock.notDamage == true)
+        {
             Instantiate(booM, transform.position, Quaternion.identity);
-            health.TakeDamge(90);
-            Destroy(booMer);       
+            health.TakeDamge(0);
+            Destroy(booMer);
+            boomberDie = true;
+
+
+
+
         }
 
+        if (!boomberDie)
+        {
+            if (distance <= lookIn && boomberDie == false)
+            {
+                Instantiate(booM, transform.position, Quaternion.identity);
+                health.TakeDamge(90);
+                Destroy(booMer);
+
+
+            }
+
+        }
+
+        
+
+       
     }
 
     public void Damage(int damageAmount)

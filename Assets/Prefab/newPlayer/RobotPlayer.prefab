@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 5507991703756361794}
   - component: {fileID: 6950874912667094835}
   - component: {fileID: 4557216420858321435}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ShieldObj
   m_TagString: ShieldTag
   m_Icon: {fileID: 0}
@@ -1036,7 +1036,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4893699650448163463}
-  - component: {fileID: 6840134577381315877}
   m_Layer: 0
   m_Name: RobotPlayer
   m_TagString: main
@@ -1059,19 +1058,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6840134577381315877
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4893699650448163462}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.96, y: 1.73, z: 2.1}
-  m_Center: {x: -1.6, y: 7.35, z: -15.63}
 --- !u!1 &6840134578104940526
 GameObject:
   m_ObjectHideFlags: 0
