@@ -19,10 +19,10 @@ public class SkillCoolDown : MonoBehaviour
     public Missiles missiles;
 
     //shield
-    //public Image imageCooldownShield;
-    //public float cooldownShield = 5;
-    //public bool isCooldownShield;
-    //public ShieldAbility shieldAbility;
+    public Image imageCooldownShield;
+    public float cooldownShield = 5;
+    public bool isCooldownShield;
+    public ShieldAbility shieldAbility;
 
 
     // Start is called before the first frame update
@@ -30,10 +30,11 @@ public class SkillCoolDown : MonoBehaviour
     {
         abilityDash = GameObject.Find("Body").GetComponent<AbilityDash>();
         missiles = GameObject.Find("Body").GetComponent<Missiles>();
-        //shieldAbility = GameObject.Find("").GetComponent<ShieldAbility>();
+        shieldAbility = GameObject.Find("Body").GetComponent<ShieldAbility>();
 
         imageCooldownDash = GameObject.Find("Speed").GetComponent<Image>();
         imageCooldownMissle = GameObject.Find("CooldownMissle").GetComponent<Image>();
+        //imageCooldownShield = GameObject.Find("CooldownMissle").GetComponent<Image>();
 
     }
 
@@ -76,6 +77,26 @@ public class SkillCoolDown : MonoBehaviour
                 missiles.isMissleGo = false;
             }
         }
+
+
+        //shield
+        if (shieldAbility.isShieldGo == true)
+        {
+            isCooldownShield = true;
+        }
+
+        if (isCooldownMissle == true)
+        {
+            imageCooldownShield.fillAmount += 1 / cooldownShield * Time.deltaTime;
+
+            if (imageCooldownShield.fillAmount >= 1)
+            {
+                imageCooldownShield.fillAmount = 0;
+                isCooldownShield = false;
+                shieldAbility.isShieldGo = false;
+            }
+        }
+
 
 
 

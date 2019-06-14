@@ -1492,6 +1492,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429c678f270324d50a5b1323e5d724e3, type: 3}
+--- !u!1 &996561407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 802499405358998932, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
+    type: 3}
+  m_PrefabInstance: {fileID: 5269635290346990103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1027771131 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1239652411904812, guid: fc377209f1408400d9a446fdfc31a123,
@@ -4393,6 +4399,16 @@ PrefabInstance:
       propertyPath: healthUi
       value: 
       objectReference: {fileID: 351657303}
+    - target: {fileID: 2965012139921550255, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
+        type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 996561407}
+    - target: {fileID: 2965012139921550255, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 4717078052759881816}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8e6f58ff91a8c74f9a7a26548ba8640, type: 3}
 --- !u!114 &6661543687296366286 stripped
