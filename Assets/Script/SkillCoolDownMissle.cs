@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SkillCoolDownMissle : MonoBehaviour
 {
-   public Image imageCooldown;
+    public Image imageCooldown;
     public float cooldown = 5;
     public bool isCooldown;
     public Missiles missiles;
