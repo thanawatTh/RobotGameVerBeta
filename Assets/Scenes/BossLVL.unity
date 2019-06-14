@@ -271,6 +271,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2578296972432467538, guid: 58947774ee5ef8b4586954d4d5395c8c,
+        type: 3}
+      propertyPath: m_Name
+      value: CooldownMissle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58947774ee5ef8b4586954d4d5395c8c, type: 3}
 --- !u!1 &307899494 stripped
@@ -630,6 +635,11 @@ PrefabInstance:
     - target: {fileID: 601208693330348651, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965012139921550255, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
