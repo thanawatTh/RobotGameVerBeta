@@ -243,7 +243,7 @@ MonoBehaviour:
   missiles: {fileID: 6667913147441163725}
   imageCooldownShield: {fileID: 0}
   isCooldownShield: 0
-  shieldAbility: {fileID: 0}
+  shieldAbility: {fileID: 2965012139921550255}
 --- !u!20 &5162589739854490769
 Camera:
   m_ObjectHideFlags: 0
@@ -688,6 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a161b494d39834e80742039bed7516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthUi: {fileID: 0}
 --- !u!1 &7640508905113275250
 GameObject:
   m_ObjectHideFlags: 0
