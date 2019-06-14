@@ -239,9 +239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCooldownDash: 0
   abilityDash: {fileID: 4846607029101924589}
-  cooldownMissle: 5
   isCooldownMissle: 0
   missiles: {fileID: 6667913147441163725}
+  imageCooldownShield: {fileID: 0}
+  isCooldownShield: 0
+  shieldAbility: {fileID: 0}
 --- !u!20 &5162589739854490769
 Camera:
   m_ObjectHideFlags: 0
@@ -296,9 +298,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c92a4137e5c5e364fa3824f666174719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shield: {fileID: 0}
-  player: {fileID: 0}
+  shield: {fileID: 802499405358998932}
+  player: {fileID: 601208694381077071}
   showShield: 0
+  isShieldGo: 0
 --- !u!1 &601208694893752571
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,8 +383,9 @@ GameObject:
   - component: {fileID: 7832604453642225223}
   - component: {fileID: 562480177944058030}
   - component: {fileID: 3154897019127842783}
+  - component: {fileID: 8394843609453155063}
   m_Layer: 0
-  m_Name: Shield
+  m_Name: ShieldObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,6 +463,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8394843609453155063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802499405358998932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2488e537ca181aa41bc903af61e8f684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+  notDamage: 0
 --- !u!1 &1536589283898441474
 GameObject:
   m_ObjectHideFlags: 0

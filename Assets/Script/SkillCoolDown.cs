@@ -14,13 +14,13 @@ public class SkillCoolDown : MonoBehaviour
 
     //missle
     private Image imageCooldownMissle;
-    public float cooldownMissle = 5;
+    private float cooldownMissle = 5;
     public bool isCooldownMissle;
     public Missiles missiles;
 
     //shield
     public Image imageCooldownShield;
-    public float cooldownShield = 5;
+    private float cooldownShield = 20;
     public bool isCooldownShield;
     public ShieldAbility shieldAbility;
 
@@ -34,7 +34,7 @@ public class SkillCoolDown : MonoBehaviour
 
         imageCooldownDash = GameObject.Find("Speed").GetComponent<Image>();
         imageCooldownMissle = GameObject.Find("CooldownMissle").GetComponent<Image>();
-        //imageCooldownShield = GameObject.Find("CooldownMissle").GetComponent<Image>();
+        imageCooldownShield = GameObject.Find("CooldownShield").GetComponent<Image>();
 
     }
 
@@ -85,7 +85,7 @@ public class SkillCoolDown : MonoBehaviour
             isCooldownShield = true;
         }
 
-        if (isCooldownMissle == true)
+        if (isCooldownShield == true)
         {
             imageCooldownShield.fillAmount += 1 / cooldownShield * Time.deltaTime;
 
@@ -94,6 +94,7 @@ public class SkillCoolDown : MonoBehaviour
                 imageCooldownShield.fillAmount = 0;
                 isCooldownShield = false;
                 shieldAbility.isShieldGo = false;
+                shieldAbility.shield.SetActive(false);
             }
         }
 
