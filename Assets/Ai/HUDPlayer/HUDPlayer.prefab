@@ -1613,6 +1613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBG
       objectReference: {fileID: 0}
+    - target: {fileID: 6071977496391973630, guid: 6a66ea1ecf1685a49a0e5ef4277f9af4,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6071977496391973617, guid: 6a66ea1ecf1685a49a0e5ef4277f9af4,
         type: 3}
       propertyPath: m_LocalPosition.x
