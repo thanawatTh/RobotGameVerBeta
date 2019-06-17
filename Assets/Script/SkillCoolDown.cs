@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class SkillCoolDown : MonoBehaviour
 {
     //dash
-    private Image imageCooldownDash;
+    public Image imageCooldownDash;
     private float cooldownDash = 1;
     public bool isCooldownDash;
     public AbilityDash abilityDash;
 
 
     //missle
-    private Image imageCooldownMissle;
+    public Image imageCooldownMissle;
     private float cooldownMissle = 5;
     public bool isCooldownMissle;
     public Missiles missiles;
