@@ -21,7 +21,7 @@ public class Boomer : MonoBehaviour
 
     public Transform target;
 
-    private HealthContorller health;
+    public HealthContorller health;
     public ShieldBlock ShieldBlock;
     public bool boomberDie;
    
@@ -41,7 +41,7 @@ public class Boomer : MonoBehaviour
 
 
     }
-    
+
     void Update()
     {
 
@@ -53,35 +53,26 @@ public class Boomer : MonoBehaviour
         }
 
 
-        if (ShieldBlock.notDamage == true)
+
+        if (distance <= lookIn ) 
         {
-            Instantiate(booM, transform.position, Quaternion.identity);
-            health.TakeDamge(0);
-            Destroy(booMer);
-            boomberDie = true;
-
-
-
-
-        }
-
-        if (!boomberDie)
-        {
-            if (distance <= lookIn && boomberDie == false)
+            if(boomberDie == false)
             {
                 Instantiate(booM, transform.position, Quaternion.identity);
                 health.TakeDamge(90);
                 Destroy(booMer);
-
-
             }
+            
+            
+                
+                
+            
 
-        }
-
-        
-
+        } 
        
     }
+       
+    
 
     public void Damage(int damageAmount)
     {
@@ -89,14 +80,14 @@ public class Boomer : MonoBehaviour
         //currentHealth -= damageAmount;
         healthEnamyContorller.healthBoomber -= damageAmount;
 
-        if ( healthEnamyContorller.healthBoomber <= 0)
+        if (healthEnamyContorller.healthBoomber <= 0) 
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
 
         }
-
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -105,6 +96,14 @@ public class Boomer : MonoBehaviour
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "ShieldTag")
+        {
+            boomberDie = true;
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+
         }
     }
 

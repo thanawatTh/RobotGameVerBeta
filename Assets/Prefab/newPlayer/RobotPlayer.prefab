@@ -607,7 +607,6 @@ GameObject:
   - component: {fileID: 2813911630323338923}
   - component: {fileID: 5507991703756361794}
   - component: {fileID: 6950874912667094835}
-  - component: {fileID: 4557216420858321435}
   m_Layer: 0
   m_Name: ShieldObj
   m_TagString: ShieldTag
@@ -682,25 +681,11 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4655887543011454328}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4557216420858321435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4655887543011454328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2488e537ca181aa41bc903af61e8f684, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 0}
-  notDamage: 0
 --- !u!1 &4893699648876394519
 GameObject:
   m_ObjectHideFlags: 0

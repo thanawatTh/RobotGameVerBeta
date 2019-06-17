@@ -29,6 +29,12 @@ public class E1ball : MonoBehaviour
 
     public NavMeshAgent agent;
 
+    bool ballDie = false;
+
+    private HealthEnamyContorller healthEnamyContorller;
+
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,6 +42,8 @@ public class E1ball : MonoBehaviour
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
+        ballDie = false;
+        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
     }
 
     void Update()
@@ -53,10 +61,16 @@ public class E1ball : MonoBehaviour
 
         if (distance <= lookIn)
         {
-            Instantiate(ballHit, transform.position, Quaternion.identity);
-            health.TakeDamge(20);
-            Destroy(Ball);
+            if (ballDie == false)
+            {
+                Instantiate(ballHit, transform.position, Quaternion.identity);
+                health.TakeDamge(20);
+                Destroy(Ball);
+            }
+           
         }
+
+        
 
     }
 
@@ -81,6 +95,14 @@ public class E1ball : MonoBehaviour
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "ShieldTag")
+        {
+            ballDie = true;
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+
         }
     }
 

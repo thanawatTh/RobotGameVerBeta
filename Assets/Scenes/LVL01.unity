@@ -588,6 +588,11 @@ PrefabInstance:
       propertyPath: ShieldBlock
       value: 
       objectReference: {fileID: 1476175559}
+    - target: {fileID: 4530393051127878788, guid: 05bb455c6a37807408d8d9835a6a86a7,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 351657305}
     - target: {fileID: 4375642674999638017, guid: 05bb455c6a37807408d8d9835a6a86a7,
         type: 3}
       propertyPath: shield
@@ -603,9 +608,15 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8426633866318054263, guid: 05bb455c6a37807408d8d9835a6a86a7,
+        type: 3}
+      propertyPath: notDamage
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4528555325092267879, guid: 05bb455c6a37807408d8d9835a6a86a7, type: 3}
     - {fileID: 6773009648389428264, guid: 05bb455c6a37807408d8d9835a6a86a7, type: 3}
+    - {fileID: 6898924431210690255, guid: 05bb455c6a37807408d8d9835a6a86a7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 05bb455c6a37807408d8d9835a6a86a7, type: 3}
 --- !u!4 &232592233 stripped
 Transform:
@@ -2093,7 +2104,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 189015497864454907}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2488e537ca181aa41bc903af61e8f684, type: 3}
   m_Name: 
@@ -3725,6 +3736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4557216420858321435, guid: 6f5062906749e7a4d99ef6fee07d366d,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 351657305}
     - target: {fileID: 4893699650448163463, guid: 6f5062906749e7a4d99ef6fee07d366d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3795,11 +3811,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4557216420858321435, guid: 6f5062906749e7a4d99ef6fee07d366d,
+    - target: {fileID: 6950874912667094835, guid: 6f5062906749e7a4d99ef6fee07d366d,
         type: 3}
-      propertyPath: health
-      value: 
-      objectReference: {fileID: 351657305}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6840134577381315877, guid: 6f5062906749e7a4d99ef6fee07d366d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6f5062906749e7a4d99ef6fee07d366d, type: 3}
