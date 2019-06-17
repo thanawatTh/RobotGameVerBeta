@@ -50,7 +50,8 @@ public class EvilEyeController : MonoBehaviour
             (target.transform.position.x, transform.transform.position.y, target.transform.position.z);
 
         if (distance <= lookRaius && Time.time > nextFire)
-        {          
+        {
+            nextFire = Time.time + fireRate;
             Rigidbody missleInstance;
             missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             missleInstance.AddForce(barrelEnd.forward * 2000);
@@ -58,7 +59,7 @@ public class EvilEyeController : MonoBehaviour
             transform.LookAt(targetPosition);
         }
 
-        if (distance <= lookIn)
+        if (distance <= lookIn && Time.time > nextFire)
         {
             /*Instantiate(ballHit, transform.position, Quaternion.identity);
             health.TakeDamge(20);
