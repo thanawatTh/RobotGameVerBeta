@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: b33b9a1e5157e384ca6b2fb02c9df019, type: 2}
 --- !u!1 &105524882
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +632,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 17.05
       objectReference: {fileID: 0}
+    - target: {fileID: 2965012139921550255, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 601208693330348651, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -692,11 +697,6 @@ PrefabInstance:
       propertyPath: healthUi
       value: 
       objectReference: {fileID: 502588128}
-    - target: {fileID: 2965012139921550255, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3368308223328369377, guid: b8e6f58ff91a8c74f9a7a26548ba8640,
         type: 3}
       propertyPath: shieldAbility
@@ -727,7 +727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &917237625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -748,7 +748,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917237624}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
