@@ -29,6 +29,8 @@ public class EvilEyeController : MonoBehaviour
     private float nextFire;
 
     public float fireRate = 2f;
+    public Rigidbody missilPrefab;
+    public Transform barrelEnd;
 
     private void Start()
     {       
@@ -44,11 +46,16 @@ public class EvilEyeController : MonoBehaviour
 
         float distance = Vector3.Distance(target.position, transform.position);
         Debug.Log(distance);
+        Vector3 targetPosition = new Vector3
+            (target.transform.position.x, transform.transform.position.y, target.transform.position.z);
 
         if (distance <= lookRaius && Time.time > nextFire)
-        {
-            nextFire = Time.time + fireRate;
-            Instantiate(cude, spawnPoints.position, spawnPoints.rotation);
+        {          
+            Rigidbody missleInstance;
+            missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
+            missleInstance.AddForce(barrelEnd.forward * 2000);
+
+            transform.LookAt(targetPosition);
         }
 
         if (distance <= lookIn)
@@ -56,6 +63,8 @@ public class EvilEyeController : MonoBehaviour
             /*Instantiate(ballHit, transform.position, Quaternion.identity);
             health.TakeDamge(20);
             Destroy(Ball);*/
+            nextFire = Time.time + fireRate;
+            Instantiate(cude, spawnPoints.position, spawnPoints.rotation);
         }
 
     }
