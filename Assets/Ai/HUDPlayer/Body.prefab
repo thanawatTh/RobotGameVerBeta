@@ -65,7 +65,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523060036035291374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.9, y: 17.03, z: -34.4}
+  m_LocalPosition: {x: 111.9, y: 17.03, z: -29.400002}
   m_LocalScale: {x: 2.0376, y: 3, z: 2.0376}
   m_Children:
   - {fileID: 1570237480338200200}
@@ -192,7 +192,7 @@ MonoBehaviour:
     type: 3}
   barrelEnd: {fileID: 8487060202184240162}
   countMissiles: 5
-  isMissleGo: 0
+  isMissleGo: 1
   missleCall: 0
 --- !u!114 &6789045037302274637
 MonoBehaviour:
@@ -209,7 +209,7 @@ MonoBehaviour:
   distace: 5
   fireRate: 1
   dashStart: 0
-  isDashGo: 0
+  isDashGo: 1
 --- !u!114 &3732271795274543169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,8 +285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shield: {fileID: 1609508976111480628}
   player: {fileID: 1523060036035291375}
-  showShield: 0
-  isShieldGo: 0
+  showShield: 1
+  isShieldGo: 1
 --- !u!1 &1523060036715903579
 GameObject:
   m_ObjectHideFlags: 0
