@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e46fbe40113266408ddd7d29633b507, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,7 +154,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2913e8c31c63e1740aa4e371ffc66f3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -199,15 +199,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c884d8abbde9abe4d9ac923a7bf03919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 2715918762866171766, guid: 442867dd6308e8040a7b29ee5a786c18,
-    type: 3}
   lookRaius: 10
   speed: 2
   missilPrefab: {fileID: 7707115001276440689, guid: 3d866d1c72adf4b46bf1e7cf5e7d06e8,
     type: 3}
   barrelEnd: {fileID: 7105245465219631338}
   fireRate: 0.1
-  currentHealth: 3
 --- !u!195 &7105245465069843839
 NavMeshAgent:
   m_ObjectHideFlags: 0
