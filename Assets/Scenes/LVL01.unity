@@ -152,6 +152,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall: {fileID: 33008546}
   enamy: 0
+  danger:
+  - {fileID: 227665279}
+  - {fileID: 1221652202}
+  - {fileID: 1580624836}
 --- !u!65 &33008548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1921,6 +1925,12 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1221652202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3007125627180882365, guid: 308f173e7375e1d4cbdfacc9eefe5a10,
+    type: 3}
+  m_PrefabInstance: {fileID: 3007125627411369462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1265002678
 GameObject:
   m_ObjectHideFlags: 0

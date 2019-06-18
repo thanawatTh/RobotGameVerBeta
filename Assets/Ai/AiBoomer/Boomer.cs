@@ -22,7 +22,7 @@ public class Boomer : MonoBehaviour
     public Transform target;
 
     public HealthContorller health;
-    public ShieldBlock ShieldBlock;
+   
     public bool boomberDie;
    
 
@@ -36,7 +36,7 @@ public class Boomer : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
         healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
-        ShieldBlock = GameObject.Find("ShieldObj").GetComponent<ShieldBlock>();
+        
         boomberDie = false;
 
 
