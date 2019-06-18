@@ -44,6 +44,7 @@ public class manS : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         float distance = Vector3.Distance(target.position, transform.position);
         Debug.Log(distance);
+        
 
 
         if (distance <= lookRaius)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EvilEyeController : MonoBehaviour
+public class EyeOfEvilL : MonoBehaviour
 {
 
     [Header("Unity Setup")]
@@ -11,9 +11,9 @@ public class EvilEyeController : MonoBehaviour
 
     public int currentHealth = 1;
     Rigidbody rb;
-    public float lookRaius = 5f;
-    public float lookIn = 2f;
 
+    public float lookRaius = 5f;
+    
     public Transform target;
 
     private HealthContorller health;
@@ -23,18 +23,15 @@ public class EvilEyeController : MonoBehaviour
 
     public NavMeshAgent agent;
 
-    public Transform spawnPoints;
-    public GameObject cude;
-
     private float nextFire;
 
     public float fireRate = 2f;
-    public float fireRateBoom = 5f;
+    
     public Rigidbody missilPrefab;
     public Transform barrelEnd;
 
     private void Start()
-    {       
+    {
         rb = GetComponent<Rigidbody>();
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
@@ -50,25 +47,13 @@ public class EvilEyeController : MonoBehaviour
         if (distance <= lookRaius && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            //Instantiate(cude, spawnPoints.position, spawnPoints.rotation);
-
             Rigidbody missleInstance;
             missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             missleInstance.AddForce(barrelEnd.forward * 2000);
 
             transform.LookAt(targetPosition);
         }
-        
-        /*if (distance <= lookIn && Time.time > nextFire)
-        {
-            nextFire = Time.time + fireRate;
-            Rigidbody missleInstance;
-            missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
-            missleInstance.AddForce(barrelEnd.forward * 2000);
-
-            transform.LookAt(targetPosition);
-        }*/
-
+     
     }
 
     public void Damage(int damageAmount)
@@ -100,10 +85,7 @@ public class EvilEyeController : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRaius);
-
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(transform.position, lookIn);
-
+       
     }
-    
+
 }
