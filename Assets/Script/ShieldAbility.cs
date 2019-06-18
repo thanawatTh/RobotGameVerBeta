@@ -12,7 +12,7 @@ public class ShieldAbility : MonoBehaviour
     [HideInInspector]
     public bool showShield;
     public bool isShieldGo;
-
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,8 @@ public class ShieldAbility : MonoBehaviour
         showShield = false;
         
         player = GameObject.Find("Body").GetComponent<Transform>();
-        
+        animator = GameObject.Find("animator").GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -49,7 +50,7 @@ public class ShieldAbility : MonoBehaviour
                 if (shield != null)
                 {
                     shield.SetActive(true);
-
+                   
                 }
                     
                 

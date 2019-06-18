@@ -22,9 +22,11 @@ public class HealthEnamyContorller : MonoBehaviour
     public GameObject manS;
 
     //public float startHealth;
+    public int countEnamy;
 
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +37,7 @@ public class HealthEnamyContorller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
 
     }
 
@@ -69,5 +71,7 @@ public class HealthEnamyContorller : MonoBehaviour
 
     }
 
+
+    
 
 }

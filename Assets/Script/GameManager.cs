@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public HealthContorller healthBar;
     public GameObject main;
-
+   
 
 
     private void Start()

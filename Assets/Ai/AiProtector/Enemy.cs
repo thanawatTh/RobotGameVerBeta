@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     public float fireRate = 0.25f;
 
     private float nextFire;
+    
 
 
     private HealthEnamyContorller healthEnamyContorller;
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
+            
 
         }
     }
@@ -53,6 +55,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+           
         }
     }
 
