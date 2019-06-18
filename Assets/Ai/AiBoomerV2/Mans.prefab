@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4058119180152364126}
   - component: {fileID: 5336470110318358485}
   - component: {fileID: 7273659174388394847}
+  - component: {fileID: 4703236559510198246}
   m_Layer: 0
   m_Name: Mans
   m_TagString: TestEnamy
@@ -105,14 +106,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe5812acd1bb4747a067d3a59fddf85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 0}
   lookRaius: 5
   lookIn: 2
-  agent: {fileID: 0}
-  booMer: {fileID: 0}
-  booM: {fileID: 0}
-  target: {fileID: 0}
+  speed: 5
+  agent: {fileID: 7273659174388394847}
+  booMer: {fileID: 6433701417878265516}
+  booM: {fileID: 2715918762866171766, guid: 442867dd6308e8040a7b29ee5a786c18, type: 3}
+  target: {fileID: 3459052447716630890, guid: d43242c6f437a754f9e9248fdf24120a, type: 3}
   currentHealth: 1
+  fireRate: 2
 --- !u!195 &7273659174388394847
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -135,3 +137,19 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!54 &4703236559510198246
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433701417878265516}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
