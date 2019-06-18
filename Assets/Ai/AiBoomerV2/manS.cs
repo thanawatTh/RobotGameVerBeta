@@ -23,12 +23,9 @@ public class manS : MonoBehaviour
 
     public int currentHealth = 1;
 
-    private float nextFire;
-
-    public float fireRate = 2f;
-
-
     private HealthEnamyContorller healthEnamyContorller;
+
+    bool manSDie = false;
 
     void Start()
     {
@@ -44,14 +41,8 @@ public class manS : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         float distance = Vector3.Distance(target.position, transform.position);
         Debug.Log(distance);
-        
 
-
-        if (distance <= lookRaius)
-        {
-            
-            agent.SetDestination(target.position);
-        }
+        agent.SetDestination(target.position);
 
         if (distance <= lookIn)
         {
@@ -59,7 +50,7 @@ public class manS : MonoBehaviour
             health.TakeDamge(5);
             Destroy(booMer);
         }
-
+    
     }
 
     public void Damage(int damageAmount)
@@ -83,6 +74,13 @@ public class manS : MonoBehaviour
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "ShieldTag")
+        {
+            
+           Destroy(gameObject);
+
         }
 
     }

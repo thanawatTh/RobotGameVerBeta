@@ -54,7 +54,7 @@ public class EvilEyeController : MonoBehaviour
 
             Rigidbody missleInstance;
             missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
-            missleInstance.AddForce(barrelEnd.forward * 2000);
+            //missleInstance.AddForce(barrelEnd.forward * 2000);
 
             transform.LookAt(targetPosition);
         }

@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe5812acd1bb4747a067d3a59fddf85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRaius: 5
+  lookRaius: 50
   lookIn: 2
   speed: 5
   agent: {fileID: 7273659174388394847}
