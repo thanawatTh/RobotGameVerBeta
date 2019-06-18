@@ -607,7 +607,6 @@ GameObject:
   - component: {fileID: 2813911630323338923}
   - component: {fileID: 5507991703756361794}
   - component: {fileID: 6950874912667094835}
-  - component: {fileID: 3977201293062757922}
   m_Layer: 0
   m_Name: ShieldObj
   m_TagString: ShieldTag
@@ -687,25 +686,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &3977201293062757922
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4655887543011454328}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 333b3ffb9eb1a8443aceb45513ce3158, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4893699648876394519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1014,7 @@ MonoBehaviour:
   player: {fileID: 4893699649397484195}
   showShield: 0
   isShieldGo: 0
+  animator: {fileID: 0}
 --- !u!1 &4893699650448163462
 GameObject:
   m_ObjectHideFlags: 0
