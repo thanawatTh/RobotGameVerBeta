@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1439811243527794363}
   - component: {fileID: 1439811243527794362}
+  - component: {fileID: 6083166958443442815}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -45,3 +46,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   main: {fileID: 0}
+--- !u!114 &6083166958443442815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439811243527794361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33a761b78a580d46a12af496fd2eb8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBoomber: 1
+  boomber: {fileID: 0}
+  healthProtecter: 3
+  protecter: {fileID: 0}
+  healthTank: 3
+  tank: {fileID: 0}
+  healthManS: 1
+  manS: {fileID: 0}
+  deathEffect: {fileID: 0}

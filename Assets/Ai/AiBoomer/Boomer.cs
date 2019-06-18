@@ -86,6 +86,8 @@ public class Boomer : MonoBehaviour
 
             gameObject.SetActive(false);
 
+         
+           
         }
         
     }
@@ -96,6 +98,7 @@ public class Boomer : MonoBehaviour
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+          
         }
 
         if (other.gameObject.tag == "ShieldTag")
@@ -103,7 +106,7 @@ public class Boomer : MonoBehaviour
             boomberDie = true;
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
-
+            
         }
     }
 

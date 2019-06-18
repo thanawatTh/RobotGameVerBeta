@@ -20,10 +20,11 @@ public class SkillCoolDown : MonoBehaviour
 
     //shield
     public Image imageCooldownShield;
-    private float cooldownShield = 20;
+    private float cooldownShield = 10;
     public bool isCooldownShield;
     public ShieldAbility shieldAbility;
-
+    private float time = 15.0f;
+    bool timeEnd = false;
 
     // Start is called before the first frame update
     void Start()
@@ -80,32 +81,54 @@ public class SkillCoolDown : MonoBehaviour
 
 
         //shield
-        if (shieldAbility.isShieldGo == true)
+        if (time >= 0 )
         {
-            isCooldownShield = true;
+            time -= Time.deltaTime;
+
+
         }
 
-        if (isCooldownShield == true)
+        if (time <= 0)
         {
-            imageCooldownShield.fillAmount += 1 / cooldownShield * Time.deltaTime;
+            shieldAbility.animator.SetBool("IsFade", true);
+            shieldAbility.shield.SetActive(false);
 
-            if (imageCooldownShield.fillAmount >= 1)
+            if (shieldAbility.isShieldGo == true)
             {
-                imageCooldownShield.fillAmount = 0;
-                isCooldownShield = false;
-                shieldAbility.isShieldGo = false;
-                shieldAbility.shield.SetActive(false);
+                isCooldownShield = true;
             }
+
+            if (isCooldownShield == true)
+            {
+                imageCooldownShield.fillAmount += 1 / cooldownShield * Time.deltaTime;
+
+                if (imageCooldownShield.fillAmount >= 1)
+                {
+                    imageCooldownShield.fillAmount = 0;
+                    isCooldownShield = false;
+                    shieldAbility.isShieldGo = false;
+                    shieldAbility.shield.SetActive(false);
+                    shieldAbility.animator.SetBool("IsFade", false);
+                    timeEnd = true;
+                    time = 10.0f;
+                }
+            }
+
+            
+
+
+
+
         }
 
-
-
-
-
+        
     }
 
 
-
-
-   
 }
+
+    
+
+
+
+
