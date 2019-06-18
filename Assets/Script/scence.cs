@@ -8,6 +8,8 @@ public class scence : MonoBehaviour
 
     public GameObject wall;
     public int enamy;
+    private List<Boomer> boomers;
+    bool removeAll;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,38 @@ public class scence : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (removeAll == true)
+        {
+            wall.SetActive(true);
+            SceneManager.LoadScene("LVL02");
+        }
         
-        SceneManager.LoadScene("LVL02");
+       
     }
+
+    public void RemoveFromList(Boomer toRemove)
+    {
+        if (boomers == null)
+        {
+            Debug.Log("have boomber");
+        }
+        else
+        {
+            boomers.Remove(toRemove);
+            if (boomers.Count == 0)
+            {
+                 removeAll = true;
+            }
+        }
+    }
+
+
+    //public void AddToList(Boomer enamyToAdd)
+    //{
+    //    if (boomers == null)
+    //    {
+    //        boomers = new List<Boomer>();
+    //    }
+    //    boomers.Add(enamyToAdd);
+    //}
 }

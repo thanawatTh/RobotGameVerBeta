@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e30dadc7022f84d890366e8ff6b418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall: {fileID: 0}
+  wall: {fileID: 33008546}
   enamy: 0
 --- !u!65 &33008548
 BoxCollider:
@@ -4417,6 +4417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3799357617476496073, guid: 53d11afaf828e0a4cbb7353a752e3b3a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3799357617476496076, guid: 53d11afaf828e0a4cbb7353a752e3b3a,
         type: 3}
