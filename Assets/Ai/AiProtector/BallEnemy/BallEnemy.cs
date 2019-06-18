@@ -48,6 +48,8 @@ public class BallEnemy : MonoBehaviour
 
 
 
+
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -57,6 +59,8 @@ public class BallEnemy : MonoBehaviour
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+
+       
     }
 
     void Update()

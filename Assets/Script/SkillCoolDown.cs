@@ -91,15 +91,19 @@ public class SkillCoolDown : MonoBehaviour
         if (time <= 0)
         {
             shieldAbility.animator.SetBool("IsFade", true);
-            shieldAbility.shield.SetActive(false);
+           
 
             if (shieldAbility.isShieldGo == true)
             {
                 isCooldownShield = true;
+                
             }
+
+          
 
             if (isCooldownShield == true)
             {
+               
                 imageCooldownShield.fillAmount += 1 / cooldownShield * Time.deltaTime;
 
                 if (imageCooldownShield.fillAmount >= 1)

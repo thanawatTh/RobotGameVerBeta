@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class scence : MonoBehaviour
+public class scencesBack : MonoBehaviour
 {
-
-
-
     // Start is called before the first frame update
     void Start()
     {
-
 
     }
 
@@ -19,22 +15,15 @@ public class scence : MonoBehaviour
     void Update()
     {
 
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("LVL02");
+            SceneManager.LoadScene("LVL01");
         }
-       
-
 
     }
 
-
-   
-
-  
 }

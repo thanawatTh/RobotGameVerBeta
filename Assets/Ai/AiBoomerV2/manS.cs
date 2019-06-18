@@ -84,6 +84,7 @@ public class manS : MonoBehaviour
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+
     }
 
     void OnDrawGizmosSelected()

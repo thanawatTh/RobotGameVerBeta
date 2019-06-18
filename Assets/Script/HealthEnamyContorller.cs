@@ -22,7 +22,7 @@ public class HealthEnamyContorller : MonoBehaviour
     public GameObject manS;
 
     //public float startHealth;
-    public int countEnamy;
+   
 
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;

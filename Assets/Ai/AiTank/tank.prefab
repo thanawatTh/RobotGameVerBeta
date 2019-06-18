@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7105245463250015633}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.028, z: 0.598}
-  m_LocalScale: {x: 0.32906982, y: 0.57031095, z: 0.19137265}
+  m_LocalScale: {x: 0.4262301, y: 0.73869944, z: 0.24787682}
   m_Children:
   - {fileID: 7105245465219631338}
   m_Father: {fileID: 7105245465069843810}
@@ -121,9 +121,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7105245465069843836}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.39, y: 3.78, z: 13.279999}
-  m_LocalScale: {x: 2.4813972, y: 4.1085, z: 2.4813972}
+  m_LocalScale: {x: 1.9629588, y: 3.250111, z: 1.9629588}
   m_Children:
   - {fileID: 7105245463250015632}
   m_Father: {fileID: 0}
@@ -199,12 +199,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c884d8abbde9abe4d9ac923a7bf03919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRaius: 10
+  lookRaius: 12
   speed: 2
   missilPrefab: {fileID: 7707115001276440689, guid: 3d866d1c72adf4b46bf1e7cf5e7d06e8,
     type: 3}
   barrelEnd: {fileID: 7105245465219631338}
-  fireRate: 0.1
+  fireRate: 1
 --- !u!195 &7105245465069843839
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7105245465219631339}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.97, z: -0}
+  m_LocalPosition: {x: 0, y: 1.33, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7105245463250015632}
