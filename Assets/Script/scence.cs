@@ -7,21 +7,21 @@ public class scence : MonoBehaviour
 {
 
     public GameObject wall;
-    public int enamy;
    
+
     public GameObject[] danger;
 
     // Start is called before the first frame update
     void Start()
     {
         wall.SetActive(false);
-
+        danger = GameObject.FindGameObjectsWithTag("TestEnamy");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        CheackDanger();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,4 +33,22 @@ public class scence : MonoBehaviour
 
     }
 
+
+    public void CheackDanger()
+    {
+        //GameObject enmay = GameObject.FindWithTag("TestEnamy");
+
+        //if (enmay != null && danger.Contains(enmay))
+        //{
+        //    Debug.Log("DangerAll");
+        //}
+
+
+        if (danger != null) 
+        {
+            Debug.Log("dddddddddddddddddddddddddddddddddd");
+        }
+    }
+
+  
 }

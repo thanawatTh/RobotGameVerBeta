@@ -151,11 +151,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 33008546}
-  enamy: 0
   danger:
-  - {fileID: 227665279}
-  - {fileID: 1221652202}
   - {fileID: 1580624836}
+  - {fileID: 1221652202}
+  - {fileID: 227665279}
+  - {fileID: 3318069663581244709}
 --- !u!65 &33008548
 BoxCollider:
   m_ObjectHideFlags: 0
