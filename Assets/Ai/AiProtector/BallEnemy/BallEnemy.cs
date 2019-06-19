@@ -20,9 +20,10 @@ public class BallEnemy : MonoBehaviour
 
     private float nextFire;
 
+
     //public int currentHealth = 3;
 
-    private HealthEnamyContorller healthEnamyContorller;
+     public HealthEnamyContorller healthEnamyContorller;
 
     void Start()
     {

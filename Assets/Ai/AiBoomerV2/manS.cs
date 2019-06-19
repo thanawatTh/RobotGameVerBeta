@@ -23,7 +23,7 @@ public class manS : MonoBehaviour
 
     public int currentHealth = 1;
 
-    private HealthEnamyContorller healthEnamyContorller;
+    public HealthEnamyContorller healthEnamyContorller;
 
     bool manSDie = false;
 

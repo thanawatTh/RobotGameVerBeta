@@ -90,8 +90,7 @@ public class SkillCoolDown : MonoBehaviour
 
         if (time <= 0)
         {
-            shieldAbility.animator.SetBool("IsFade", true);
-           
+            shieldAbility.shield.SetActive(false);
 
             if (shieldAbility.isShieldGo == true)
             {
@@ -111,8 +110,6 @@ public class SkillCoolDown : MonoBehaviour
                     imageCooldownShield.fillAmount = 0;
                     isCooldownShield = false;
                     shieldAbility.isShieldGo = false;
-                    shieldAbility.shield.SetActive(false);
-                    shieldAbility.animator.SetBool("IsFade", false);
                     timeEnd = true;
                     time = 10.0f;
                 }

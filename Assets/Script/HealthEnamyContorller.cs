@@ -42,34 +42,34 @@ public class HealthEnamyContorller : MonoBehaviour
     }
 
 
-    public void TakeDamageBoomber(int damage)
-    {
+    //public void TakeDamageBoomber(int damage)
+    //{
 
-        healthBoomber -= damage;
+    //    healthBoomber -= damage;
         
-    }
+    //}
 
 
-    public void TakeDamageProtecter(int damage)
-    {
+    //public void TakeDamageProtecter(int damage)
+    //{
 
-        healthProtecter -= damage;
+    //    healthProtecter -= damage;
         
-    }
+    //}
 
-    public void TakeDamageTank(int damage)
-    {
+    //public void TakeDamageTank(int damage)
+    //{
 
-        healthTank -=damage;
+    //    healthTank -=damage;
 
-    }
+    //}
 
 
-    public void TakeDamageManS(int damage)
-    {
-        healthManS -= damage;
+    //public void TakeDamageManS(int damage)
+    //{
+    //    healthManS -= damage;
 
-    }
+    //}
 
 
     

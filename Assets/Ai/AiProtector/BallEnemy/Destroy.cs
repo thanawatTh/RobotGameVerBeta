@@ -30,7 +30,6 @@ public class Destroy : MonoBehaviour
             notDamage = true;
 
            
-
         }
 
         if (!notDamage)
