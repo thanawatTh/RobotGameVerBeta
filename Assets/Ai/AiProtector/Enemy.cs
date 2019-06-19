@@ -43,9 +43,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-            gameObject.SetActive(false);
-            
-
+            gameObject.SetActive(false);           
         }
     }
 
