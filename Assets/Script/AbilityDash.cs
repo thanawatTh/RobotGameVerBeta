@@ -5,7 +5,7 @@ using UnityEngine;
 public class AbilityDash : MonoBehaviour
 {
     
-    public float distace = 5.0f;
+    public float distace = 10.0f;
     private Rigidbody rigiBody;
     public float fireRate = 0.25f;
     private float nextFire;
