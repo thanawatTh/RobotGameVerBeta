@@ -78,8 +78,8 @@ public class manS : MonoBehaviour
 
         if (other.gameObject.tag == "ShieldTag")
         {
-            
-           Destroy(gameObject);
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
 
         }
 
