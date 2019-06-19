@@ -114,7 +114,8 @@ MonoBehaviour:
   booM: {fileID: 2715918762866171766, guid: 442867dd6308e8040a7b29ee5a786c18, type: 3}
   target: {fileID: 3459052447716630890, guid: d43242c6f437a754f9e9248fdf24120a, type: 3}
   currentHealth: 1
-  fireRate: 2
+  healthEnamyContorller: {fileID: 5220897950744256053, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+    type: 3}
 --- !u!195 &7273659174388394847
 NavMeshAgent:
   m_ObjectHideFlags: 0

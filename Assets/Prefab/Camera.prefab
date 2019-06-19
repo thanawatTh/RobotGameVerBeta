@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3799357617476496073
+--- !u!1 &2183647558160850509
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3799357617476496076}
-  - component: {fileID: 3799357617476496079}
-  - component: {fileID: 3799357617476496078}
+  - component: {fileID: 2183647558160850496}
+  - component: {fileID: 2183647558160850499}
+  - component: {fileID: 2183647558160850498}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: MainCamera
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3799357617476496076
+--- !u!4 &2183647558160850496
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3799357617476496073}
+  m_GameObject: {fileID: 2183647558160850509}
   m_LocalRotation: {x: 0.37213436, y: -0.23884007, z: 0.09971309, w: 0.89136344}
   m_LocalPosition: {x: 35.7, y: 67.7, z: -22.9}
   m_LocalScale: {x: 1.9025, y: 1.9025, z: 1.9025}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45.32, y: -30, z: 0}
---- !u!20 &3799357617476496079
+--- !u!20 &2183647558160850499
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3799357617476496073}
+  m_GameObject: {fileID: 2183647558160850509}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -57,7 +57,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 10000
   field of view: 20
-  orthographic: 1
+  orthographic: 0
   orthographic size: 29.59
   m_Depth: 0
   m_CullingMask:
@@ -65,7 +65,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
+  m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -74,11 +74,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3799357617476496078
+--- !u!81 &2183647558160850498
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3799357617476496073}
+  m_GameObject: {fileID: 2183647558160850509}
   m_Enabled: 1
