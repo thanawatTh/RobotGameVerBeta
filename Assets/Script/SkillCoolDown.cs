@@ -9,20 +9,20 @@ public class SkillCoolDown : MonoBehaviour
     public Image imageCooldownDash;
     private float cooldownDash = 1;
     public bool isCooldownDash;
-    public AbilityDash abilityDash;
+    private AbilityDash abilityDash;
 
 
     //missle
     public Image imageCooldownMissle;
     private float cooldownMissle = 5;
     public bool isCooldownMissle;
-    public Missiles missiles;
+    private Missiles missiles;
 
     //shield
     public Image imageCooldownShield;
     private float cooldownShield = 10;
     public bool isCooldownShield;
-    public ShieldAbility shieldAbility;
+    private ShieldAbility shieldAbility;
     private float time = 15.0f;
     bool timeEnd = false;
     bool fade, fadeStart;
@@ -30,14 +30,11 @@ public class SkillCoolDown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        abilityDash = GameObject.Find("Body").GetComponent<AbilityDash>();
-        missiles = GameObject.Find("Body").GetComponent<Missiles>();
-        shieldAbility = GameObject.Find("Body").GetComponent<ShieldAbility>();
+        abilityDash = GetComponent<AbilityDash>();
+        missiles = GetComponent<Missiles>();
+        shieldAbility = GetComponent<ShieldAbility>();
 
-        imageCooldownDash = GameObject.Find("Speed").GetComponent<Image>();
-        imageCooldownMissle = GameObject.Find("CooldownMissle").GetComponent<Image>();
-        imageCooldownShield = GameObject.Find("CooldownShield").GetComponent<Image>();
-
+        
     }
 
     // Update is called once per frame

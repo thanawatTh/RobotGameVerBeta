@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadScence : MonoBehaviour
+public class NextScence : MonoBehaviour
 {
 
     private int nextSceneToLoad;
@@ -27,5 +27,11 @@ public class LoadScence : MonoBehaviour
         {
             SceneManager.LoadScene(nextSceneToLoad);
         }
+    }
+
+    public void Onclick()
+    {
+        SceneManager.LoadScene(nextSceneToLoad);
+      
     }
 }
