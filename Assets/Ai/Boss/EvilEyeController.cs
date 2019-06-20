@@ -23,8 +23,8 @@ public class EvilEyeController : MonoBehaviour
 
     public NavMeshAgent agent;
 
-    public Transform spawnPoints;
-    public GameObject cude;
+    public Transform[] spawnPoints;
+    public GameObject[] cube;
 
     private float nextFire;
 
@@ -47,16 +47,20 @@ public class EvilEyeController : MonoBehaviour
             (target.transform.position.x, transform.transform.position.y, target.transform.position.z);
         float distance = Vector3.Distance(target.position, transform.position);
 
+        int spawnIndex = Random.Range(0, spawnPoints.Length);
+        Transform spawnPoint = spawnPoints[spawnIndex];
+
         if (distance <= lookRaius && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            //Instantiate(cude, spawnPoints.position, spawnPoints.rotation);
+            GameObject spawnedCube = Instantiate(cube[Random.Range(0, 2)], spawnPoint.position, spawnPoint.rotation);
 
-            Rigidbody missleInstance;
-            missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
+            //Rigidbody missleInstance;
+            //missleInstance = Instantiate(missilPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             //missleInstance.AddForce(barrelEnd.forward * 2000);
 
             transform.LookAt(targetPosition);
+            Destroy(spawnedCube, 3f);
         }
         
         /*if (distance <= lookIn && Time.time > nextFire)
