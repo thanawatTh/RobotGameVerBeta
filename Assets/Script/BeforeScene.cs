@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PrvScene : MonoBehaviour
+public class BeforeScene : MonoBehaviour
 {
-    private int nextSceneToLoad;
+    private int beforetSceneToLoad;
+    public GameObject healthPlayer;
     // Start is called before the first frame update
     void Start()
     {
-        nextSceneToLoad = SceneManager.GetActiveScene().buildIndex - 1;
+        beforetSceneToLoad = SceneManager.GetActiveScene().buildIndex - 1;
     }
 
     // Update is called once per frame
@@ -24,7 +25,8 @@ public class PrvScene : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(nextSceneToLoad);
+            SceneManager.LoadScene(beforetSceneToLoad);
+            DontDestroyOnLoad(healthPlayer);
         }
     }
 

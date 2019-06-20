@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NextScence : MonoBehaviour
 {
-
+    public GameObject healthPlayer;
     private int nextSceneToLoad;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,7 @@ public class NextScence : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(nextSceneToLoad);
+            DontDestroyOnLoad(healthPlayer);
         }
     }
 

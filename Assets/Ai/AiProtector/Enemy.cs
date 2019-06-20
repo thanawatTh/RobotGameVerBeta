@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     
 
 
-    private HealthEnamyContorller healthEnamyContorller;
+    public HealthEnamyContorller healthEnamyContorller;
 
     //public int currentHealth = 3;
 
@@ -31,8 +31,7 @@ public class Enemy : MonoBehaviour
 
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
-        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
-
+        
     }
 
     public void Damage(int damageAmount)

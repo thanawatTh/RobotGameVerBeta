@@ -45,8 +45,10 @@ public class HealthContorller : MonoBehaviour
     {
         health = health - damage;
         healthBarImage.fillAmount = health / startHealth;
-    }  
-    
+    }
+
 
    
+
+
 }

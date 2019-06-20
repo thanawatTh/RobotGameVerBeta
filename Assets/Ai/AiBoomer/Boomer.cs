@@ -28,14 +28,14 @@ public class Boomer : MonoBehaviour
 
     //public int currentHealth = 1;
 
-    private HealthEnamyContorller healthEnamyContorller;
+    public HealthEnamyContorller healthEnamyContorller;
 
     void Start()
     {
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
-        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
+        
         
         boomberDie = false;
 

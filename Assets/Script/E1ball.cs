@@ -9,7 +9,7 @@ public class E1ball : MonoBehaviour
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;
 
-    public int currentHealth = 1;
+    //public int currentHealth = 1;
     Rigidbody rb;
     public float lookRaius = 5f;
     public float lookIn = 2f;
@@ -31,7 +31,7 @@ public class E1ball : MonoBehaviour
 
     bool ballDie = false;
 
-    private HealthEnamyContorller healthEnamyContorller;
+    public HealthEnamyContorller healthEnamyContorller;
 
 
 
@@ -43,7 +43,7 @@ public class E1ball : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
         ballDie = false;
-        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
+       
     }
 
     void Update()
@@ -77,11 +77,11 @@ public class E1ball : MonoBehaviour
     public void Damage(int damageAmount)
     {
 
-        currentHealth -= damageAmount;
+        healthEnamyContorller.healthManS -= damageAmount;
 
-        if (currentHealth <= 0)
+        if (healthEnamyContorller.healthManS <= 0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
 
@@ -93,7 +93,7 @@ public class E1ball : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 

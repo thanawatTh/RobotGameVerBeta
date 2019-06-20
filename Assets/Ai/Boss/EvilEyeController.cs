@@ -96,8 +96,17 @@ public class EvilEyeController : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            healthEnamyContorller.healthEvilEye -= 5;
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+            if (healthEnamyContorller.healthEvilEye <= 0)
+            {
+                Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+                gameObject.SetActive(false);
+
+            }
+
         }
     }
 

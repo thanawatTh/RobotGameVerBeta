@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4722560618372764772}
   - component: {fileID: 4722560618372764779}
   - component: {fileID: 4722560618372764778}
-  - component: {fileID: 798167117810232044}
+  - component: {fileID: 4211061099845647234}
   m_Layer: 0
   m_Name: prv
   m_TagString: Untagged
@@ -92,7 +92,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.01, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &798167117810232044
+--- !u!114 &4211061099845647234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

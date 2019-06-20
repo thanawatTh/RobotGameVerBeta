@@ -30,7 +30,7 @@ public class BallEnemy : MonoBehaviour
 
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
-        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
+       
     }
 
 
