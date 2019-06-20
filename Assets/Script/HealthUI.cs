@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
-    [HideInInspector]
+   
     public Image healthUi;
-    public Text test1;
-    public Text test2;
-    public Text test3;
-    public Text test4;
-    public Image test5;
-    public Camera testCamera;
+    //public Text test1;
+    //public Text test2;
+    //public Text test3;
+    //public Text test4;
+    //public Image test5;
+    //public Camera testCamera;
     
 
 
@@ -23,14 +23,15 @@ public class HealthUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 image = Camera.main.WorldToScreenPoint(this.transform.parent.transform.position);
-        Vector3 image2 = testCamera.WorldToScreenPoint(this.transform.parent.transform.position);
-        healthUi.rectTransform.position = image;
-        test1.rectTransform.position = image;
-        test2.rectTransform.anchoredPosition = image;
-        test3.rectTransform.anchoredPosition = image2;
-        test4.rectTransform.position = image2;
-        test5.rectTransform.position = image2;
+       //Vector3 image = Camera.main.WorldToScreenPoint(this.transform.parent.transform.position);
+        healthUi.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 0.3f, 0));
+        //Vector3 image2 = testCamera.WorldToScreenPoint(this.transform.parent.transform.position);
+        //healthUi.rectTransform.position = image;
+        //test1.rectTransform.position = image;
+        //test2.rectTransform.anchoredPosition = image;
+        //test3.rectTransform.anchoredPosition = image2;
+        //test4.rectTransform.position = image2;
+        //test5.rectTransform.position = image2;
 
     }
 }
