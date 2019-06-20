@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class HealthContorller : MonoBehaviour
 {
-    public float health = 100;
-    public float startHealth;
+    static float health = 100;
+    static float startHealth;
     public Image healthBarImage;
 
     public ParticleSystem dead;

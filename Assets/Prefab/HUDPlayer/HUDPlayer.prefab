@@ -1283,8 +1283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074616d7283d82a4bb57ea39712e0368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  startHealth: 100
   healthBarImage: {fileID: 969242200572494206}
   dead: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96, type: 3}
   player: {fileID: 0}

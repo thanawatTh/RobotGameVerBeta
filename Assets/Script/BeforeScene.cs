@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class BeforeScene : MonoBehaviour
 {
     private int beforetSceneToLoad;
-    public GameObject healthPlayer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +25,9 @@ public class BeforeScene : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+           
             SceneManager.LoadScene(beforetSceneToLoad);
-            DontDestroyOnLoad(healthPlayer);
+           
         }
     }
 
