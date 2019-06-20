@@ -33,12 +33,15 @@ public class EvilEyeController : MonoBehaviour
     public Rigidbody missilPrefab;
     public Transform barrelEnd;
 
+    public HealthEnamyContorller healthEnamyContorller;
+
     private void Start()
     {       
         rb = GetComponent<Rigidbody>();
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
+        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
     }
 
     void Update()
@@ -78,16 +81,15 @@ public class EvilEyeController : MonoBehaviour
     public void Damage(int damageAmount)
     {
 
-        currentHealth -= damageAmount;
+        healthEnamyContorller.healthEvilEye -= damageAmount;
 
-        if (currentHealth <= 0)
+        if (healthEnamyContorller.healthEvilEye <= 0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
 
         }
-
     }
 
     void OnTriggerEnter(Collider other)

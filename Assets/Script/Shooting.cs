@@ -70,6 +70,9 @@ public class Shooting : MonoBehaviour
                 Boomer health1 = hit.collider.GetComponent<Boomer>();
                 BallEnemy health2 = hit.collider.GetComponent<BallEnemy>();
                 Enemy health3 = hit.collider.GetComponent<Enemy>();
+                EvilEyeController health4 = hit.collider.GetComponent<EvilEyeController>();
+                EyeOfEvilL health5 = hit.collider.GetComponent<EyeOfEvilL>();
+
 
                 //E1ball
                 if (health != null)
@@ -119,6 +122,34 @@ public class Shooting : MonoBehaviour
                 {
 
                     health3.Damage(gunDamage);
+                }
+
+
+                if (hit.rigidbody != null)
+                {
+
+                    hit.rigidbody.AddForce(-hit.normal * hitForce);
+                }
+
+                //BossEvilEye
+                if (health4 != null)
+                {
+
+                    health4.Damage(gunDamage);
+                }
+
+
+                if (hit.rigidbody != null)
+                {
+
+                    hit.rigidbody.AddForce(-hit.normal * hitForce);
+                }
+
+                //EyeOfEvil
+                if (health5 != null)
+                {
+
+                    health5.Damage(gunDamage);
                 }
 
 
