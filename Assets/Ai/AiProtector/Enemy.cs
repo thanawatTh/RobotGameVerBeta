@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     public float lookRaius = 5f;
 
-    Transform target;
+     Transform target;
     NavMeshAgent agent;
     public float speed;
 

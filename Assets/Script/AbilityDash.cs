@@ -17,8 +17,9 @@ public class AbilityDash : MonoBehaviour
      void Start()
     {
         rigiBody = GetComponent<Rigidbody>();
-        
-       
+        isDashGo = false;
+        dashStart = false;
+
     }
     // Update is called once per frame
     void Update()
@@ -40,9 +41,7 @@ public class AbilityDash : MonoBehaviour
             DashForward();
         }
 
-
-
-
+               
         //if(dashStart == true)
         //{
         //    //isDashGo = true;

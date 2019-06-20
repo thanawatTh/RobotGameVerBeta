@@ -9,17 +9,13 @@ public class ScenceManager : MonoBehaviour
     void Start()
     {
 
-        
+
         //SceneManager.LoadScene("BaseScenes", LoadSceneMode.Additive);
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("BaseScenes"));
-       
-    }
-     void Awake()
-    {
         SceneManager.LoadScene("BaseScenes", LoadSceneMode.Additive);
 
-
     }
+    
     // Update is called once per frame
     void Update()
     {

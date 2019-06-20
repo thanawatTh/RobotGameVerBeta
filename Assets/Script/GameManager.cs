@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         {
             gameHasEnded = true;
             Debug.Log("GAME OVER");
-            Invoke("Reset", 2f);
+            Invoke("Reset",1f);
         }
     }
 

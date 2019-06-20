@@ -23,7 +23,6 @@ public class ShieldAbility : MonoBehaviour
     {
         shield.SetActive(false);
         showShield = false;
-        player = GameObject.Find("Body").GetComponent<Transform>();
         image = GameObject.Find("CooldownShieldBlack").GetComponent<Image>();
         image.enabled = false;
     }
