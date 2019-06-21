@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
 
     TouchControl joyInputMove;
     TouchRotControl joyInputRot;
+    public HealthContorller health;
 
 
     // Start is called before the first frame update
@@ -31,49 +32,48 @@ public class PlayerControl : MonoBehaviour
     
     void Update()
     {
+        if (health.isDie == false)
+        {
+            //Touch
+            /////////////////////////////////////////////////////////////////////////////
+            moveInput = new Vector3(joyInputMove.joyInput.x, 0, joyInputMove.joyInput.y);
+            moveVelocity = moveInput * moveSpeed;
 
-        //Touch
-        /////////////////////////////////////////////////////////////////////////////
-        moveInput = new Vector3(joyInputMove.joyInput.x, 0, joyInputMove.joyInput.y);
-        moveVelocity = moveInput * moveSpeed;
+            Vector2 from = new Vector2(0, 1);
+            Vector2 to = joyInputMove.rotationInput;
 
-        Vector2 from = new Vector2(0,1);
-        Vector2 to = joyInputMove.rotationInput;
-
-        transform.localEulerAngles = new Vector3(0f, -30 - Vector2.SignedAngle(from, to), 0f);//หามุมของแกนy
-
-
-
-
-
-        //rotation right
-
-        /*Vector2 from = new Vector2(0, 1);
-        Vector2 to = joyInputRot.rotInput;
-
-        transform.localEulerAngles = new Vector3(0f, -30 - Vector2.SignedAngle(from, to), 0f);//หามุมของแกนy
-
-         */
+            transform.localEulerAngles = new Vector3(0f, -30 - Vector2.SignedAngle(from, to), 0f);//หามุมของแกนy
 
 
 
-        //moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-        //moveVelocity = moveInput * moveSpeed;
+            //rotation right
 
-        //cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-        //Plane groundPlan = new Plane(Vector3.up, Vector3.zero);
-        //float rayLength;
+            /*Vector2 from = new Vector2(0, 1);
+            Vector2 to = joyInputRot.rotInput;
 
-        //if (groundPlan.Raycast(cameraRay, out rayLength))
-        //{
-        //    Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-        //    Debug.DrawLine(cameraRay.origin, pointToLook, Color.black);
+            transform.localEulerAngles = new Vector3(0f, -30 - Vector2.SignedAngle(from, to), 0f);//หามุมของแกนy
 
-        //    transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-        //}
+             */
 
 
 
+            //moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+            //moveVelocity = moveInput * moveSpeed;
+
+            //cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+            //Plane groundPlan = new Plane(Vector3.up, Vector3.zero);
+            //float rayLength;
+
+            //if (groundPlan.Raycast(cameraRay, out rayLength))
+            //{
+            //    Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+            //    Debug.DrawLine(cameraRay.origin, pointToLook, Color.black);
+
+            //    transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+            //}
+
+
+        }
 
 
     }

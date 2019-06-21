@@ -35,6 +35,11 @@ public class NextScence : MonoBehaviour
     public void Onclick()
     {
         SceneManager.LoadScene("LVL01");
-
+        Debug.Log("Gooo");
+    }
+    public void Exit()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
     }
 }

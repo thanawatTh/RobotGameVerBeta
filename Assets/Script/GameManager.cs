@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
+    public GameObject gameOver;
+    public HealthContorller healthBar;
     #region Signleton
     public static GameManager instance;
-    public HealthContorller healthBar;
+   
     public GameObject main;
     public bool loadNewScene = false;
-    public GameObject gameOver;
+
 
 
     private void Start()
@@ -31,27 +33,19 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (healthBar.isDie == true)
+        {
+
+            gameOver.SetActive(true);
+
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
-   // public void EndGame()
-   // {     
-   //    if (gameHasEnded == false)
-   //     {
-   //         gameHasEnded = true;
-   //         Debug.Log("GAME OVER");
-   //         Invoke("Reset", 2f);
-   //     }
-        
-       
-   // }
-
-   //public void Reset()
-   // {
-   //     Time.timeScale = 1;
-   //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-   // }
+  
 
     public void nextScene()
     {
@@ -59,22 +53,12 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void EndGame()
-    {
-        if (healthBar.health <= 0)
-        {
-            Time.timeScale = 0;
-            gameOver.SetActive(true);
-
-        }
-    }
-
 
     public void Reset()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+        healthBar.isDie = false;
     }
 
     public void GotoMenu()

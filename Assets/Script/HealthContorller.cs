@@ -21,25 +21,24 @@ public class HealthContorller : MonoBehaviour
     void Start()
     {
        startHealth = health;
+        isDie = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Camera.main.WorldToScreenPoint    
-        //if (health <= 0)
-        //{
-
-        //    Instantiate(dead, transform.position, Quaternion.identity);
-        //    //player.SetActive(false);
-        //    //hpBar.SetActive(false);
-        //    Time.timeScale = 0;
-
-             
-            
-
-        //    //isDie = true;
-        //}
+        if (health <= 0)
+        {
+            isDie = true;
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        
+       
+        
     }
 
     public void TakeDamge(int damage)
