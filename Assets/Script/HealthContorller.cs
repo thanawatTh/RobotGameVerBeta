@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class HealthContorller : MonoBehaviour
 {
-    static float health = 100;
-    static float startHealth;
+    public float health = 100;
+    public float startHealth;
     public Image healthBarImage;
 
     public ParticleSystem dead;
@@ -21,24 +21,24 @@ public class HealthContorller : MonoBehaviour
     void Start()
     {
        startHealth = health;
+        isDie = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Camera.main.WorldToScreenPoint    
         if (health <= 0)
         {
-
-            Instantiate(dead, transform.position, Quaternion.identity);
-            player.SetActive(false);
-            hpBar.SetActive(false);
-
-
-            GameObject.FindObjectOfType<GameManager>().EndGame();
-
-            //isDie = true;
+            isDie = true;
+            Time.timeScale = 0;
         }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        
+       
+        
     }
 
     public void TakeDamge(int damage)

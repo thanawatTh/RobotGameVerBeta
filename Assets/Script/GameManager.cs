@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
+    public GameObject gameOver;
+    public HealthContorller healthBar;
     #region Signleton
     public static GameManager instance;
-    public HealthContorller healthBar;
+   
     public GameObject main;
     public bool loadNewScene = false;
+
 
 
     private void Start()
     {
         gameHasEnded = false;
+        gameOver.SetActive(false);
     }
     void Awake()
     {
@@ -28,32 +33,37 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
-    }
-
-    public void EndGame()
-    {     
-       if (gameHasEnded == false)
+        if (healthBar.isDie == true)
         {
-            gameHasEnded = true;
-            Debug.Log("GAME OVER");
-            Invoke("Reset", 2f);
+
+            gameOver.SetActive(true);
+
         }
-        
-       
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
-   public void Reset()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-    }
+  
 
     public void nextScene()
     {
         SceneManager.LoadScene("LVL01");
     }
 
+
+
+    public void Reset()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        healthBar.isDie = false;
+    }
+
+    public void GotoMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
 }
