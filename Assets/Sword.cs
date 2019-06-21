@@ -52,7 +52,7 @@ public class Sword : MonoBehaviour
       
         if (distance <= lookRaius && Time.time > nextFire)
         {
-            animator.SetFloat("Hit", lookIn);
+            
         }
 
         if (distance <= lookIn && Time.time > nextFire)
