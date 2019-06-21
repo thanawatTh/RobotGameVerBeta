@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EvilEyeController : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class EvilEyeController : MonoBehaviour
     public Transform barrelEnd;
 
     public HealthEnamyContorller healthEnamyContorller;
+    //public float startHealthBoss;
+    //public Image healthBarImage;
+    public BossHealth bossHealth;
+
+
 
     private void Start()
     {       
@@ -42,6 +48,7 @@ public class EvilEyeController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
         healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
+        //startHealthBoss = healthEnamyContorller.healthEvilEye;
     }
 
     void Update()
@@ -78,37 +85,56 @@ public class EvilEyeController : MonoBehaviour
 
     }
 
-    public void Damage(int damageAmount)
+    //public void Damage(int damageAmount)
+    //{
+
+    //    healthEnamyContorller.healthEvilEye -= damageAmount;
+    //    //healthBarImage.fillAmount = healthEnamyContorller.healthEvilEye / startHealthBoss;
+
+    //    if (healthEnamyContorller.healthEvilEye <= 0)
+    //    {
+    //        Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+    //        gameObject.SetActive(false);
+
+    //    }
+    
+
+    void OnTriggerEnter(Collider other)
     {
+        //if (other.gameObject.tag == "Missle")
+        //{
+        //    healthEnamyContorller.healthEvilEye -= 5;
+        //    Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-        healthEnamyContorller.healthEvilEye -= damageAmount;
+        //    if (healthEnamyContorller.healthEvilEye <= 0)
+        //    {
+        //        Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-        if (healthEnamyContorller.healthEvilEye <= 0)
+        //        gameObject.SetActive(false);
+
+        //    }
+
+        //}
+
+    if (other.gameObject.tag == "Missle")
+    {
+          bossHealth.TakeDamage(5);
+        Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+        if (bossHealth.healthEvilEye <= 0)
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
 
         }
+
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Missle")
-        {
-            healthEnamyContorller.healthEvilEye -= 5;
-            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-            if (healthEnamyContorller.healthEvilEye <= 0)
-            {
-                Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-                gameObject.SetActive(false);
-
-            }
-
-        }
-    }
+}
 
     void OnDrawGizmosSelected()
     {

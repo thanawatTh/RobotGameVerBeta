@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthEnamyContorller : MonoBehaviour
 {
@@ -22,8 +23,10 @@ public class HealthEnamyContorller : MonoBehaviour
     public GameObject manS;
 
     //BossEvilEye
-    public float healthEvilEye = 250;
-    public GameObject evilEye;
+    //public float healthEvilEye = 65;
+    //public GameObject evilEye;
+    //public Image healthBarBoos;
+    //public float starHealthBoss;
 
     //EyeOfEvil
     public float healthEyeOfEvil01 = 50;
@@ -38,7 +41,8 @@ public class HealthEnamyContorller : MonoBehaviour
     public float healthEyeOfEvil04 = 50;
     public GameObject eyeOfevil04;
 
-    //public float startHealth;
+
+  
 
 
     [Header("Unity Setup")]
@@ -48,13 +52,13 @@ public class HealthEnamyContorller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //starHealthBoss = healthEvilEye;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
 
     }
 
@@ -63,7 +67,7 @@ public class HealthEnamyContorller : MonoBehaviour
     //{
 
     //    healthBoomber -= damage;
-        
+
     //}
 
 
@@ -71,7 +75,7 @@ public class HealthEnamyContorller : MonoBehaviour
     //{
 
     //    healthProtecter -= damage;
-        
+
     //}
 
     //public void TakeDamageTank(int damage)
@@ -88,7 +92,11 @@ public class HealthEnamyContorller : MonoBehaviour
 
     //}
 
+    //public void TakeDamage(int damge)
+    //{
+    //    healthEvilEye = healthEvilEye - damge;
+    //    healthBarBoos.fillAmount = healthEvilEye / starHealthBoss;
+    //}
 
-    
 
 }

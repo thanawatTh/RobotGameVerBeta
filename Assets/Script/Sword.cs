@@ -37,6 +37,8 @@ public class Sword : MonoBehaviour
 
     public Animator animator;
 
+    public BossHealth bossHealth;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -62,28 +64,43 @@ public class Sword : MonoBehaviour
 
     }
 
-    public void Damage(int damageAmount)
-    {
+    //public void Damage(int damageAmount)
+    //{
 
-        healthEnamyContorller.healthEvilEye  -= damageAmount;
+    //    healthEnamyContorller.healthEvilEye  -= damageAmount;
 
-        if (healthEnamyContorller.healthEvilEye <= 0)
-        {
-            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+    //    if (healthEnamyContorller.healthEvilEye <= 0)
+    //    {
+    //        Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-            gameObject.SetActive(false);
+    //        gameObject.SetActive(false);
 
-        }
-    }
+    //    }
+    //}
 
     void OnTriggerEnter(Collider other)
     {
+        //if (other.gameObject.tag == "Missle")
+        //{
+        //    healthEnamyContorller.healthEvilEye -= 5;
+        //    Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+        //    if (healthEnamyContorller.healthEvilEye <= 0)
+        //    {
+        //        Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+        //        gameObject.SetActive(false);
+
+        //    }
+
+        //}
+
         if (other.gameObject.tag == "Missle")
         {
-            healthEnamyContorller.healthEvilEye -= 5;
+            bossHealth.TakeDamage(5);
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-            if (healthEnamyContorller.healthEvilEye <= 0)
+            if (bossHealth.healthEvilEye <= 0)
             {
                 Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
