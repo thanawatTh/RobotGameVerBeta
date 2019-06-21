@@ -25,7 +25,7 @@ public class NextScence : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-           
+
             SceneManager.LoadScene(nextSceneToLoad);
            
 
@@ -34,7 +34,7 @@ public class NextScence : MonoBehaviour
 
     public void Onclick()
     {
-        SceneManager.LoadScene(nextSceneToLoad);
-      
+        SceneManager.LoadScene("LVL01");
+
     }
 }

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public HealthContorller healthBar;
     public GameObject main;
-   
+    public bool loadNewScene = false;
 
 
     private void Start()
@@ -26,24 +26,34 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-
+    private void Update()
+    {
+        
+    }
 
     public void EndGame()
-    {
-        if (gameHasEnded == false)
+    {     
+       if (gameHasEnded == false)
         {
             gameHasEnded = true;
             Debug.Log("GAME OVER");
-            Invoke("Reset",1f);
+            Invoke("Reset", 2f);
         }
+        
+       
     }
 
-     void Reset()
+   public void Reset()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+
+    public void nextScene()
     {
         SceneManager.LoadScene("LVL01");
     }
-
-
 
 
 }

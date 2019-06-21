@@ -31,13 +31,13 @@ public class HealthContorller : MonoBehaviour
         {
 
             Instantiate(dead, transform.position, Quaternion.identity);
-            Destroy(player);
-            Destroy(hpBar);
+            player.SetActive(false);
+            hpBar.SetActive(false);
 
 
             GameObject.FindObjectOfType<GameManager>().EndGame();
 
-
+            //isDie = true;
         }
     }
 
