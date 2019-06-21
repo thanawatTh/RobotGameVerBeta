@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
     public GameObject gameOver;
+    public GameObject pauseGameObj;
     public HealthContorller healthBar;
+    int count;
+    [HideInInspector]
+    public bool pause;
     #region Signleton
     public static GameManager instance;
    
@@ -21,6 +25,9 @@ public class GameManager : MonoBehaviour
     {
         gameHasEnded = false;
         gameOver.SetActive(false);
+        pauseGameObj.SetActive(false);
+        pause = false;
+        Time.timeScale = 1;
     }
     void Awake()
     {
@@ -65,5 +72,31 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void Pause()
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            pause = true;
+            pauseGameObj.SetActive(true);
+
+            
+        }
+       
+               
+    }
+
+    public void Continue()
+    {
+        
+            Time.timeScale = 1;
+            pause = false;
+            pauseGameObj.SetActive(false);
+        
+    }
+
+
+   
 
 }
