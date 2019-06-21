@@ -17,6 +17,7 @@ public class PlayerControl : MonoBehaviour
     TouchControl joyInputMove;
     TouchRotControl joyInputRot;
     public HealthContorller health;
+    public GameManager gameManager;
 
 
     // Start is called before the first frame update
@@ -32,7 +33,7 @@ public class PlayerControl : MonoBehaviour
     
     void Update()
     {
-        if (health.isDie == false)
+        if (health.isDie == false && gameManager.pause == false) 
         {
             //Touch
             /////////////////////////////////////////////////////////////////////////////
