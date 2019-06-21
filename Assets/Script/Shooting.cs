@@ -165,7 +165,7 @@ public class Shooting : MonoBehaviour
                 if (health6 != null)
                 {
 
-                    health6.Damage(gunDamage);
+                    health6.bossHealth.TakeDamage(gunDamage);
                 }
 
 
