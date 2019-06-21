@@ -882,6 +882,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9205963949698023127, guid: 072162143ead02d4492ff931288f3f45,
         type: 3}
+    - target: {fileID: 4405660634632122066, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: sword
+      value: 
+      objectReference: {fileID: 1783675844}
+    - target: {fileID: 4405660634632122066, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: healthSword
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405660634632122066, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: healthEyeOfEvil04
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405660634632122066, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: healthEyeOfEvil03
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405660634632122066, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: healthEyeOfEvil02
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405660634632122066, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: healthEyeOfEvil01
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405660634632122066, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: healthEvilEye
+      value: 65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35ab8df76f300dd44ba494651fd8f0eb, type: 3}
 --- !u!1 &202096521
@@ -4257,6 +4292,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1783675844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4676803483129660574, guid: bc93ca649a6ac2b4ab319547bda8db1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4676803482665523281}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1784763444
 GameObject:
   m_ObjectHideFlags: 0

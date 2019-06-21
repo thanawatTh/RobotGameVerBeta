@@ -73,6 +73,7 @@ public class Shooting : MonoBehaviour
                 Enemy health3 = hit.collider.GetComponent<Enemy>();
                 EvilEyeController health4 = hit.collider.GetComponent<EvilEyeController>();
                 EyeOfEvilL health5 = hit.collider.GetComponent<EyeOfEvilL>();
+                Sword health6 = hit.collider.GetComponent<Sword>();
 
 
                 //E1ball
@@ -151,6 +152,20 @@ public class Shooting : MonoBehaviour
                 {
 
                     health5.Damage(gunDamage);
+                }
+
+
+                if (hit.rigidbody != null)
+                {
+
+                    hit.rigidbody.AddForce(-hit.normal * hitForce);
+                }
+
+                //Sword
+                if (health6 != null)
+                {
+
+                    health6.Damage(gunDamage);
                 }
 
 

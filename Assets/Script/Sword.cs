@@ -51,11 +51,8 @@ public class Sword : MonoBehaviour
     void Update()
     {     
         float distance = Vector3.Distance(target.position, transform.position);
-      
-        if (distance <= lookRaius && Time.time > nextFire)
-        {
-            
-        }
+
+        agent.SetDestination(target.position);
 
         if (distance <= lookIn && Time.time > nextFire)
         {
@@ -113,9 +110,6 @@ public class Sword : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lookRaius);
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookIn);
