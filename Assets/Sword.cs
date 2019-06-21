@@ -35,6 +35,8 @@ public class Sword : MonoBehaviour
 
     public HealthEnamyContorller healthEnamyContorller;
 
+    public Animator animator;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -45,22 +47,17 @@ public class Sword : MonoBehaviour
     }
 
     void Update()
-    {
-        Vector3 targetPosition = new Vector3
-            (target.transform.position.x, transform.transform.position.y, target.transform.position.z);
+    {     
         float distance = Vector3.Distance(target.position, transform.position);
-
-        int spawnIndex = Random.Range(0, spawnPoints.Length);
-        Transform spawnPoint = spawnPoints[spawnIndex];
-
+      
         if (distance <= lookRaius && Time.time > nextFire)
         {
-            
+            animator.SetFloat("Hit", lookIn);
         }
 
         if (distance <= lookIn && Time.time > nextFire)
         {
-        
+            animator.SetFloat("Hit", lookIn);
         }
 
     }
@@ -68,7 +65,7 @@ public class Sword : MonoBehaviour
     public void Damage(int damageAmount)
     {
 
-        healthEnamyContorller.healthEvilEye -= damageAmount;
+        healthEnamyContorller.healthEvilEye  -= damageAmount;
 
         if (healthEnamyContorller.healthEvilEye <= 0)
         {
