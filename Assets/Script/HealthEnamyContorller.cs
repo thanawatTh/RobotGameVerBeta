@@ -38,6 +38,11 @@ public class HealthEnamyContorller : MonoBehaviour
     public float healthEyeOfEvil04 = 50;
     public GameObject eyeOfevil04;
 
+    //Sword
+    public float healthSword = 50;
+    public GameObject sword;
+
+
     //public float startHealth;
 
 
