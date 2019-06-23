@@ -10,11 +10,6 @@ public class HealthContorller : MonoBehaviour
     public Image healthBarImage;
 
     public ParticleSystem dead;
-
-    public GameObject player;
-
-    public GameObject hpBar;
-
     public bool isDie;
   
     // Start is called before the first frame update

@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             pause = true;
             pauseGameObj.SetActive(true);
-
+            
             
         }
        

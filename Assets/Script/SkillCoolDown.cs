@@ -79,7 +79,7 @@ public class SkillCoolDown : MonoBehaviour
 
 
         //shield
-        if (time >= 0 )
+        if (time >= 0 && shieldAbility.isShieldGo == false) 
         {
             time -= Time.deltaTime;
 

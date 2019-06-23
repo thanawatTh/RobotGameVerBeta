@@ -193,6 +193,8 @@ MonoBehaviour:
     type: 3}
   barrelEnd: {fileID: 9205963950147729079}
   fireRate: 1
+  hpBar: {fileID: 0}
+  positionBall: {fileID: 0}
   healthEnamyContorller: {fileID: 5220897950744256053, guid: 35ab8df76f300dd44ba494651fd8f0eb,
     type: 3}
 --- !u!195 &9205963949698023129

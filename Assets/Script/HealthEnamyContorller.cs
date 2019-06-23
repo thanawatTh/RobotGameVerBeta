@@ -17,6 +17,7 @@ public class HealthEnamyContorller : MonoBehaviour
     //tank
     public float healthTank = 3;
     public GameObject tank;
+    public float starHealthTank;
 
     //manS
     public float healthManS = 1;
@@ -53,6 +54,7 @@ public class HealthEnamyContorller : MonoBehaviour
     void Start()
     {
         //starHealthBoss = healthEvilEye;
+      
     }
 
     // Update is called once per frame

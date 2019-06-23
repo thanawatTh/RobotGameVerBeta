@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class BallEnemy : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class BallEnemy : MonoBehaviour
     public float fireRate = 0.25f;
 
     private float nextFire;
+    public Image hpBarPosition;
+    public Image hpBar;
+    public Transform positionBall;
 
 
     //public int currentHealth = 3;
@@ -30,7 +34,8 @@ public class BallEnemy : MonoBehaviour
 
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
-       
+        healthEnamyContorller.starHealthTank = healthEnamyContorller.healthTank;
+
     }
 
 
@@ -38,6 +43,7 @@ public class BallEnemy : MonoBehaviour
     {
 
         healthEnamyContorller.healthTank -= damageAmount;
+        hpBar.fillAmount = healthEnamyContorller.healthTank / healthEnamyContorller.starHealthTank;
 
         if (healthEnamyContorller.healthTank <= 0)
         {
@@ -66,7 +72,8 @@ public class BallEnemy : MonoBehaviour
 
     void Update()
     {
-
+        hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
+       
         //transform.position = Vector3.MoveTowards(transform.position, target.position , speed * Time.deltaTime);
         float distance = Vector3.Distance(target.position, transform.position);
      
