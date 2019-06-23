@@ -23,7 +23,7 @@ public class SkillCoolDown : MonoBehaviour
     private float cooldownShield = 10;
     public bool isCooldownShield;
     private ShieldAbility shieldAbility;
-    private float time = 15.0f;
+    private float time;
     bool timeEnd = false;
     bool fade, fadeStart;
 
@@ -33,8 +33,8 @@ public class SkillCoolDown : MonoBehaviour
         abilityDash = GetComponent<AbilityDash>();
         missiles = GetComponent<Missiles>();
         shieldAbility = GetComponent<ShieldAbility>();
+        time = 10.0f;
 
-        
     }
 
     // Update is called once per frame

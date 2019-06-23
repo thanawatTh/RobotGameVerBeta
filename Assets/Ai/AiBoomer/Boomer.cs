@@ -75,10 +75,7 @@ public class Boomer : MonoBehaviour
 
     public void Damage(int damageAmount)
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
-        foreach (GameObject enemy in enemies) {
-
-        }
+       
         //currentHealth -= damageAmount;
         healthEnamyContorller.healthBoomber -= damageAmount;
 
