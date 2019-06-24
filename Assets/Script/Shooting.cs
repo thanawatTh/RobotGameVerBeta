@@ -16,7 +16,7 @@ public class Shooting : MonoBehaviour
     private AudioSource gunAudio;
     private LineRenderer laserLine;
     private float nextFire;
-    public BossHealth bossHealth;
+    
 
     public bool shootingCall;
 
