@@ -25,7 +25,7 @@ public class Sword : MonoBehaviour
  
     public Image hpBarPosition;
     public Image hpBar;
-    public HealthEnamyContorller healthEnamyContorller;
+    private HealthEnamyContorller healthEnamyContorller;
     public Missiles missiles;
 
     private void Start()
@@ -37,6 +37,7 @@ public class Sword : MonoBehaviour
         healthEnamyContorller.starHealthSwordN = healthEnamyContorller.healthSwordN;
         hpBarPosition.enabled = true;
         hpBar.enabled = true;
+        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
     }
 
     void Update()
@@ -77,11 +78,20 @@ public class Sword : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
-            healthEnamyContorller.healthSwordN -= missiles.damage;
+            healthEnamyContorller.healthSwordN -= 5;
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             //Destroy(gameObject);
-            hpBarPosition.enabled = false;
-            hpBar.enabled = false;
+           
+
+            if (healthEnamyContorller.healthSwordN <= 0)
+            {
+                Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+                gameObject.SetActive(false);
+                hpBarPosition.enabled = false;
+                hpBar.enabled = false;
+
+            }
 
         }
 

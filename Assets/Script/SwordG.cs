@@ -78,12 +78,23 @@ public class SwordG : MonoBehaviour
 
         if (other.gameObject.tag == "Missle")
         {
-
+            healthEnamyContorller.heathSwordG -= 5;
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            hpBarPosition.enabled = false;
-            hpBar.enabled = false;
+            //Destroy(gameObject);
+
+
+            if (healthEnamyContorller.heathSwordG <= 0)
+            {
+                Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+                gameObject.SetActive(false);
+                hpBarPosition.enabled = false;
+                hpBar.enabled = false;
+
+            }
+
         }
+
 
 
     }

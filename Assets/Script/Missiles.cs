@@ -12,7 +12,7 @@ public class Missiles : MonoBehaviour
    // public Text countM;
     public bool isMissleGo;
     public bool missleCall;
-    public int damage = 5;
+   
 
 
     
