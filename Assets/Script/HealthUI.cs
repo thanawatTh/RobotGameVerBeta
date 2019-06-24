@@ -24,7 +24,7 @@ public class HealthUI : MonoBehaviour
     void Update()
     {
        //Vector3 image = Camera.main.WorldToScreenPoint(this.transform.parent.transform.position);
-        healthUi.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 0.3f, 0));
+        healthUi.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 2f, 0));
         //Vector3 image2 = testCamera.WorldToScreenPoint(this.transform.parent.transform.position);
         //healthUi.rectTransform.position = image;
         //test1.rectTransform.position = image;

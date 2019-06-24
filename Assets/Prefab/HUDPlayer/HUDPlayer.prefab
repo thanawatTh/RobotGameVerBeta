@@ -667,7 +667,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 37.7, y: 8.6}
+  m_SizeDelta: {x: 34.2, y: 7.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8862172453253008135
 CanvasRenderer:
@@ -1788,7 +1788,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40.62, y: 11.5}
+  m_SizeDelta: {x: 36.44, y: 9.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5982554171416860934
 CanvasRenderer:
@@ -1843,8 +1843,6 @@ MonoBehaviour:
   startHealth: 0
   healthBarImage: {fileID: 7665135490347125477}
   dead: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96, type: 3}
-  player: {fileID: 0}
-  hpBar: {fileID: 8458863807643173574}
   isDie: 0
 --- !u!1 &9028547520460001910
 GameObject:
