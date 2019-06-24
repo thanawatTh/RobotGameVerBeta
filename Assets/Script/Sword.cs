@@ -26,6 +26,7 @@ public class Sword : MonoBehaviour
     public Image hpBarPosition;
     public Image hpBar;
     public HealthEnamyContorller healthEnamyContorller;
+    public Missiles missiles;
 
     private void Start()
     {
@@ -68,19 +69,22 @@ public class Sword : MonoBehaviour
 
         }
 
-        void OnTriggerEnter(Collider other)
+        
+
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Missle")
         {
-            if (other.gameObject.tag == "Missle")
-            {
-
-                Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
-                Destroy(gameObject);
-                hpBarPosition.enabled = false;
-                hpBar.enabled = false;
-            }
-
+            healthEnamyContorller.healthSwordN -= missiles.damage;
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+            //Destroy(gameObject);
+            hpBarPosition.enabled = false;
+            hpBar.enabled = false;
 
         }
+
 
     }
 
