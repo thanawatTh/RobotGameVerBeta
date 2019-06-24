@@ -4789,6 +4789,21 @@ PrefabInstance:
       propertyPath: hpBar
       value: 
       objectReference: {fileID: 1701890557}
+    - target: {fileID: 254450138187845109, guid: 725479ccb2ac50242b265b4b411aaaee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0356042
+      objectReference: {fileID: 0}
+    - target: {fileID: 254450138187845109, guid: 725479ccb2ac50242b265b4b411aaaee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9534475
+      objectReference: {fileID: 0}
+    - target: {fileID: 254450138187845109, guid: 725479ccb2ac50242b265b4b411aaaee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.055
+      objectReference: {fileID: 0}
     - target: {fileID: 8621003435762325429, guid: 725479ccb2ac50242b265b4b411aaaee,
         type: 3}
       propertyPath: healthEnamyContorller
