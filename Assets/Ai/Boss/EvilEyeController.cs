@@ -39,6 +39,7 @@ public class EvilEyeController : MonoBehaviour
     //public Image healthBarImage;
     //public BossHealth bossHealth;
     public Image hpBar;
+    public bool isDie;
 
 
 
@@ -48,9 +49,9 @@ public class EvilEyeController : MonoBehaviour
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
-        healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
         healthEnamyContorller.starHealthEvilEye = healthEnamyContorller.healthEvilEye;
         healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
+        isDie = false;
     }
 
     void Update()
@@ -100,7 +101,7 @@ public class EvilEyeController : MonoBehaviour
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
-
+            isDie = true;
         }
 
     }
@@ -111,13 +112,15 @@ public class EvilEyeController : MonoBehaviour
                 healthEnamyContorller.healthEvilEye -= 5;
                 Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-                if (healthEnamyContorller.healthEvilEye <= 0)
-                {
-                    Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+            if (healthEnamyContorller.healthEvilEye <= 0)
+            {
+                Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-                    gameObject.SetActive(false);
+                gameObject.SetActive(false);
+                isDie = true;
+            }
 
-                }
+            
 
             }
 
