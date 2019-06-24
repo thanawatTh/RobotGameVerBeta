@@ -23,7 +23,7 @@ public class BallEnemy : MonoBehaviour
     //public Image hpBarPosition;
     //public Image hpBar;
     public Transform positionBall;
-    private AudioSource gunAudio;
+    public AudioSource gunAudio;
 
 
     //public int currentHealth = 3;
@@ -65,13 +65,14 @@ public class BallEnemy : MonoBehaviour
         {
             
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
-            gunAudio.Play();
+            
             Destroy(gameObject);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
         }
+        gunAudio.Play();
 
-       
+
     }
 
     void Update()

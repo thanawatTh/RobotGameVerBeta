@@ -31,7 +31,7 @@ public class E1ball : MonoBehaviour
     public NavMeshAgent agent;
 
     bool ballDie = false;
-    private AudioSource gunAudio;
+    public AudioSource gunAudio;
 
     private HealthEnamyContorller healthEnamyContorller;
     //public Image hpBarPosition;
@@ -72,12 +72,13 @@ public class E1ball : MonoBehaviour
             {
                 Instantiate(ballHit, transform.position, Quaternion.identity);
                 health.TakeDamge(20);
-                gunAudio.Play();
+                
                 Destroy(Ball);
                 //hpBarPosition.enabled = false;
                 //hpBar.enabled = false;
             }
-           
+            gunAudio.Play();
+
         }
 
         
