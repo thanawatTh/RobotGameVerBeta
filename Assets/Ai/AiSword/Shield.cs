@@ -27,13 +27,9 @@ public class Shield : MonoBehaviour
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-            gameObject.SetActive(false);
-           
+            gameObject.SetActive(false);           
 
         }
-
-       
-
 
     }
 
@@ -47,7 +43,6 @@ public class Shield : MonoBehaviour
             Destroy(gameObject);
 
         }
-
 
     }
 }
