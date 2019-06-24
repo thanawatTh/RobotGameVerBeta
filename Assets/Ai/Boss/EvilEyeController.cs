@@ -39,6 +39,7 @@ public class EvilEyeController : MonoBehaviour
     //public Image healthBarImage;
     //public BossHealth bossHealth;
     public Image hpBar;
+    public bool isDie;
 
 
 
@@ -50,7 +51,7 @@ public class EvilEyeController : MonoBehaviour
         health = GameManager.instance.healthBar;
         healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
         healthEnamyContorller.starHealthEvilEye = healthEnamyContorller.healthEvilEye;
-        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
+        
     }
 
     void Update()
@@ -87,6 +88,9 @@ public class EvilEyeController : MonoBehaviour
             transform.LookAt(targetPosition);
         }*/
 
+
+       
+
     }
 
     public void Damage(int damageAmount)
@@ -100,6 +104,8 @@ public class EvilEyeController : MonoBehaviour
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
+            isDie = true;
+            Debug.Log("Boss Die");
 
         }
 
@@ -116,8 +122,10 @@ public class EvilEyeController : MonoBehaviour
                     Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
                     gameObject.SetActive(false);
+                    isDie = true;
+                    Debug.Log("Boss Die");
 
-                }
+            }
 
             }
 

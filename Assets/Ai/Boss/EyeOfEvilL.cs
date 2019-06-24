@@ -33,6 +33,8 @@ public class EyeOfEvilL : MonoBehaviour
     //public Image hpBarPosition;
     //public Image hpBar;
     private HealthEnamyContorller healthEnamyContorller;
+    public EvilEyeController evil;
+    public GameObject eye;
 
     private void Start()
     {
@@ -58,6 +60,11 @@ public class EyeOfEvilL : MonoBehaviour
             missleInstance.AddForce(barrelEnd.forward * 2000);
 
             transform.LookAt(targetPosition);
+        }
+
+        if (evil.isDie == true) 
+        {
+            eye.SetActive(false);
         }
      
     }
