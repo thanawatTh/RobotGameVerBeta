@@ -49,15 +49,19 @@ public class HealthEnamyContorller : MonoBehaviour
     //EyeOfEvil
     public float healthEyeOfEvil01 = 50;
     public GameObject eyeOfevil01;
+    public float starHeathEyeOfEvil01;
 
-    public float healthEyeOfEvil02 = 50;
-    public GameObject eyeOfevil02;
+    //public float healthEyeOfEvil02 = 50;
+    //public GameObject eyeOfevil02;
+    //public float starHeathEyeOfEvil02;
 
-    public float healthEyeOfEvil03 = 50;
-    public GameObject eyeOfevil03;
+    //public float healthEyeOfEvil03 = 50;
+    //public GameObject eyeOfevil03;
+    //public float starHeathEyeOfEvil03;
 
-    public float healthEyeOfEvil04 = 50;
-    public GameObject eyeOfevil04;
+    //public float healthEyeOfEvil04 = 50;
+    //public GameObject eyeOfevil04;
+    //public float starHeathEyeOfEvil04;
 
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;

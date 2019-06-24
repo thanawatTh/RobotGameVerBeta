@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EyeOfEvilL : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class EyeOfEvilL : MonoBehaviour
     
     public Rigidbody missilPrefab;
     public Transform barrelEnd;
+    public Image hpBarPosition;
+    public Image hpBar;
+    public HealthEnamyContorller healthEnamyContorller;
 
     private void Start()
     {
@@ -36,10 +40,12 @@ public class EyeOfEvilL : MonoBehaviour
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
+       
     }
 
     void Update()
     {
+       
         Vector3 targetPosition = new Vector3
             (target.transform.position.x, transform.transform.position.y, target.transform.position.z);
         float distance = Vector3.Distance(target.position, transform.position);
@@ -59,14 +65,16 @@ public class EyeOfEvilL : MonoBehaviour
     public void Damage(int damageAmount)
     {
 
-        currentHealth -= damageAmount;
+        healthEnamyContorller.healthEyeOfEvil01 -= damageAmount;
+        //hpBar.fillAmount = healthEnamyContorller.healthEyeOfEvil01 / healthEnamyContorller.starHeathEyeOfEvil01;
+        //currentHealth -= damageAmount;
 
-        if (currentHealth <= 0)
+        if (healthEnamyContorller.healthEyeOfEvil01 <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
-
+           
         }
 
     }
@@ -75,8 +83,10 @@ public class EyeOfEvilL : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
+           
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+
         }
     }
 
