@@ -45,6 +45,7 @@ public class HealthEnamyContorller : MonoBehaviour
     public float healthEvilEye = 65;
     public GameObject evilEye;
     public float starHealthEvilEye;
+   
 
     //EyeOfEvil
     public float healthEyeOfEvil01 = 50;
@@ -63,6 +64,10 @@ public class HealthEnamyContorller : MonoBehaviour
     //public GameObject eyeOfevil04;
     //public float starHeathEyeOfEvil04;
 
+    public BallEnemy ball;
+
+   
+
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;
 
@@ -71,13 +76,23 @@ public class HealthEnamyContorller : MonoBehaviour
     void Start()
     {
         //starHealthBoss = healthEvilEye;
-      
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
+        if (healthTank <= 0)
+        {
+            SoundManager.BombSound("explosion");
+            //SoundManager.instance.TestSound();
+            Debug.LogError("die");
+
+        }
+        
+        //Debug.Log(healthTank);
+
 
     }
 
@@ -117,5 +132,5 @@ public class HealthEnamyContorller : MonoBehaviour
     //    healthBarBoos.fillAmount = healthEvilEye / starHealthBoss;
     //}
 
-
+   
 }

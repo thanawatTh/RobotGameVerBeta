@@ -217,7 +217,7 @@ MonoBehaviour:
   cudeSize: 5
   cubeInrow: 5
   agent: {fileID: 3007125626082137329}
-  gunAudio: {fileID: 0}
+  gunAudio: {fileID: 8992695249361735058}
 --- !u!82 &8992695249361735058
 AudioSource:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e7686e03a3ae97448a6923bbe05fa760, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    bool gameHasEnded = false;
+    
     public GameObject gameOver;
     public GameObject pauseGameObj;
     public HealthContorller healthBar;
@@ -18,12 +18,13 @@ public class GameManager : MonoBehaviour
    
     public GameObject main;
     public bool loadNewScene = false;
+    //public EvilEyeController evil;
 
 
 
     private void Start()
     {
-        gameHasEnded = false;
+       
         gameOver.SetActive(false);
         pauseGameObj.SetActive(false);
         pause = false;
@@ -50,6 +51,8 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+
+        
     }
 
   
@@ -97,6 +100,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-   
+   public void WinGame()
+    {
+
+    }
 
 }

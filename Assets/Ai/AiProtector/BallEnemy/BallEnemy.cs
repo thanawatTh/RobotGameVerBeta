@@ -23,7 +23,8 @@ public class BallEnemy : MonoBehaviour
     //public Image hpBarPosition;
     //public Image hpBar;
     public Transform positionBall;
-    public AudioSource gunAudio;
+    public bool isDie;
+   
 
 
     //public int currentHealth = 3;
@@ -39,6 +40,8 @@ public class BallEnemy : MonoBehaviour
         //hpBarPosition.enabled = true;
         //hpBar.enabled = true;
         healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
+       
+       
     }
 
 
@@ -55,7 +58,7 @@ public class BallEnemy : MonoBehaviour
             gameObject.SetActive(false);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
-
+            isDie = true;
         }
     }
 
@@ -65,12 +68,14 @@ public class BallEnemy : MonoBehaviour
         {
             
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
-            
             Destroy(gameObject);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
+            isDie = true;
+
+
         }
-        gunAudio.Play();
+        //gunAudio.Play();
 
 
     }
@@ -95,7 +100,13 @@ public class BallEnemy : MonoBehaviour
             Debug.Log("missle");
 
         }
-   
+
+        if (healthEnamyContorller.healthTank <= 0)
+        {
+
+            isDie = true;
+        }
+
     }
 
     void OnDrawGizmosSelected()

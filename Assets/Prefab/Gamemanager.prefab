@@ -64,22 +64,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBoomber: 1
   boomber: {fileID: 7222563684843572279, guid: 05bb455c6a37807408d8d9835a6a86a7, type: 3}
+  starHealthBoomber: 0
   healthProtecter: 3
   protecter: {fileID: 6374738313500220209, guid: 0c431352de63bdf4f8edadc71e20916d,
     type: 3}
+  starHealthProtecter: 0
   healthTank: 3
   tank: {fileID: 0}
+  starHealthTank: 0
   healthManS: 1
   manS: {fileID: 6433701417878265516, guid: 7525cf53b96bc6044a945cc5284c0174, type: 3}
+  starHealthManS: 0
+  healthSwordN: 20
+  SwordN: {fileID: 0}
+  starHealthSwordN: 0
+  heathSwordG: 15
+  SwordG: {fileID: 0}
+  starHealthSwordG: 0
+  heathShield: 5
+  ShieldEnemy: {fileID: 0}
+  starHeathShield: 0
   healthEvilEye: 250
   evilEye: {fileID: 0}
+  starHealthEvilEye: 0
   healthEyeOfEvil01: 50
   eyeOfevil01: {fileID: 0}
-  healthEyeOfEvil02: 50
-  eyeOfevil02: {fileID: 0}
-  healthEyeOfEvil03: 50
-  eyeOfevil03: {fileID: 0}
-  healthEyeOfEvil04: 50
-  eyeOfevil04: {fileID: 0}
+  starHeathEyeOfEvil01: 0
+  ball: {fileID: 0}
   deathEffect: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96,
     type: 3}
