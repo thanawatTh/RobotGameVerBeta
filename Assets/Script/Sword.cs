@@ -39,7 +39,8 @@ public class Sword : MonoBehaviour
     }
 
     void Update()
-    {     
+    {
+        hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
         float distance = Vector3.Distance(target.position, transform.position);
 
         agent.SetDestination(target.position);

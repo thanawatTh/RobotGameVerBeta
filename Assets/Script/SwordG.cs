@@ -40,6 +40,7 @@ public class SwordG : MonoBehaviour
 
     void Update()
     {
+        hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
         float distance = Vector3.Distance(target.position, transform.position);
 
         agent.SetDestination(target.position);
@@ -67,19 +68,23 @@ public class SwordG : MonoBehaviour
 
         }
 
-        void OnTriggerEnter(Collider other)
+       
+
+    }
+
+
+    public  void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Missle")
         {
-            if (other.gameObject.tag == "Missle")
-            {
 
-                Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
-                Destroy(gameObject);
-                hpBarPosition.enabled = false;
-                hpBar.enabled = false;
-            }
-
-
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            hpBarPosition.enabled = false;
+            hpBar.enabled = false;
         }
+
 
     }
 
