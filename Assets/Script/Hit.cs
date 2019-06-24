@@ -24,7 +24,7 @@ public class Hit : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
 
-          health.TakeDamge(100);
+          health.TakeDamge(20);
 
         }
         
