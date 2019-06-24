@@ -34,6 +34,7 @@ public class EyeOfEvilL : MonoBehaviour
     //public Image hpBar;
     private HealthEnamyContorller healthEnamyContorller;
     public EvilEyeController evil;
+    public GameObject eye;
 
     private void Start()
     {
@@ -61,10 +62,9 @@ public class EyeOfEvilL : MonoBehaviour
             transform.LookAt(targetPosition);
         }
 
-        if (evil.isDie == true)
+        if (evil.isDie == true) 
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            gameObject.SetActive(false);
+            eye.SetActive(false);
         }
      
     }
