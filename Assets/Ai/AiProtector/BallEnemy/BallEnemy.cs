@@ -35,7 +35,8 @@ public class BallEnemy : MonoBehaviour
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         healthEnamyContorller.starHealthTank = healthEnamyContorller.healthTank;
-
+        hpBarPosition.enabled = true;
+        hpBar.enabled = true;
     }
 
 
@@ -50,6 +51,8 @@ public class BallEnemy : MonoBehaviour
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
+            hpBarPosition.enabled = false;
+            hpBar.enabled = false;
 
         }
 
@@ -63,8 +66,11 @@ public class BallEnemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
+            
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            hpBarPosition.enabled = false;
+            hpBar.enabled = false;
         }
 
        

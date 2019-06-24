@@ -8,11 +8,13 @@ public class HealthEnamyContorller : MonoBehaviour
     //boomber
     public float healthBoomber = 1;
     public GameObject boomber;
+    public float starHealthBoomber;
 
 
     //protecter
     public float healthProtecter = 3;
     public GameObject protecter;
+    public float starHealthProtecter;
 
     //tank
     public float healthTank = 3;
@@ -22,6 +24,7 @@ public class HealthEnamyContorller : MonoBehaviour
     //manS
     public float healthManS = 1;
     public GameObject manS;
+    public float starHealthManS;
 
     //BossEvilEye
     //public float healthEvilEye = 65;

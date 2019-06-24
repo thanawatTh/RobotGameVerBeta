@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class E1ball : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class E1ball : MonoBehaviour
     bool ballDie = false;
 
     public HealthEnamyContorller healthEnamyContorller;
+    public Image hpBarPosition;
+    public Image hpBar;
 
 
 
@@ -43,13 +46,15 @@ public class E1ball : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
         ballDie = false;
-       
+        hpBarPosition.enabled = true;
+        hpBar.enabled = true;
     }
 
     void Update()
     {
-        
-      
+
+        hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
+
         float distance = Vector3.Distance(target.position, transform.position);
         Debug.Log(distance);
 
@@ -66,6 +71,8 @@ public class E1ball : MonoBehaviour
                 Instantiate(ballHit, transform.position, Quaternion.identity);
                 health.TakeDamge(20);
                 Destroy(Ball);
+                hpBarPosition.enabled = false;
+                hpBar.enabled = false;
             }
            
         }
@@ -84,6 +91,8 @@ public class E1ball : MonoBehaviour
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
+            hpBarPosition.enabled = false;
+            hpBar.enabled = false;
 
         }
 
@@ -95,6 +104,9 @@ public class E1ball : MonoBehaviour
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            hpBarPosition.enabled = false;
+            hpBar.enabled = false;
+
         }
 
         if (other.gameObject.tag == "ShieldTag")
@@ -102,6 +114,8 @@ public class E1ball : MonoBehaviour
             ballDie = true;
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            hpBarPosition.enabled = false;
+            hpBar.enabled = false;
 
         }
     }
