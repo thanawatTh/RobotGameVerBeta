@@ -55,11 +55,6 @@ public class BallEnemy : MonoBehaviour
             hpBar.enabled = false;
 
         }
-
-
-
-
-
     }
 
     void OnTriggerEnter(Collider other)

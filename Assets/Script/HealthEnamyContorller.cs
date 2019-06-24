@@ -26,6 +26,21 @@ public class HealthEnamyContorller : MonoBehaviour
     public GameObject manS;
     public float starHealthManS;
 
+    //SwordN
+    public float healthSwordN = 20;
+    public GameObject SwordN;
+    public float starHealthSwordN;
+
+    //SwordG
+    public float heathSwordG = 15;
+    public GameObject SwordG;
+    public float starHealthSwordG;
+
+    //ShieldEnemy
+    public float heathShield = 5;
+    public GameObject ShieldEnemy;
+    public float starHeathShield;
+
     //BossEvilEye
     //public float healthEvilEye = 65;
     //public GameObject evilEye;
@@ -44,10 +59,6 @@ public class HealthEnamyContorller : MonoBehaviour
 
     public float healthEyeOfEvil04 = 50;
     public GameObject eyeOfevil04;
-
-
-  
-
 
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;

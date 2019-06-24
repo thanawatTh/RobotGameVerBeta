@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class Sword : MonoBehaviour
+public class SwordG : MonoBehaviour
 {
 
     [Header("Unity Setup")]
-    
+
     Rigidbody rb;
     public float lookRaius = 5f;
     public float lookIn = 2f;
@@ -20,12 +20,11 @@ public class Sword : MonoBehaviour
     public NavMeshAgent agent;
 
     private float nextFire;
-
-    public Animator animator;
- 
+    public HealthEnamyContorller healthEnamyContorller;
     public Image hpBarPosition;
     public Image hpBar;
-    public HealthEnamyContorller healthEnamyContorller;
+
+    public Animator animator;
 
     private void Start()
     {
@@ -33,20 +32,21 @@ public class Sword : MonoBehaviour
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
-        healthEnamyContorller.starHealthSwordN = healthEnamyContorller.healthSwordN;
+        healthEnamyContorller.starHealthSwordG = healthEnamyContorller.heathSwordG;
         hpBarPosition.enabled = true;
         hpBar.enabled = true;
+
     }
 
     void Update()
-    {     
+    {
         float distance = Vector3.Distance(target.position, transform.position);
 
         agent.SetDestination(target.position);
 
         if (distance <= lookIn && Time.time > nextFire)
         {
-            animator.SetFloat("Hit", lookIn);
+            animator.SetFloat("HitHam", lookIn);
         }
 
     }
@@ -54,10 +54,10 @@ public class Sword : MonoBehaviour
     public void Damage(int damageAmount)
     {
 
-        healthEnamyContorller.healthSwordN -= damageAmount;
-        hpBar.fillAmount = healthEnamyContorller.healthSwordN / healthEnamyContorller.starHealthSwordN;
+        healthEnamyContorller.heathSwordG -= damageAmount;
+        hpBar.fillAmount = healthEnamyContorller.heathSwordG / healthEnamyContorller.starHealthSwordG;
 
-        if (healthEnamyContorller.healthSwordN <= 0)
+        if (healthEnamyContorller.heathSwordG <= 0)
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
@@ -90,5 +90,5 @@ public class Sword : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lookIn);
 
     }
-
 }
+
