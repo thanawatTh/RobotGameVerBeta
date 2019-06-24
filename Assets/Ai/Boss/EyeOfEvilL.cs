@@ -30,9 +30,9 @@ public class EyeOfEvilL : MonoBehaviour
     
     public Rigidbody missilPrefab;
     public Transform barrelEnd;
-    public Image hpBarPosition;
-    public Image hpBar;
-    public HealthEnamyContorller healthEnamyContorller;
+    //public Image hpBarPosition;
+    //public Image hpBar;
+    private HealthEnamyContorller healthEnamyContorller;
 
     private void Start()
     {
@@ -40,7 +40,7 @@ public class EyeOfEvilL : MonoBehaviour
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
-       
+        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
     }
 
     void Update()
@@ -83,10 +83,17 @@ public class EyeOfEvilL : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
-           
+            healthEnamyContorller.healthEvilEye -= 5;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
+            if (healthEnamyContorller.healthEyeOfEvil01 <= 0)
+            {
+                Instantiate(deathEffect, transform.position, Quaternion.identity);
+
+                gameObject.SetActive(false);
+
+            }
         }
     }
 

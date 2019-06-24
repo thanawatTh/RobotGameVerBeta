@@ -20,23 +20,24 @@ public class BallEnemy : MonoBehaviour
     public float fireRate = 0.25f;
 
     private float nextFire;
-    public Image hpBarPosition;
-    public Image hpBar;
+    //public Image hpBarPosition;
+    //public Image hpBar;
     public Transform positionBall;
 
 
     //public int currentHealth = 3;
 
-     public HealthEnamyContorller healthEnamyContorller;
+     private HealthEnamyContorller healthEnamyContorller;
 
     void Start()
     {
 
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
-        healthEnamyContorller.starHealthTank = healthEnamyContorller.healthTank;
-        hpBarPosition.enabled = true;
-        hpBar.enabled = true;
+        //healthEnamyContorller.starHealthTank = healthEnamyContorller.healthTank;
+        //hpBarPosition.enabled = true;
+        //hpBar.enabled = true;
+        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
     }
 
 
@@ -44,15 +45,15 @@ public class BallEnemy : MonoBehaviour
     {
 
         healthEnamyContorller.healthTank -= damageAmount;
-        hpBar.fillAmount = healthEnamyContorller.healthTank / healthEnamyContorller.starHealthTank;
+        //hpBar.fillAmount = healthEnamyContorller.healthTank / healthEnamyContorller.starHealthTank;
 
         if (healthEnamyContorller.healthTank <= 0)
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
-            hpBarPosition.enabled = false;
-            hpBar.enabled = false;
+            //hpBarPosition.enabled = false;
+            //hpBar.enabled = false;
 
         }
     }
@@ -64,8 +65,8 @@ public class BallEnemy : MonoBehaviour
             
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            hpBarPosition.enabled = false;
-            hpBar.enabled = false;
+            //hpBarPosition.enabled = false;
+            //hpBar.enabled = false;
         }
 
        
@@ -73,7 +74,7 @@ public class BallEnemy : MonoBehaviour
 
     void Update()
     {
-        hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
+        //hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
        
         //transform.position = Vector3.MoveTowards(transform.position, target.position , speed * Time.deltaTime);
         float distance = Vector3.Distance(target.position, transform.position);

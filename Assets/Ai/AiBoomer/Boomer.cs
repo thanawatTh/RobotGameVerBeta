@@ -29,9 +29,9 @@ public class Boomer : MonoBehaviour
 
     //public int currentHealth = 1;
 
-    public HealthEnamyContorller healthEnamyContorller;
-    public Image hpBarPosition;
-    public Image hpBar;
+    private HealthEnamyContorller healthEnamyContorller;
+    //public Image hpBarPosition;
+    //public Image hpBar;
 
 
 
@@ -40,17 +40,19 @@ public class Boomer : MonoBehaviour
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
-        
-        
+        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
+
         boomberDie = false;
-        hpBarPosition.enabled = true;
-        hpBar.enabled = true;
+        //hpBarPosition.enabled = true;
+        //hpBar.enabled = true;
+
+        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
 
     }
 
     void Update()
     {
-        hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
+        //hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
 
         float distance = Vector3.Distance(target.position, transform.position);
         Debug.Log(distance);
@@ -68,8 +70,8 @@ public class Boomer : MonoBehaviour
                 Instantiate(booM, transform.position, Quaternion.identity);
                 health.TakeDamge(90);
                 Destroy(booMer);
-                hpBarPosition.enabled = false;
-                hpBar.enabled = false;
+                //hpBarPosition.enabled = false;
+                //hpBar.enabled = false;
             }
             
                       
@@ -93,8 +95,8 @@ public class Boomer : MonoBehaviour
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
-            hpBarPosition.enabled = false;
-            hpBar.enabled = false;
+            //hpBarPosition.enabled = false;
+            //hpBar.enabled = false;
 
 
         }
@@ -107,8 +109,8 @@ public class Boomer : MonoBehaviour
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            hpBarPosition.enabled = false;
-            hpBar.enabled = false;
+            //hpBarPosition.enabled = false;
+            //hpBar.enabled = false;
 
         }
 
@@ -117,8 +119,8 @@ public class Boomer : MonoBehaviour
             boomberDie = true;
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            hpBarPosition.enabled = false;
-            hpBar.enabled = false;
+            //hpBarPosition.enabled = false;
+            //hpBar.enabled = false;
 
         }
     }

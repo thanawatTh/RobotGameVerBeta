@@ -34,7 +34,7 @@ public class EvilEyeController : MonoBehaviour
     public Rigidbody missilPrefab;
     public Transform barrelEnd;
 
-    public HealthEnamyContorller healthEnamyContorller;
+    private HealthEnamyContorller healthEnamyContorller;
     //public float startHealthBoss;
     //public Image healthBarImage;
     //public BossHealth bossHealth;
@@ -50,6 +50,7 @@ public class EvilEyeController : MonoBehaviour
         health = GameManager.instance.healthBar;
         healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
         healthEnamyContorller.starHealthEvilEye = healthEnamyContorller.healthEvilEye;
+        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
     }
 
     void Update()
