@@ -42,10 +42,9 @@ public class HealthEnamyContorller : MonoBehaviour
     public float starHeathShield;
 
     //BossEvilEye
-    //public float healthEvilEye = 65;
-    //public GameObject evilEye;
-    //public Image healthBarBoos;
-    //public float starHealthBoss;
+    public float healthEvilEye = 65;
+    public GameObject evilEye;
+    public float starHealthEvilEye;
 
     //EyeOfEvil
     public float healthEyeOfEvil01 = 50;

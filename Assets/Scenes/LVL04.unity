@@ -5166,6 +5166,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwordN
       objectReference: {fileID: 0}
+    - target: {fileID: 5792865762838367644, guid: 51c89fc6e59f8d340a317c4abcdb26dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5792865763870517896, guid: 51c89fc6e59f8d340a317c4abcdb26dc,
         type: 3}
       propertyPath: m_LocalPosition.x

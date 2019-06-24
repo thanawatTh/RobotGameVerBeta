@@ -37,22 +37,25 @@ public class EvilEyeController : MonoBehaviour
     public HealthEnamyContorller healthEnamyContorller;
     //public float startHealthBoss;
     //public Image healthBarImage;
-    public BossHealth bossHealth;
+    //public BossHealth bossHealth;
+    public Image hpBar;
 
 
 
     private void Start()
-    {       
+    {
         rb = GetComponent<Rigidbody>();
         target = GameManager.instance.main.transform;
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
         healthEnamyContorller = GameObject.Find("Gamemanager").GetComponent<HealthEnamyContorller>();
-        //startHealthBoss = healthEnamyContorller.healthEvilEye;
+        healthEnamyContorller.starHealthEvilEye = healthEnamyContorller.healthEvilEye;
     }
 
     void Update()
     {
+        hpBar.fillAmount = healthEnamyContorller.healthEvilEye / healthEnamyContorller.starHealthEvilEye;
+
         Vector3 targetPosition = new Vector3
             (target.transform.position.x, transform.transform.position.y, target.transform.position.z);
         float distance = Vector3.Distance(target.position, transform.position);
@@ -72,7 +75,7 @@ public class EvilEyeController : MonoBehaviour
             transform.LookAt(targetPosition);
             Destroy(spawnedCube, 3f);
         }
-        
+
         /*if (distance <= lookIn && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
@@ -85,44 +88,13 @@ public class EvilEyeController : MonoBehaviour
 
     }
 
-    //public void Damage(int damageAmount)
-    //{
-
-    //    healthEnamyContorller.healthEvilEye -= damageAmount;
-    //    //healthBarImage.fillAmount = healthEnamyContorller.healthEvilEye / startHealthBoss;
-
-    //    if (healthEnamyContorller.healthEvilEye <= 0)
-    //    {
-    //        Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
-
-    //        gameObject.SetActive(false);
-
-    //    }
-    
-
-    void OnTriggerEnter(Collider other)
+    public void Damage(int damageAmount)
     {
-        //if (other.gameObject.tag == "Missle")
-        //{
-        //    healthEnamyContorller.healthEvilEye -= 5;
-        //    Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-        //    if (healthEnamyContorller.healthEvilEye <= 0)
-        //    {
-        //        Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+        healthEnamyContorller.healthEvilEye -= damageAmount;
+        hpBar.fillAmount = healthEnamyContorller.healthEvilEye / healthEnamyContorller.starHealthEvilEye;
 
-        //        gameObject.SetActive(false);
-
-        //    }
-
-        //}
-
-    if (other.gameObject.tag == "Missle")
-    {
-          bossHealth.TakeDamage(5);
-        Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
-
-        if (bossHealth.healthEvilEye <= 0)
+        if (healthEnamyContorller.healthEvilEye <= 0)
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
@@ -131,20 +103,36 @@ public class EvilEyeController : MonoBehaviour
         }
 
     }
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag == "Missle")
+            {
+                healthEnamyContorller.healthEvilEye -= 5;
+                Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
+                if (healthEnamyContorller.healthEvilEye <= 0)
+                {
+                    Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
+                    gameObject.SetActive(false);
 
-}
+                }
 
-    void OnDrawGizmosSelected()
-    {
+            }
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lookRaius);
+        }
+    
 
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(transform.position, lookIn);
+        void OnDrawGizmosSelected()
+        {
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, lookRaius);
+
+            //Gizmos.color = Color.red;
+            //Gizmos.DrawWireSphere(transform.position, lookIn);
+
+        }
 
     }
-    
-}
+

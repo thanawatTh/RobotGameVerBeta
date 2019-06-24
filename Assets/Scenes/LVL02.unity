@@ -277,18 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &311962263 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1129534374449537377, guid: b39ed0ffc943cb049a0418fbb62ae1e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1129534374676548598}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c420e37c4f60fe4daca59d63bb7ff90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &348607975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -385,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 6744005832177772184, guid: 1de71ba8e62738e45baf60a8c8ddb781,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3810943477116852272, guid: 1de71ba8e62738e45baf60a8c8ddb781,
         type: 3}
@@ -684,7 +672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &726765548 stripped
 GameObject:
@@ -890,7 +878,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bossHealth
       value: 
-      objectReference: {fileID: 311962263}
+      objectReference: {fileID: 0}
     - target: {fileID: 5973641831478714643, guid: 6f5062906749e7a4d99ef6fee07d366d,
         type: 3}
       propertyPath: distace
@@ -918,7 +906,7 @@ PrefabInstance:
     - target: {fileID: 2771729906584928106, guid: 58947774ee5ef8b4586954d4d5395c8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3257353718432357309, guid: 58947774ee5ef8b4586954d4d5395c8c,
         type: 3}
@@ -1360,6 +1348,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a48b7a76a3be9843aa4dbc959932cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1505682939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1129534374449537379, guid: b39ed0ffc943cb049a0418fbb62ae1e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1129534374676548598}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1544915323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1367,26 +1367,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4405660634133590971, guid: 35ab8df76f300dd44ba494651fd8f0eb,
-        type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1341269337}
-    - target: {fileID: 4405660634133590971, guid: 35ab8df76f300dd44ba494651fd8f0eb,
-        type: 3}
-      propertyPath: main
-      value: 
-      objectReference: {fileID: 1392186623}
-    - target: {fileID: 4405660634133590971, guid: 35ab8df76f300dd44ba494651fd8f0eb,
-        type: 3}
-      propertyPath: pauseGameObj
-      value: 
-      objectReference: {fileID: 2018229305}
-    - target: {fileID: 4405660634133590971, guid: 35ab8df76f300dd44ba494651fd8f0eb,
-        type: 3}
-      propertyPath: gameOver
-      value: 
-      objectReference: {fileID: 445232393}
     - target: {fileID: 4405660634632122066, guid: 35ab8df76f300dd44ba494651fd8f0eb,
         type: 3}
       propertyPath: eyeOfevil01
@@ -1447,6 +1427,31 @@ PrefabInstance:
       propertyPath: healthBarBoos
       value: 
       objectReference: {fileID: 1003064658}
+    - target: {fileID: 4405660634133590971, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1341269337}
+    - target: {fileID: 4405660634133590971, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: main
+      value: 
+      objectReference: {fileID: 1392186623}
+    - target: {fileID: 4405660634133590971, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: pauseGameObj
+      value: 
+      objectReference: {fileID: 2018229305}
+    - target: {fileID: 4405660634133590971, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 445232393}
+    - target: {fileID: 7889263789098275267, guid: 35ab8df76f300dd44ba494651fd8f0eb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5220897950744256053, guid: 35ab8df76f300dd44ba494651fd8f0eb,
         type: 3}
       propertyPath: tank
@@ -1894,7 +1899,17 @@ PrefabInstance:
         type: 3}
       propertyPath: bossHealth
       value: 
-      objectReference: {fileID: 311962263}
+      objectReference: {fileID: 0}
+    - target: {fileID: 771682379167911980, guid: aeb2feb86a13dab45aa68973a79cf091,
+        type: 3}
+      propertyPath: hpBarPosition
+      value: 
+      objectReference: {fileID: 1505682939}
+    - target: {fileID: 771682379167911980, guid: aeb2feb86a13dab45aa68973a79cf091,
+        type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 1003064658}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeb2feb86a13dab45aa68973a79cf091, type: 3}
 --- !u!1001 &1129534374676548598
