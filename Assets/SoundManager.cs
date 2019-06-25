@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Bomb = Resources.Load<AudioClip>("explosion");
+        //Bomb = Resources.Load<AudioClip>("explosion");
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -25,17 +25,17 @@ public class SoundManager : MonoBehaviour
     {
         
     }
-    public static void BombSound(string clip)
-    {
-        //switch (clip)
-        //{
-        //    case "explosion":audioSource.PlayOneShot(Bomb);
-        //        break;
-        //}
-        audioSource.PlayOneShot(Bomb);
-    }
+    //public static void BombSound(string clip)
+    //{
+    //    //switch (clip)
+    //    //{
+    //    //    case "explosion":audioSource.PlayOneShot(Bomb);
+    //    //        break;
+    //    //}
+    //    audioSource.PlayOneShot(Bomb);
+    //}
 
-    public void TestSound()
+    public void Sound()
     {
         Debug.Log("Test");
         audioSource.PlayOneShot(bomb);

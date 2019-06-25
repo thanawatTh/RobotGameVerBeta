@@ -40,6 +40,7 @@ public class EvilEyeController : MonoBehaviour
     //public BossHealth bossHealth;
     public Image hpBar;
     public bool isDie;
+    public GameObject sound;
 
 
 
@@ -106,30 +107,31 @@ public class EvilEyeController : MonoBehaviour
             gameObject.SetActive(false);
             isDie = true;
             Debug.Log("Boss Die");
-
+           
         }
 
     }
-        void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Missle")
         {
-            if (other.gameObject.tag == "Missle")
+            healthEnamyContorller.healthEvilEye -= 5;
+            Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
+
+            if (healthEnamyContorller.healthEvilEye <= 0)
             {
-                healthEnamyContorller.healthEvilEye -= 5;
                 Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
-                if (healthEnamyContorller.healthEvilEye <= 0)
-                {
-                    Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
-
-                    gameObject.SetActive(false);
-                    isDie = true;
-                    Debug.Log("Boss Die");
-
+                gameObject.SetActive(false);
+                isDie = true;
+                Debug.Log("Boss Die");
+               
             }
 
-            }
+
 
         }
+    }
     
 
         void OnDrawGizmosSelected()

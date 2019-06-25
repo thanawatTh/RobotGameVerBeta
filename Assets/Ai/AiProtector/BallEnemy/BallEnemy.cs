@@ -24,6 +24,7 @@ public class BallEnemy : MonoBehaviour
     //public Image hpBar;
     public Transform positionBall;
     public bool isDie;
+
    
 
 
@@ -59,6 +60,7 @@ public class BallEnemy : MonoBehaviour
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
             isDie = true;
+            SoundManager.instance.Sound();
         }
     }
 
@@ -72,6 +74,7 @@ public class BallEnemy : MonoBehaviour
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
             isDie = true;
+            SoundManager.instance.Sound();
 
 
         }

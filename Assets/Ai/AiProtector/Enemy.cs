@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     private HealthEnamyContorller healthEnamyContorller;
     //public Image hpBarPosition;
     //public Image hpBar;
-    
+    public bool isDie;
 
 
     //public int currentHealth = 3;
@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         healthEnamyContorller.starHealthProtecter = healthEnamyContorller.healthProtecter;
         //hpBarPosition.enabled = true;
         //hpBar.enabled = true;
-       
+        isDie = false;
         
     }
 
@@ -55,7 +55,10 @@ public class Enemy : MonoBehaviour
             gameObject.SetActive(false);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
+            isDie = true;
+            SoundManager.instance.Sound();
         }
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -66,7 +69,8 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
-
+            isDie = true;
+            SoundManager.instance.Sound();
         }
     }
 

@@ -64,9 +64,12 @@ public class HealthEnamyContorller : MonoBehaviour
     //public GameObject eyeOfevil04;
     //public float starHeathEyeOfEvil04;
 
-    public BallEnemy ball;
+    //public BallEnemy ball;
+    //public Boomer boomer;
+    //public Enemy protec;
+    //public E1ball e1Ball;
 
-   
+
 
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;
@@ -82,17 +85,53 @@ public class HealthEnamyContorller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ////tankDie
+        //if (ball.isDie == true) 
+        //{
+           
+        //    SoundManager.instance.Sound();
+        //    Debug.Log("die");
 
-        if (healthTank <= 0)
-        {
-            SoundManager.BombSound("explosion");
-            //SoundManager.instance.TestSound();
-            Debug.LogError("die");
+        //    if (ball.isDie == true)
+        //    {
+        //        ball.isDie = false;
+        //    }
 
-        }
-        
-        //Debug.Log(healthTank);
+        //}
 
+        ////boomberDie
+        //if (boomer.boomberDie == true)
+        //{
+        //    SoundManager.instance.Sound();
+
+        //    if(boomer.boomberDie == true)
+        //    {
+        //        boomer.boomberDie = false;
+        //    }
+        //}
+
+        ////protec
+        //if (protec.isDie == true)
+        //{
+        //    SoundManager.instance.Sound();
+
+        //    if (protec.isDie == true)
+        //    {
+        //        protec.isDie = false;
+        //    }
+        //}
+
+        ////ballE1
+        //if (e1Ball.ballDie == true)
+        //{
+        //    SoundManager.instance.Sound();
+
+        //    if (e1Ball.ballDie == true)
+        //    {
+        //        e1Ball.ballDie = false;
+        //    }
+
+        //}
 
     }
 

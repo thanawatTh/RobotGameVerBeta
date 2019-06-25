@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3178982920092722961
+--- !u!1 &4984888268670054528
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7889263789098275267}
-  - component: {fileID: 4405660634133590971}
-  - component: {fileID: 4405660634632122066}
+  - component: {fileID: 2392944045113086157}
+  - component: {fileID: 6118189662998847738}
+  - component: {fileID: 6118189663508004243}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7889263789098275267
+--- !u!4 &2392944045113086157
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3178982920092722961}
+  m_GameObject: {fileID: 4984888268670054528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.6, y: 0, z: 33.1}
   m_LocalScale: {x: 61.675304, y: 0.87617713, z: 61.976738}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4405660634133590971
+--- !u!114 &6118189662998847738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3178982920092722961}
+  m_GameObject: {fileID: 4984888268670054528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c77b51a11933674c9a62c18b3e169f9, type: 3}
@@ -50,13 +50,13 @@ MonoBehaviour:
   pause: 0
   main: {fileID: 0}
   loadNewScene: 0
---- !u!114 &4405660634632122066
+--- !u!114 &6118189663508004243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3178982920092722961}
+  m_GameObject: {fileID: 4984888268670054528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b33a761b78a580d46a12af496fd2eb8f, type: 3}
@@ -91,5 +91,8 @@ MonoBehaviour:
   eyeOfevil01: {fileID: 0}
   starHeathEyeOfEvil01: 0
   ball: {fileID: 0}
+  boomer: {fileID: 0}
+  protec: {fileID: 0}
+  e1Ball: {fileID: 0}
   deathEffect: {fileID: 1626122839150399266, guid: d0b2a67525724fa428879f2130ecec96,
     type: 3}

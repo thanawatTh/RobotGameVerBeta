@@ -72,6 +72,7 @@ public class Boomer : MonoBehaviour
                 Destroy(booMer);
                 //hpBarPosition.enabled = false;
                 //hpBar.enabled = false;
+                boomberDie = true;
             }
             
                       
@@ -97,7 +98,8 @@ public class Boomer : MonoBehaviour
             gameObject.SetActive(false);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
-
+            boomberDie = true;
+            SoundManager.instance.Sound();
 
         }
         
@@ -111,7 +113,8 @@ public class Boomer : MonoBehaviour
             Destroy(gameObject);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
-
+            boomberDie = true;
+            SoundManager.instance.Sound();
         }
 
         if (other.gameObject.tag == "ShieldTag")
@@ -121,7 +124,8 @@ public class Boomer : MonoBehaviour
             Destroy(gameObject);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
-
+            boomberDie = true;
+            SoundManager.instance.Sound();
         }
     }
 

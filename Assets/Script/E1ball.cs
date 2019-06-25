@@ -30,8 +30,8 @@ public class E1ball : MonoBehaviour
 
     public NavMeshAgent agent;
 
-    bool ballDie = false;
-    public AudioSource gunAudio;
+    public bool ballDie = false;
+  
 
     private HealthEnamyContorller healthEnamyContorller;
     //public Image hpBarPosition;
@@ -76,8 +76,9 @@ public class E1ball : MonoBehaviour
                 Destroy(Ball);
                 //hpBarPosition.enabled = false;
                 //hpBar.enabled = false;
+                ballDie = true;
             }
-            gunAudio.Play();
+            
 
         }
 
@@ -97,7 +98,8 @@ public class E1ball : MonoBehaviour
             gameObject.SetActive(false);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
-
+            ballDie = true;
+            SoundManager.instance.Sound();
         }
 
     }
@@ -110,7 +112,8 @@ public class E1ball : MonoBehaviour
             Destroy(gameObject);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
-
+            ballDie = true;
+            SoundManager.instance.Sound();
         }
 
         if (other.gameObject.tag == "ShieldTag")
@@ -120,7 +123,7 @@ public class E1ball : MonoBehaviour
             Destroy(gameObject);
             //hpBarPosition.enabled = false;
             //hpBar.enabled = false;
-
+            SoundManager.instance.Sound();
         }
     }
 
