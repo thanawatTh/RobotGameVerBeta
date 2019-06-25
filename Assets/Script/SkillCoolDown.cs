@@ -22,8 +22,9 @@ public class SkillCoolDown : MonoBehaviour
     public Image imageCooldownShield;
     private float cooldownShield = 10;
     public bool isCooldownShield;
+    private bool isWaitingForShieldGone = false;
     private ShieldAbility shieldAbility;
-    private float time = 10f;
+    private float time = 0f;
     bool timeEnd = false;
     bool fade, fadeStart;
 
@@ -78,44 +79,61 @@ public class SkillCoolDown : MonoBehaviour
         }
 
 
+
         //shield
-        if (time >= 0) 
+        if (isWaitingForShieldGone)
         {
-            time -= Time.deltaTime;
-           
+            //Debug.Log("Wait " + isWaitingForShieldGone);
+            if (time >= 0 && shieldAbility.isShieldGo)
+            {
+                Debug.Log("Wait1 " + isWaitingForShieldGone);
+                time -= Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log("Wait2 " + isWaitingForShieldGone);
+                shieldAbility.isShieldGo = false;
+                isWaitingForShieldGone = false;
+                shieldAbility.shield.SetActive(false);
+                shieldAbility.image.enabled = false;
+                //time = 2f;
+            }
+            //time = 10.0f;
 
-        }
-
-        if (time <= 0 && shieldAbility.isShieldGo == true) 
+        }else
         {
-             //shieldAbility.shield.SetActive(false);
-
+            Debug.Log("not Wait");
+            //shieldAbility.shield.SetActive(false);
+            Debug.Log("isShieldGo "+shieldAbility.isShieldGo);
             if (shieldAbility.isShieldGo == true)
             {
                 isCooldownShield = true;
-                shieldAbility.shield.SetActive(false);
-                shieldAbility.image.enabled = false;
+                shieldAbility.shield.SetActive(true);
+                shieldAbility.image.enabled = true;
+                isWaitingForShieldGone = true;
+                time = 10f;
             }
                        
             
-            if (isCooldownShield == true)
-             {
+            if (isCooldownShield == true &&!isWaitingForShieldGone)
+            {
 
-                 imageCooldownShield.fillAmount += 1 / cooldownShield * Time.deltaTime;
+                imageCooldownShield.fillAmount += 1 / cooldownShield * Time.deltaTime;
 
-                    if (imageCooldownShield.fillAmount >= 1)
-                    {
+                if (imageCooldownShield.fillAmount >= 1)
+                {
                         
 
-                        imageCooldownShield.fillAmount = 0;
-                        isCooldownShield = false;
-                        shieldAbility.isShieldGo = false;
-                        timeEnd = true;
-                        time = 10.0f;
-                    }
+                    imageCooldownShield.fillAmount = 0;
+                    isCooldownShield = false;
+                    shieldAbility.isShieldGo = false;
+                    isWaitingForShieldGone = true;
+                //timeEnd = true;
+                //time = 10.0f;
+                }
 
                     
-                }
+            }
             
            
 

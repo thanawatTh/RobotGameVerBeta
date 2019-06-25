@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2915301906844050458
 Transform:
   m_ObjectHideFlags: 0
@@ -435,6 +435,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 18
   rigidBody: {fileID: 7566987302279650543}
+  health: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!65 &7566987302279650540
 BoxCollider:
   m_ObjectHideFlags: 0
