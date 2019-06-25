@@ -30,7 +30,7 @@ public class BallEnemy : MonoBehaviour
 
     //public int currentHealth = 3;
 
-    private HealthEnamyContorller healthEnamyContorller;
+    public HealthEnamyContorller healthEnamyContorller;
 
     void Start()
     {
@@ -40,8 +40,7 @@ public class BallEnemy : MonoBehaviour
         //healthEnamyContorller.starHealthTank = healthEnamyContorller.healthTank;
         //hpBarPosition.enabled = true;
         //hpBar.enabled = true;
-        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
-       
+        
        
     }
 

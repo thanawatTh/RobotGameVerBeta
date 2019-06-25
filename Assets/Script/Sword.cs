@@ -23,9 +23,9 @@ public class Sword : MonoBehaviour
 
     public Animator animator;
  
-    public Image hpBarPosition;
-    public Image hpBar;
-    private HealthEnamyContorller healthEnamyContorller;
+    //public Image hpBarPosition;
+    //public Image hpBar;
+    public HealthEnamyContorller healthEnamyContorller;
     public Missiles missiles;
 
     private void Start()
@@ -35,14 +35,14 @@ public class Sword : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         health = GameManager.instance.healthBar;
         healthEnamyContorller.starHealthSwordN = healthEnamyContorller.healthSwordN;
-        hpBarPosition.enabled = true;
-        hpBar.enabled = true;
+        //hpBarPosition.enabled = true;
+        //hpBar.enabled = true;
         healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
     }
 
     void Update()
     {
-        hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
+        //hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
         float distance = Vector3.Distance(target.position, transform.position);
 
         agent.SetDestination(target.position);
@@ -52,22 +52,25 @@ public class Sword : MonoBehaviour
             animator.SetFloat("Hit", lookIn);
         }
 
+       
+
+
     }
 
     public void Damage(int damageAmount)
     {
 
         healthEnamyContorller.healthSwordN -= damageAmount;
-        hpBar.fillAmount = healthEnamyContorller.healthSwordN / healthEnamyContorller.starHealthSwordN;
+        //hpBar.fillAmount = healthEnamyContorller.heathSwordG / healthEnamyContorller.starHealthSwordG;
 
         if (healthEnamyContorller.healthSwordN <= 0)
         {
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
-            hpBarPosition.enabled = false;
-            hpBar.enabled = false;
-
+            //hpBarPosition.enabled = false;
+            //hpBar.enabled = false;
+            SoundManager.instance.Sound();
         }
 
         
@@ -78,6 +81,7 @@ public class Sword : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
+            SoundManager.instance.Sound();
             healthEnamyContorller.healthSwordN -= 5;
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
             //Destroy(gameObject);
@@ -88,9 +92,9 @@ public class Sword : MonoBehaviour
                 Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
                 gameObject.SetActive(false);
-                hpBarPosition.enabled = false;
-                hpBar.enabled = false;
-
+                //hpBarPosition.enabled = false;
+                //hpBar.enabled = false;
+                SoundManager.instance.Sound();
             }
 
         }

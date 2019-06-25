@@ -73,6 +73,7 @@ public class Boomer : MonoBehaviour
                 //hpBarPosition.enabled = false;
                 //hpBar.enabled = false;
                 boomberDie = true;
+                SoundManager.instance.Sound();
             }
             
                       

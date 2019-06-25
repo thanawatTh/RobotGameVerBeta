@@ -77,6 +77,7 @@ public class E1ball : MonoBehaviour
                 //hpBarPosition.enabled = false;
                 //hpBar.enabled = false;
                 ballDie = true;
+                SoundManager.instance.Sound();
             }
             
 

@@ -40,7 +40,7 @@ public class EvilEyeController : MonoBehaviour
     //public BossHealth bossHealth;
     public Image hpBar;
     public bool isDie;
-    public GameObject sound;
+   
 
 
 
@@ -106,6 +106,7 @@ public class EvilEyeController : MonoBehaviour
 
             gameObject.SetActive(false);
             isDie = true;
+            SoundManager.instance.Sound();
             Debug.Log("Boss Die");
            
         }
@@ -115,6 +116,7 @@ public class EvilEyeController : MonoBehaviour
     {
         if (other.gameObject.tag == "Missle")
         {
+            SoundManager.instance.Sound();
             healthEnamyContorller.healthEvilEye -= 5;
             Instantiate(healthEnamyContorller.deathEffect, transform.position, Quaternion.identity);
 
@@ -125,7 +127,8 @@ public class EvilEyeController : MonoBehaviour
                 gameObject.SetActive(false);
                 isDie = true;
                 Debug.Log("Boss Die");
-               
+                SoundManager.instance.Sound();
+
             }
 
 

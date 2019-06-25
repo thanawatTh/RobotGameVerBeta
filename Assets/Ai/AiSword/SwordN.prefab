@@ -305,7 +305,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5792865762838367644}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -330,6 +330,7 @@ MonoBehaviour:
   hpBarPosition: {fileID: 0}
   hpBar: {fileID: 0}
   healthEnamyContorller: {fileID: 0}
+  missiles: {fileID: 0}
 --- !u!195 &5792865762838367646
 NavMeshAgent:
   m_ObjectHideFlags: 0

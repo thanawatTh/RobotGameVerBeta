@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
     private float nextFire;
      
-    private HealthEnamyContorller healthEnamyContorller;
+    public HealthEnamyContorller healthEnamyContorller;
     //public Image hpBarPosition;
     //public Image hpBar;
     public bool isDie;
@@ -33,7 +33,6 @@ public class Enemy : MonoBehaviour
     {
 
         target = GameManager.instance.main.transform;
-        healthEnamyContorller = GameManager.instance.GetComponent<HealthEnamyContorller>();
         agent = GetComponent<NavMeshAgent>();
         healthEnamyContorller.starHealthProtecter = healthEnamyContorller.healthProtecter;
         //hpBarPosition.enabled = true;
