@@ -42,6 +42,18 @@ public class HealthContorller : MonoBehaviour
         healthBarImage.fillAmount = health / startHealth;
     }
 
+    public void healHp(int heal)
+    {
+        health = health + heal;
+        healthBarImage.fillAmount = health / startHealth;
+
+        if (health > 100)
+        {
+            health = 100;
+            healthBarImage.fillAmount = health / startHealth;
+        }
+    }
+
 
    
 
