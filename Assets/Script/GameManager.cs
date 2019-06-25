@@ -10,16 +10,17 @@ public class GameManager : MonoBehaviour
     public GameObject gameOver;
     public GameObject pauseGameObj;
     public HealthContorller healthBar;
-    int count;
+    public HealthEnamyContorller healthEnamy;
     [HideInInspector]
     public bool pause;
     #region Signleton
     public static GameManager instance;
+    public GameObject winGame;
    
     public GameObject main;
     public bool loadNewScene = false;
     //public EvilEyeController evil;
-
+    bool wingameBool = false;
 
 
     private void Start()
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         pauseGameObj.SetActive(false);
         pause = false;
         Time.timeScale = 1;
+        winGame.SetActive(false);
     }
     void Awake()
     {
@@ -52,6 +54,17 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
         }
 
+        if (healthEnamy.healthEvilEye <= 0)
+        {
+            Invoke("WinGame", 2f);
+
+            if (wingameBool == true)
+            {
+                Invoke("StopTime", 1f);
+                Time.timeScale= 0;
+            }
+        }
+       
         
     }
 
@@ -102,7 +115,13 @@ public class GameManager : MonoBehaviour
 
    public void WinGame()
     {
+        winGame.SetActive(true);
+        wingameBool = true;
+    }
 
+    public void StopTime()
+    {
+        Time.timeScale = 0;
     }
 
 }

@@ -65,6 +65,7 @@ public class EyeOfEvilL : MonoBehaviour
         if (evil.isDie == true) 
         {
             eye.SetActive(false);
+
         }
      
     }
