@@ -11,12 +11,15 @@ public class HealthContorller : MonoBehaviour
 
     public ParticleSystem dead;
     public bool isDie;
+    //public NextScence next;
+    public bool isFull;
   
     // Start is called before the first frame update
     void Start()
     {
        startHealth = health;
         isDie = false;
+       
     }
 
     // Update is called once per frame
@@ -47,10 +50,12 @@ public class HealthContorller : MonoBehaviour
         health = health + heal;
         healthBarImage.fillAmount = health / startHealth;
 
-        if (health > 100)
+
+        if (health >= 100)
         {
             health = 100;
             healthBarImage.fillAmount = health / startHealth;
+            isFull = true;
         }
     }
 

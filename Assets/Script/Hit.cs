@@ -6,10 +6,12 @@ public class Hit : MonoBehaviour
 {
 
     private HealthContorller health;
+    bool notDamage = false;
 
     void Start()
     {
         health = GameManager.instance.healthBar;
+       notDamage = false;
     }
 
    
@@ -20,13 +22,25 @@ public class Hit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-    
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "ShieldTag")
         {
+            health.TakeDamge(0);
+            notDamage = true;
+        }
 
-          health.TakeDamge(20);
+        if (!notDamage)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+
+                health.TakeDamge(20);
+
+            }
 
         }
+
+
+        
         
     }
 }

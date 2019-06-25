@@ -5,11 +5,12 @@ using UnityEngine;
 public class nuts : MonoBehaviour
 {
     public HealthContorller healthContorller;
+    public bool test;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        test = true;
     }
 
     // Update is called once per frame
@@ -20,10 +21,21 @@ public class nuts : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (healthContorller.isFull == true)
         {
-            healthContorller.healHp(5);
-            Destroy(gameObject, 0.5f);
+            test = false;
         }
+
+
+        if (test == true && healthContorller.health < 100) 
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                healthContorller.healHp(10);
+                Destroy(gameObject, 0.5f);
+            }
+        }
+       
+
     }
 }
