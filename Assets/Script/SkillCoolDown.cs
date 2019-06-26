@@ -26,7 +26,9 @@ public class SkillCoolDown : MonoBehaviour
     private ShieldAbility shieldAbility;
     private float time = 0f;
     bool timeEnd = false;
-    bool fade, fadeStart;
+    public GameObject block;
+  
+    
 
     // Start is called before the first frame update
     void Start()
@@ -34,13 +36,13 @@ public class SkillCoolDown : MonoBehaviour
         abilityDash = GetComponent<AbilityDash>();
         missiles = GetComponent<Missiles>();
         shieldAbility = GetComponent<ShieldAbility>();
-       
-       
+        block.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+      
         //dash
         if (abilityDash.isDashGo == true)
         {
@@ -84,10 +86,11 @@ public class SkillCoolDown : MonoBehaviour
         if (isWaitingForShieldGone)
         {
             //Debug.Log("Wait " + isWaitingForShieldGone);
-            if (time >= 0 && shieldAbility.isShieldGo)
+            if (time >= 0 && shieldAbility.isShieldGo ) 
             {
                 Debug.Log("Wait1 " + isWaitingForShieldGone);
                 time -= Time.deltaTime;
+                
             }
             else
             {
@@ -96,11 +99,14 @@ public class SkillCoolDown : MonoBehaviour
                 isWaitingForShieldGone = false;
                 shieldAbility.shield.SetActive(false);
                 shieldAbility.image.enabled = false;
+               
+                
                 //time = 2f;
             }
             //time = 10.0f;
 
-        }else
+        }
+        else
         {
             Debug.Log("not Wait");
             //shieldAbility.shield.SetActive(false);
@@ -111,7 +117,10 @@ public class SkillCoolDown : MonoBehaviour
                 shieldAbility.shield.SetActive(true);
                 shieldAbility.image.enabled = true;
                 isWaitingForShieldGone = true;
-                time = 10f;
+                time = 2f;
+                block.SetActive(true);
+
+
             }
                        
             
@@ -128,18 +137,25 @@ public class SkillCoolDown : MonoBehaviour
                     isCooldownShield = false;
                     shieldAbility.isShieldGo = false;
                     isWaitingForShieldGone = true;
-                //timeEnd = true;
-                //time = 10.0f;
+                    block.SetActive(false);
+                    //timeEnd = true;
+                    //time = 2.0f;
                 }
 
-                    
+                
+
             }
-            
-           
+
+                     
+
 
         }
 
         
+
+
+
+
     }
 
 

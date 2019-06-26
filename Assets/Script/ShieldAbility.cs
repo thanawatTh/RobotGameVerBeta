@@ -16,7 +16,7 @@ public class ShieldAbility : MonoBehaviour
     public bool isShieldGo;
     private Animator anim;
     public SkillCoolDown skillCoolDown;
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -47,15 +47,15 @@ public class ShieldAbility : MonoBehaviour
         if (showShield)
         {
             if (isShieldGo == false)
-            {                
-                    isShieldGo = true;
+            {
+                isShieldGo = true;
 
                 if (shield != null)
                 {
                     shield.SetActive(true);
                    
                 }
-                    
+            }    
                 
                 
             }
@@ -71,4 +71,3 @@ public class ShieldAbility : MonoBehaviour
 
 
 
-}
