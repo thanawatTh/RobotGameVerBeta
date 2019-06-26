@@ -117,7 +117,7 @@ public class SkillCoolDown : MonoBehaviour
                 shieldAbility.shield.SetActive(true);
                 shieldAbility.image.enabled = true;
                 isWaitingForShieldGone = true;
-                time = 2f;
+                time = 10f;
                 block.SetActive(true);
 
 

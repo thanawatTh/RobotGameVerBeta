@@ -31,7 +31,7 @@ public class nuts : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                healthContorller.healHp(10);
+                healthContorller.healHp(20);
                 Destroy(gameObject, 0.5f);
             }
         }
