@@ -1618,6 +1618,16 @@ PrefabInstance:
       propertyPath: imageCooldownShield
       value: 
       objectReference: {fileID: 373854174}
+    - target: {fileID: 1870072387937899442, guid: 6f5062906749e7a4d99ef6fee07d366d,
+        type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1341269338}
+    - target: {fileID: 1870072387937899442, guid: 6f5062906749e7a4d99ef6fee07d366d,
+        type: 3}
+      propertyPath: buttonShield
+      value: 
+      objectReference: {fileID: 1341269338}
     - target: {fileID: 4071797387000371793, guid: 6f5062906749e7a4d99ef6fee07d366d,
         type: 3}
       propertyPath: anim
@@ -1672,6 +1682,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2329192124880511691, guid: 58947774ee5ef8b4586954d4d5395c8c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1392186625}
+    - target: {fileID: 2329192124880511691, guid: 58947774ee5ef8b4586954d4d5395c8c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnTouchDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2329192124880511691, guid: 58947774ee5ef8b4586954d4d5395c8c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2771729906584928106, guid: 58947774ee5ef8b4586954d4d5395c8c,
         type: 3}
       propertyPath: m_RootOrder
@@ -2021,6 +2046,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074616d7283d82a4bb57ea39712e0368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1341269338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8365610032686776242, guid: 58947774ee5ef8b4586954d4d5395c8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1341269336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1375829439 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6419226302160476503, guid: 58947774ee5ef8b4586954d4d5395c8c,
@@ -2208,7 +2239,7 @@ PrefabInstance:
     - target: {fileID: 6118189663508004243, guid: 35ab8df76f300dd44ba494651fd8f0eb,
         type: 3}
       propertyPath: healthEvilEye
-      value: 60
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6118189662998847738, guid: 35ab8df76f300dd44ba494651fd8f0eb,
         type: 3}
