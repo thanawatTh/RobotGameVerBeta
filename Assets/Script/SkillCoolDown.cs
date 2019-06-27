@@ -14,7 +14,7 @@ public class SkillCoolDown : MonoBehaviour
 
     //missle
     public Image imageCooldownMissle;
-    private float cooldownMissle = 50;
+    private float cooldownMissle = 30;
     public bool isCooldownMissle;
     private Missiles missiles;
 

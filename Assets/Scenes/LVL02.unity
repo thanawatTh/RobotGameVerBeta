@@ -1134,7 +1134,7 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1255512081}
     - target: {fileID: 8645307698633424100, guid: 05bb455c6a37807408d8d9835a6a86a7,
         type: 3}
       propertyPath: healthEnamyContorller
@@ -1395,7 +1395,7 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1255512081}
     - target: {fileID: 8645307698633424100, guid: 05bb455c6a37807408d8d9835a6a86a7,
         type: 3}
       propertyPath: boomberDie
@@ -2314,7 +2314,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f1e3a9801df59fb40bfba2459f51eba2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2765,7 +2765,7 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1255512081}
     - target: {fileID: 8645307698633424100, guid: 05bb455c6a37807408d8d9835a6a86a7,
         type: 3}
       propertyPath: healthEnamyContorller
@@ -4767,7 +4767,7 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1255512081}
     - target: {fileID: 8645307698633424100, guid: 05bb455c6a37807408d8d9835a6a86a7,
         type: 3}
       propertyPath: healthEnamyContorller
