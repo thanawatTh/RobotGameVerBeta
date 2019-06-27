@@ -82,11 +82,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         healthBar.isDie = false;
+        SoundManager.instance.ButtonClick();
     }
 
     public void GotoMenu()
     {
         SceneManager.LoadScene("Menu");
+
+        SoundManager.instance.ButtonClick();
     }
 
     public void Pause()
@@ -96,8 +99,8 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             pause = true;
             pauseGameObj.SetActive(true);
-            
-            
+            SoundManager.instance.ButtonClick();
+
         }
        
                
@@ -109,7 +112,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             pause = false;
             pauseGameObj.SetActive(false);
-        
+            SoundManager.instance.ButtonClick();
     }
 
 
