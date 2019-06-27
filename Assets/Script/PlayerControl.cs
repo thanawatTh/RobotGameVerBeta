@@ -27,13 +27,13 @@ public class PlayerControl : MonoBehaviour
         mainCamera = Camera.main;
 
         joyInputMove = GameObject.Find("JoyMove").GetComponent<TouchControl>();
-       // joyInputRot = GameObject.Find("JoyRot").GetComponent<TouchRotControl>();
+        // joyInputRot = GameObject.Find("JoyRot").GetComponent<TouchRotControl>();
     }
 
-    
+
     void Update()
     {
-        if (health.isDie == false && gameManager.pause == false) 
+        if (health.isDie == false && gameManager.pause == false)
         {
             //Touch
             /////////////////////////////////////////////////////////////////////////////
@@ -58,30 +58,33 @@ public class PlayerControl : MonoBehaviour
 
 
 
-            moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-            moveVelocity = moveInput * moveSpeed;
+            //    moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+            //    moveVelocity = moveInput * moveSpeed;
 
-            cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-            Plane groundPlan = new Plane(Vector3.up, Vector3.zero);
-            float rayLength;
+            //    cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+            //    Plane groundPlan = new Plane(Vector3.up, Vector3.zero);
+            //    float rayLength;
 
-            if (groundPlan.Raycast(cameraRay, out rayLength))
-            {
-                Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-                Debug.DrawLine(cameraRay.origin, pointToLook, Color.black);
+            //    if (groundPlan.Raycast(cameraRay, out rayLength))
+            //    {
+            //        Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+            //        Debug.DrawLine(cameraRay.origin, pointToLook, Color.black);
 
-                transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-            }
+            //        transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+            //    }
+
+
+            //}
 
 
         }
-
-
     }
 
-    void FixedUpdate()
-    {
-        rigidBody.velocity = moveVelocity;
+        void FixedUpdate()
+        {
+            rigidBody.velocity = moveVelocity;
 
+        }
     }
-}
+
+

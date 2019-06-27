@@ -2413,11 +2413,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6118189663508004243, guid: 35ab8df76f300dd44ba494651fd8f0eb,
-        type: 3}
-      propertyPath: healthEvilEye
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 6118189662998847738, guid: 35ab8df76f300dd44ba494651fd8f0eb,
         type: 3}
       propertyPath: gameOver
