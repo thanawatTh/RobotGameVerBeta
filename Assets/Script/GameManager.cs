@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         pause = false;
         Time.timeScale = 1;
         winGame.SetActive(false);
+
     }
     void Awake()
     {

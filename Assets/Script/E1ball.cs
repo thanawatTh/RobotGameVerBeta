@@ -58,7 +58,7 @@ public class E1ball : MonoBehaviour
         //hpBarPosition.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 5f, 0));
 
         float distance = Vector3.Distance(target.position, transform.position);
-        Debug.Log(distance);
+        //Debug.Log(distance);
 
         if (distance <= lookRaius)
         {

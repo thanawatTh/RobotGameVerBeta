@@ -7,16 +7,21 @@ public class NextScence : MonoBehaviour
 {
    
     private int nextSceneToLoad;
+    public bool isSave;
+    public HealthContorller health; 
+  
+
     // Start is called before the first frame update
     void Start()
     {
         nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        isSave = false;
     }
 
 
@@ -28,15 +33,16 @@ public class NextScence : MonoBehaviour
 
             SceneManager.LoadScene(nextSceneToLoad);
            
-
         }
+       
     }
-
+    
     public void Onclick()
     {
         SceneManager.LoadScene("LVL01");
         Debug.Log("Gooo");
         SoundManager.instance.ButtonClick();
+       
     }
     public void Exit()
     {

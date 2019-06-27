@@ -13,14 +13,17 @@ public class HealthContorller : MonoBehaviour
     public bool isDie;
     //public NextScence next;
     public bool isFull;
-  
+   
+    
     // Start is called before the first frame update
     void Start()
     {
        startHealth = health;
         isDie = false;
-       
+        
+
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -43,24 +46,30 @@ public class HealthContorller : MonoBehaviour
     {
         health = health - damage;
         healthBarImage.fillAmount = health / startHealth;
+      
+        
+
     }
 
     public void healHp(int heal)
     {
         health = health + heal;
         healthBarImage.fillAmount = health / startHealth;
-
+        PlayerPrefs.SetFloat("Health", health);
 
         if (health >= 100)
         {
             health = 100;
             healthBarImage.fillAmount = health / startHealth;
             isFull = true;
+           
         }
     }
 
 
+    
    
+
 
 
 }
