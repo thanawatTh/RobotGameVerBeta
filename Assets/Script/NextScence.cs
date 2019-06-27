@@ -36,10 +36,12 @@ public class NextScence : MonoBehaviour
     {
         SceneManager.LoadScene("LVL01");
         Debug.Log("Gooo");
+        SoundManager.instance.ButtonClick();
     }
     public void Exit()
     {
         Debug.Log("Quit");
+        SoundManager.instance.ButtonExit();
         Application.Quit();
     }
 }
