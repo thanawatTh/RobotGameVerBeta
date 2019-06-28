@@ -55,13 +55,13 @@ public class HealthContorller : MonoBehaviour
     {
         health = health + heal;
         healthBarImage.fillAmount = health / startHealth;
-        PlayerPrefs.SetFloat("Health", health);
+       
 
         if (health >= 100)
         {
             health = 100;
             healthBarImage.fillAmount = health / startHealth;
-            isFull = true;
+            //isFull = true;
            
         }
     }

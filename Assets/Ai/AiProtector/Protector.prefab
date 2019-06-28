@@ -116,7 +116,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7835548418981233117}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -253,8 +253,8 @@ MonoBehaviour:
     type: 3}
   barrelEnd: {fileID: 7835548418472933326}
   fireRate: 1
-  hpBarPosition: {fileID: 0}
-  hpBar: {fileID: 0}
+  healthEnamyContorller: {fileID: 0}
+  isDie: 0
 --- !u!195 &7835548419671526506
 NavMeshAgent:
   m_ObjectHideFlags: 0

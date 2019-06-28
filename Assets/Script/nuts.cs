@@ -23,16 +23,17 @@ public class nuts : MonoBehaviour
     {
         if (healthContorller.isFull == true)
         {
-            test = false;
+            //test = false;
+            Destroy(gameObject, 0.2f);
         }
 
 
-        if (test == true && healthContorller.health < 100) 
+        if (/*test == true &&*/ healthContorller.health < 100) 
         {
             if (other.gameObject.tag == "Player")
             {
                 healthContorller.healHp(20);
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.2f);
             }
         }
        
