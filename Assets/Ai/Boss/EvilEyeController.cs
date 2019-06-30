@@ -10,7 +10,11 @@ public class EvilEyeController : MonoBehaviour
     [Header("Unity Setup")]
     public ParticleSystem deathEffect;
 
-    public int currentHealth = 1;
+    public State currentState = State.FullHP;
+    public enum State {
+        FullHP,
+        LowHP
+    }
     Rigidbody rb;
     public float lookRaius = 5f;
     public float lookIn = 2f;
@@ -65,6 +69,15 @@ public class EvilEyeController : MonoBehaviour
 
         int spawnIndex = Random.Range(0, spawnPoints.Length);
         Transform spawnPoint = spawnPoints[spawnIndex];
+
+        if (currentState == State.FullHP)
+        {
+
+        }
+        else if( currentState == State.LowHP)
+        {
+            
+        }
 
         if (distance <= lookRaius && Time.time > nextFire)
         {
